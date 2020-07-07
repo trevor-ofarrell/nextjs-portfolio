@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import BIRDS from 'vanta/dist/vanta.birds.min'
 import Head from 'next/head'
 import {
-  Box, Button, Card, Container, CssBaseline, Grid,
+  Box, Button, IconButton, Container, CssBaseline, Grid,
 } from '@material-ui/core';
 
 import { useSpring, animated } from 'react-spring'
@@ -11,7 +11,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import { NavBar } from '../components'
+import { NavBar, HomeSection, HomeText } from '../components'
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
@@ -21,16 +21,24 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     width: "100vw",
     height: '100vh',
-  },
-  content: {
-    textAlign: 'center',
+    textAlign: 'center'
   },
   contentContainer: {
     height: '78vh',
+    width: '100vw',
   },
   iconUp: {
     textAlign: 'center',
     color: 'white',
+  },
+  box: {
+    width: '90%',
+    height: '100%',
+    textAlign: 'left',
+    paddingLeft: '10em'
+  },
+  space: {
+    height: '1vh'
   }
 }));
 
@@ -38,6 +46,11 @@ export default function Birds() {
   const classes = useStyles()
   const [vantaEffect, setVantaEffect] = useState(0)
   const myRef = useRef(null)
+  const [contentStatus, displayContent] = React.useState(false);
+  const contentProps = useSpring({
+    opacity: contentStatus ? 1 : 0,
+    marginBottom: contentStatus ? 0 : -1000
+  })
 
   useEffect(() => {
     if (!vantaEffect) {
@@ -72,12 +85,36 @@ export default function Birds() {
       <CssBaseline />
       <div ref={myRef} className={classes.root}>
         <NavBar />
-        <Grid container className={classes.content}>
+        <Grid container>
           <Grid item xs={12} lg={12} className={classes.contentContainer}>
-
+            {
+            !contentStatus ?
+              (
+                <div>
+                  <Grid container>
+                    <Grid item xs={3} lg={6}>
+                    </Grid>
+                    <Grid item xs={3} lg={9} className={classes.space}/>
+                  </Grid>
+                </div>
+              )
+            : (
+              <animated.div className={classes.box} style={ contentProps }>
+                <HomeSection />
+              </animated.div>
+              )
+            }
           </Grid>
           <Grid item xs={12} lg={12}>
+           <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="open drawer"
+              onClick={() => displayContent(a => !a)}
+            >
             <KeyboardArrowUpIcon fontSize="large" className={classes.iconUp}/>
+            </IconButton>
           </Grid>
         </Grid>
       </div>

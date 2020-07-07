@@ -174,7 +174,7 @@ export const NavBar = () => {
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
-          <IconButton
+            <IconButton
               edge="start"
               className={classes.menuButton}
               color="inherit"
