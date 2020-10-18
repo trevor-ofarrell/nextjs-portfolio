@@ -87,7 +87,8 @@ export default function Birds() {
   return(
     <>
       <Head>
-        <script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.birds.min.js"></script>
       </Head>
       <CssBaseline />
       <div ref={myRef} className={classes.root}>

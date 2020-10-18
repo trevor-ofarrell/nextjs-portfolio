@@ -8,11 +8,14 @@ import {
 
 import { HomeText } from './HomeText'
 
+import Close from '../../public/windowclose.svg'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '50%',
     height: '28vh',
-    marginTop: '15vh',
+    marginTop: '5vh',
+    marginLeft: '30vw',
   },
   termbar: {
     backgroundColor: 'rgba(71, 71, 71);',
