@@ -11,7 +11,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import { NavBar, HomeSection, HomeText } from '../components'
+import { NavBar, HomeSection, SideBar } from '../components'
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
   },
   box: {
-    width: '90%',
+    width: '93%',
     height: '100%',
     textAlign: 'left',
     paddingLeft: '10em'
@@ -84,39 +84,7 @@ export default function Birds() {
       </Head>
       <CssBaseline />
       <div ref={myRef} className={classes.root}>
-        <NavBar />
-        <Grid container>
-          <Grid item xs={12} lg={12} className={classes.contentContainer}>
-            {
-            !contentStatus ?
-              (
-                <div>
-                  <Grid container>
-                    <Grid item xs={3} lg={6}>
-                    </Grid>
-                    <Grid item xs={3} lg={9} className={classes.space}/>
-                  </Grid>
-                </div>
-              )
-            : (
-              <animated.div className={classes.box} style={ contentProps }>
-                <HomeSection />
-              </animated.div>
-              )
-            }
-          </Grid>
-          <Grid item xs={12} lg={12}>
-           <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="open drawer"
-              onClick={() => displayContent(a => !a)}
-            >
-            <KeyboardArrowUpIcon fontSize="large" className={classes.iconUp}/>
-            </IconButton>
-          </Grid>
-        </Grid>
+        <SideBar/>
       </div>
     </>
   )
