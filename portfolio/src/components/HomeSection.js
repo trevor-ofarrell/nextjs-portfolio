@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   termscreen: {
     backgroundColor: 'rgba(71, 71, 71, 0.5);',
     height: '28vh',
+  },
+  closesvg: {
+    margin: '1px',
   }
 }));
 
@@ -33,7 +36,7 @@ export const HomeSection = () => {
   return (
     <div className={classes.root}>
       <div className={classes.termbar}>
-
+        <img height="90%" src={Close} className={classes.closesvg}/>
       </div>
       <Box className={classes.termscreen}>
         <Grid container>
