@@ -4,6 +4,7 @@ import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Nav } from "./Nav";
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -25,7 +26,27 @@ const sidebar = {
   }
 };
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        position: 'absolute',
+        top:'0',
+        left: '0',
+        bottom: '0',
+        width: '30vw',
+        zIndex: '10'
+    },
+    nav: {
+        position: 'absolute',
+        top:'0',
+        left: '0',
+        bottom: '0',
+        width: '30vw',
+        zIndex: '10'
+    }
+  }));
+
 export const SideBar = () => {
+  const classes = useStyles()
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -36,8 +57,9 @@ export const SideBar = () => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
+      className={classes.nav}
     >
-      <motion.div className="background" variants={sidebar} />
+      <motion.div className={classes.root} variants={sidebar} />
       <Nav />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>

@@ -24,21 +24,28 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   contentContainer: {
+    paddingTop: '20vh',
+    marginTop: '10vh',
     height: '78vh',
     width: '100vw',
+    zIndex: '3'
   },
   iconUp: {
     textAlign: 'center',
     color: 'white',
+    zIndex: '10'
   },
   box: {
-    width: '93%',
+    width: '90%',
     height: '100%',
     textAlign: 'left',
     paddingLeft: '10em'
   },
   space: {
     height: '1vh'
+  },
+  sidebar: {
+    zIndex: '10',
   }
 }));
 
@@ -84,7 +91,40 @@ export default function Birds() {
       </Head>
       <CssBaseline />
       <div ref={myRef} className={classes.root}>
-        <SideBar/>
+        <div className={classes.sidebar}>
+          <SideBar/>
+        </div>
+        <Grid container>
+          <Grid item xs={12} lg={12} className={classes.contentContainer}>
+            {
+            !contentStatus ?
+              (
+                <div>
+                  <Grid container>
+                    <Grid item xs={3} lg={6}>
+                    </Grid>
+                    <Grid item xs={3} lg={9} className={classes.space}/>
+                  </Grid>
+                </div>
+              )
+            : (
+              <animated.div className={classes.box} style={ contentProps }>
+                <HomeSection />
+              </animated.div>
+              )
+            }
+          </Grid>
+          <Grid item xs={12} lg={12}>
+           <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              onClick={() => displayContent(a => !a)}
+            >
+            <KeyboardArrowUpIcon fontSize="large" className={classes.iconUp}/>
+            </IconButton>
+          </Grid>
+        </Grid>
       </div>
     </>
   )

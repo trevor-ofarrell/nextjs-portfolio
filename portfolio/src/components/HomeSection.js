@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(255, 0, 0, 0.5);',
     width: '50%',
     height: '28vh',
+    marginTop: '15vh',
   },
 
 }));
