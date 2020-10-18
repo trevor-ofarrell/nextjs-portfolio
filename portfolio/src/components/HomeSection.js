@@ -12,10 +12,19 @@ import Close from '../../public/windowclose.svg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '50%',
     height: '28vh',
     marginTop: '5vh',
     marginLeft: '30vw',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+      height: '48vh',
+      marginLeft: '10vw',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+      height: '55vh',
+      marginLeft: '1vw',
+    },
   },
   termbar: {
     backgroundColor: 'rgba(71, 71, 71);',
