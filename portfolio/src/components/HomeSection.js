@@ -10,24 +10,35 @@ import { HomeText } from './HomeText'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: 'rgba(255, 0, 0, 0.5);',
     width: '50%',
     height: '28vh',
     marginTop: '15vh',
   },
-
+  termbar: {
+    backgroundColor: 'rgba(71, 71, 71);',
+    height: '2vh',
+  },
+  termscreen: {
+    backgroundColor: 'rgba(71, 71, 71, 0.5);',
+    height: '28vh',
+  }
 }));
 
 export const HomeSection = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
-      <Grid container>
-        <Grid item xs={4} lg={4}>
-          <HomeText />
+    <div className={classes.root}>
+      <div className={classes.termbar}>
+
+      </div>
+      <Box className={classes.termscreen}>
+        <Grid container>
+          <Grid item xs={4} lg={4}>
+            <HomeText />
+          </Grid>
         </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </div>
   );
 };

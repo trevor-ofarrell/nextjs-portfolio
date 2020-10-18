@@ -14,15 +14,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     color: 'white',
     fontSize: '1.5em',
-    width: '100%'
+    width: '100%',
+    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
   },
   text: {
     color: 'white',
     margin: '3em',
     paddingLeft: '-1em',
-    fontFamily: 'Tomorrow, sans-serif',
+    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     textAlign: 'left',
-  }
+  },
 }));
 
 
@@ -41,6 +42,9 @@ export const HomeText = () => {
                     typewriter.typeString('I\'m a Software Engineer from the bay area interested in web development.')
                     .deleteAll()
                     .start();
+                }}
+                options={{
+                  loop: true,
                 }}
                 className={classes.text}
             />
