@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebar: {
     zIndex: '10',
+    
   }
 }));
 

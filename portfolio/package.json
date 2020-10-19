@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^14.0.14",
+    "autodll-webpack-plugin-webpack-4": "^1.0.0",
     "typescript": "^3.9.6"
   }
 }

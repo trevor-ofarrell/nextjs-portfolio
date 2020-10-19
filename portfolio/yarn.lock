@@ -1797,6 +1797,22 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+autodll-webpack-plugin-webpack-4@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/autodll-webpack-plugin-webpack-4/-/autodll-webpack-plugin-webpack-4-1.0.0.tgz#963afef7accc15a4ef856cc8790dd2dcddc8e541"
+  integrity sha512-OrhyzuPyzU663M9XViBHzgUyg3ph/7KnOqO0zt67eOoyJRITAr1EhsQ6zjTKD0ja26isP8sbMMBo+Zy2We2tAw==
+  dependencies:
+    bluebird "^3.5.0"
+    del "^3.0.0"
+    find-cache-dir "^1.0.0"
+    lodash "^4.17.4"
+    make-dir "^1.0.0"
+    memory-fs "^0.4.1"
+    read-pkg "^2.0.0"
+    tapable "^1.0.0"
+    webpack-merge "^4.1.0"
+    webpack-sources "^1.0.1"
+
 autodll-webpack-plugin@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/autodll-webpack-plugin/-/autodll-webpack-plugin-0.4.2.tgz#36e98fbaf30c235d1d5d076330464ac80901415c"
