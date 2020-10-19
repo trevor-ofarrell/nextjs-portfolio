@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     color: 'white',
     fontSize: '1.5em',
-    width: '100%',
+    width: '300%',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
   },
   text: {
@@ -36,10 +36,12 @@ export const HomeText = () => {
             </Head>
             <Typewriter
                 onInit={(typewriter) => {
-                    typewriter.typeString('Hi I\m Trevor! Welcome to my website.')
-                    .pauseFor(500)
+                    typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website.")
+                    .pauseFor(2500)
                     .deleteAll()
-                    typewriter.typeString('I\'m a Software Engineer from the bay area interested in web development.')
+                    typewriter.typeString(
+                      'I\'m a <strong>S</strong>oft<strong>w</strong>are <strong>E</strong>ngineer from the <strong>Bay</strong> area interested in <strong>web dev</strong>elopment.')
+                    .pauseFor(2500)
                     .deleteAll()
                     .start();
                 }}

@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
         left: '0',
         bottom: '0',
         width: '30vw',
+        [theme.breakpoints.down('md')]: {
+            width: '50vw'
+        },
         zIndex: '10'
     },
     nav: {

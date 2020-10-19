@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 const variants = {
   open: {
@@ -11,12 +12,43 @@ const variants = {
   }
 };
 
-export const Nav = () => (
-  <motion.ul variants={variants}>
-    {itemIds.map(i => (
-      <MenuItem i={i} key={i} />
-    ))}
-  </motion.ul>
-);
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        position: 'absolute',
+        top:'0',
+        left: '0',
+        bottom: '0',
+        width: '30vw',
+        [theme.breakpoints.down('md')]: {
+            width: '50vw'
+        },
+        zIndex: '10'
+    },
+    ul: {
+        [theme.breakpoints.down('md')]: {
+            marginLeft: '5.6vw',
+            marginTop: '0vh',
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '-5vh',
+            marginLeft: '3.7vw'
+        },
+        [theme.breakpoints.up('lg')]: {
+            marginLeft: '6.5vw',
+        }
+    }
+  }));
+
+export const Nav = () => {
+    const classes = useStyles()
+    return(
+        <motion.ul variants={variants} className={classes.ul}>
+            {itemIds.map(i => (
+            <MenuItem i={i} key={i} />
+            ))}
+        </motion.ul>
+    )
+}
 
 const itemIds = [0, 1, 2, 3, 4];
