@@ -31,13 +31,13 @@ const useStyles = makeStyles((theme) => ({
             marginTop: '0vh',
         },
         [theme.breakpoints.down('sm')]: {
-            marginTop: '-5vh',
+            marginTop: '-3vh',
             marginLeft: '3.7vw'
         },
         [theme.breakpoints.up('lg')]: {
             marginLeft: '6.5vw',
         }
-    }
+    },
   }));
 
 export const Nav = () => {

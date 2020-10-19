@@ -5,6 +5,7 @@ import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Nav } from "./Nav";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import graff from '../../public/graffname.png'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -45,6 +46,13 @@ const useStyles = makeStyles((theme) => ({
         bottom: '0',
         width: '30vw',
         zIndex: '10'
+    },
+    title: {
+        margin: '.7em',
+        marginLeft: '5em'
+    },
+    items: {
+        marginTop: '4vh',
     }
   }));
 
@@ -62,8 +70,11 @@ export const SideBar = () => {
       ref={containerRef}
       className={classes.nav}
     >
+      <img src={graff} height="60vh" className={classes.title}/>
       <motion.div className={classes.root} variants={sidebar} />
-      <Nav />
+      <div className={classes.items}>
+        <Nav />
+      </div>
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );
