@@ -2,6 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { Typography } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const variants = {
   open: {
@@ -36,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
         float: 'left',
         fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
         marginTop: '-2.5px'
+    },
+    icon: {
+        color: 'white',
+        height: '100%'
     }
   }));
 
@@ -50,7 +55,9 @@ export const MenuItem = ({ i }) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.98 }}
     >
-      <div className="icon-placeholder" style={style} />
+      <div className="icon-placeholder" style={style} >
+        <GitHubIcon className={classes.icon}/>
+      </div>
       <div className="text-placeholder" style={style}>
         <Typography variant="h5" color="secondary" className={classes.menuText}>
             testing

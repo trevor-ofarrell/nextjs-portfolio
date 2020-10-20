@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import {
   Box,
   Grid,
@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     height: '28vh',
     marginTop: '14vh',
     marginLeft: '30vw',
-    width: '46%',
+    width: '35%',
+    textAlign: 'left',
     [theme.breakpoints.down('md')]: {
       marginTop: '18vh',
     },
@@ -39,17 +40,26 @@ const useStyles = makeStyles((theme) => ({
     height: '28vh',
   },
   closesvg: {
-    margin: '1px',
+    margin: '.5px',
+  },
+  button: {
+    height: '2vh',
+    marginLeft: '-.5vw',
   }
 }));
 
-export const HomeSection = () => {
+export const HomeSection = ({content, onContentToggle}) => {
   const classes = useStyles();
+  const handleToggle = useCallback(event => {
+    onContentToggle(event.target.value)
+  }, [onContentToggle])
 
   return (
     <div className={classes.root}>
       <div className={classes.termbar}>
-        <img height="90%" src={Close} className={classes.closesvg}/>
+        <button onClick={onContentToggle} value={content} className={classes.button}>
+          <img height="90%" src={Close} className={classes.closesvg}/>
+        </button>
       </div>
       <Box className={classes.termscreen}>
         <Grid container>

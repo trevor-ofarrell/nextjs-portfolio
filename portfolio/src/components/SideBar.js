@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     },
     items: {
         marginTop: '4vh',
-    }
+    },
   }));
 
 export const SideBar = () => {
@@ -75,7 +75,7 @@ export const SideBar = () => {
       <div className={classes.items}>
         <Nav />
       </div>
-      <MenuToggle toggle={() => toggleOpen()} />
+      <MenuToggle toggle={() => toggleOpen()}/>
     </motion.nav>
   );
 };

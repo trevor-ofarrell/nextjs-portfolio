@@ -1,5 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 const Path = props => (
   <motion.path
@@ -11,29 +12,53 @@ const Path = props => (
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
-  <button onClick={toggle}>
-    <svg width="23" height="23" viewBox="0 0 23 23">
-      <Path
-        variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" }
-        }}
-      />
-      <Path
-        d="M 2 9.423 L 20 9.423"
-        variants={{
-          closed: { opacity: 1 },
-          open: { opacity: 0 }
-        }}
-        transition={{ duration: 0.1 }}
-      />
-      <Path
-        variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" }
-        }}
-      />
-    </svg>
-  </button>
-);
+const useStyles = makeStyles((theme) => ({
+    root: {
+        position: 'absolute',
+        top:'0',
+        left: '0',
+        bottom: '0',
+        width: '30vw',
+        [theme.breakpoints.down('md')]: {
+            width: '50vw'
+        },
+        zIndex: '10'
+    },
+    toggle: {
+        top: '18px',
+        left: '15px',
+        width: '50px',
+        height: '50px',
+        borderRadius: '50%',
+    },
+  }));
+
+export const MenuToggle = ({ toggle }) => {
+    const classes = useStyles()
+    return(
+        <button onClick={toggle} className={classes.toggle}>
+            <svg width="23" height="23" viewBox="0 0 23 23">
+            <Path
+                variants={{
+                closed: { d: "M 2 2.5 L 20 2.5" },
+                open: { d: "M 3 16.5 L 17 2.5" }
+                }}
+            />
+            <Path
+                d="M 2 9.423 L 20 9.423"
+                variants={{
+                closed: { opacity: 1 },
+                open: { opacity: 0 }
+                }}
+                transition={{ duration: 0.1 }}
+            />
+            <Path
+                variants={{
+                closed: { d: "M 2 16.346 L 20 16.346" },
+                open: { d: "M 3 2.5 L 17 16.346" }
+                }}
+            />
+            </svg>
+        </button>
+    )
+}

@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
   text: {
     color: 'white',
     margin: '3em',
-    paddingLeft: '-1em',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     textAlign: 'left',
   },

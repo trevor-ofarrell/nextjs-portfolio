@@ -102,16 +102,11 @@ export default function Birds() {
             !contentStatus ?
               (
                 <div>
-                  <Grid container>
-                    <Grid item xs={3} lg={6}>
-                    </Grid>
-                    <Grid item xs={3} lg={9} className={classes.space}/>
-                  </Grid>
+                  <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
                 </div>
               )
             : (
               <animated.div className={classes.box} style={ contentProps }>
-                <HomeSection />
               </animated.div>
               )
             }
