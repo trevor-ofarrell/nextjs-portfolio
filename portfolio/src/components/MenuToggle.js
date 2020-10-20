@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
         width: '50px',
         height: '50px',
         borderRadius: '50%',
+        backgroundColor: 0x4300c0,
     },
   }));
 

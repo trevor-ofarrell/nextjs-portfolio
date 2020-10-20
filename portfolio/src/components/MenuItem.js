@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             width: '50vw'
         },
-        zIndex: '10'
     },
     menuText: {
         float: 'left',

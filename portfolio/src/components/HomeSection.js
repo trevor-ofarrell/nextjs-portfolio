@@ -44,7 +44,9 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     height: '2vh',
+    width: '2vw',
     marginLeft: '-.5vw',
+    lineHeight: '30px',
   }
 }));
 

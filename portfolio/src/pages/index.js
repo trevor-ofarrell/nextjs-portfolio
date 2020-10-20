@@ -18,10 +18,11 @@ import { NavBar, HomeSection, SideBar } from '../components'
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
-    overflow: 'hidden',
     width: "100vw",
     height: '100vh',
-    textAlign: 'center'
+    textAlign: 'center',
+    overflowY: 'scroll',
+    overflowX: 'hidden'
   },
   contentContainer: {
     paddingTop: '20vh',
@@ -46,7 +47,9 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebar: {
     zIndex: '10',
-    
+  },
+  section: {
+    height: '100%',
   }
 }));
 
@@ -96,6 +99,7 @@ export default function Birds() {
         <div className={classes.sidebar}>
           <SideBar/>
         </div>
+        <section className={classes.section}>
         <Grid container>
           <Grid item xs={12} lg={12} className={classes.contentContainer}>
             {
@@ -122,6 +126,10 @@ export default function Birds() {
             </IconButton>
           </Grid>
         </Grid>
+        </section>
+        <section className={classes.section}>
+          hello world
+        </section>
       </div>
     </>
   )

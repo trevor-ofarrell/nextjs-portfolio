@@ -15,7 +15,6 @@ nav {
   left: 0;
   bottom: 0;
   width: 300px;
-  z-index: 5;
 }
 
 
@@ -27,7 +26,6 @@ button {
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-
   background: transparent;
 }
 

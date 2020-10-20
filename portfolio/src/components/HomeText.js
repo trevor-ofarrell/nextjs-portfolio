@@ -12,16 +12,15 @@ import Head from 'next/head'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color: 'white',
+    color: '#ff0dbf',
     fontSize: '1.5em',
     width: '300%',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontWeight: '600'
   },
   text: {
-    color: 'white',
-    margin: '3em',
-    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     textAlign: 'left',
+
   },
 }));
 
