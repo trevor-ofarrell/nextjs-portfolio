@@ -5,6 +5,8 @@ import {
   Box, Button, IconButton, Container, CssBaseline, Grid,
 } from '@material-ui/core';
 
+import Grow from '@material-ui/core/Grow';
+
 import { useSpring, animated } from 'react-spring'
 
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -113,9 +115,11 @@ export default function Birds() {
                   {
                     !contentStatus ?
                       (
-                        <div>
-                          <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
-                        </div>
+                        <Grow in={!contentStatus} timeout={2400}>
+                          <div>
+                            <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
+                          </div>
+                        </Grow>
                       )
                     : (
                         <animated.div className={classes.box} style={contentProps}>
@@ -129,7 +133,7 @@ export default function Birds() {
                     color="inherit"
                     aria-label="open drawer"
                     onClick={() => displayContent(a => !a)}
-                  >
+                >
                   <KeyboardArrowUpIcon fontSize="large" className={classes.iconUp}/>
                   </IconButton>
                 </Grid>
