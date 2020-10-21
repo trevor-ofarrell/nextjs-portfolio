@@ -21,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100vw",
     height: '100vh',
     textAlign: 'center',
-    overflowY: 'scroll',
-    overflowX: 'hidden'
+    overflowX: 'hidden',
   },
   contentContainer: {
     paddingTop: '20vh',
@@ -49,6 +48,12 @@ const useStyles = makeStyles((theme) => ({
     zIndex: '10',
   },
   section: {
+    height: '100vh',
+  },
+  scrolling: {
+    overflowY: 'scroll',
+    overflowX: 'hidden',
+    width: "100vw",
     height: '100%',
   }
 }));
@@ -88,6 +93,7 @@ export default function Birds() {
       if (vantaEffect) vantaEffect.destroy()
     }
   }, [vantaEffect])
+
   return(
     <>
       <Head>
@@ -99,37 +105,43 @@ export default function Birds() {
         <div className={classes.sidebar}>
           <SideBar/>
         </div>
-        <section className={classes.section}>
-        <Grid container>
-          <Grid item xs={12} lg={12} className={classes.contentContainer}>
-            {
-            !contentStatus ?
-              (
-                <div>
-                  <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
-                </div>
-              )
-            : (
-              <animated.div className={classes.box} style={ contentProps }>
-              </animated.div>
-              )
-            }
-          </Grid>
+        <Grid container className={classes.scrolling}>
+          <section className={classes.section}>
+            <Grid item xs={12} lg={12}>
+              <Grid container>
+                <Grid item xs={12} lg={12} className={classes.contentContainer}>
+                  {
+                    !contentStatus ?
+                      (
+                        <div>
+                          <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
+                        </div>
+                      )
+                    : (
+                        <animated.div className={classes.box} style={contentProps}>
+                        </animated.div>
+                      )
+                  }
+                </Grid>
+                <Grid item xs={12} lg={12}>
+                <IconButton
+                    edge="start"
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={() => displayContent(a => !a)}
+                  >
+                  <KeyboardArrowUpIcon fontSize="large" className={classes.iconUp}/>
+                  </IconButton>
+                </Grid>
+              </Grid>
+            </Grid>
+          </section>
           <Grid item xs={12} lg={12}>
-           <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={() => displayContent(a => !a)}
-            >
-            <KeyboardArrowUpIcon fontSize="large" className={classes.iconUp}/>
-            </IconButton>
+            <section className={classes.section}>
+              hello world
+            </section>
           </Grid>
         </Grid>
-        </section>
-        <section className={classes.section}>
-          hello world
-        </section>
       </div>
     </>
   )
