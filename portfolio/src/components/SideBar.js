@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         margin: '.7em',
-        marginLeft: '5em'
+        marginLeft: '5em',
+        pointerEvents: 'none'
     },
     items: {
         marginTop: '4vh',
@@ -55,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export const SideBar = () => {
+export const SideBar = ({changeView, toggleView}) => {
   const classes = useStyles()
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
@@ -72,7 +73,7 @@ export const SideBar = () => {
       <img src={graff} height="60vh" className={classes.title}/>
       <motion.div className={classes.root} variants={sidebar} />
       <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
-        <Nav />
+        <Nav changeView={changeView} toggleView={toggleView}/>
       </div>
       <MenuToggle toggle={() => toggleOpen()}/>
     </motion.nav>

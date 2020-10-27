@@ -69,6 +69,7 @@ export default function Birds() {
     opacity: contentStatus ? 1 : 0,
     marginBottom: contentStatus ? 0 : -1000
   })
+  const [changeView, toggleView] = useState(0);
 
   useEffect(() => {
     if (!vantaEffect) {
@@ -105,7 +106,7 @@ export default function Birds() {
       <CssBaseline />
       <div ref={myRef} className={classes.root}>
         <div className={classes.sidebar}>
-          <SideBar/>
+          <SideBar changeView={changeView} toggleView={toggleView}/>
         </div>
         <Grid container className={classes.scrolling}>
           <section className={classes.section}>
@@ -122,9 +123,34 @@ export default function Birds() {
                         </Grow>
                       )
                     : (
-                        <animated.div className={classes.box} style={contentProps}>
-                        </animated.div>
-                      )
+                      <animated.div className={classes.box} style={contentProps}>
+                      </animated.div>
+                    )
+                  }
+                  {changeView == 0 &&
+                    <section className={classes.section}>
+                      hello world 1
+                    </section>                  
+                  }
+                  {changeView == 1 &&
+                    <section className={classes.section}>
+                    hello world 2
+                  </section>                      
+                  }
+                  {changeView == 2 &&
+                    <section className={classes.section}>
+                    hello world 3
+                  </section>                      
+                  }
+                  {changeView == 3 &&
+                    <section className={classes.section}>
+                    hello world 4
+                  </section>                      
+                  }
+                  {changeView == 4 &&
+                   <section className={classes.section}>
+                    hello world 5
+                   </section>                      
                   }
                 </Grid>
                 <Grid item xs={12} lg={12}>
