@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     },
     items: {
         marginTop: '4vh',
+
     },
   }));
 
@@ -70,7 +71,7 @@ export const SideBar = () => {
     >
       <img src={graff} height="60vh" className={classes.title}/>
       <motion.div className={classes.root} variants={sidebar} />
-      <div className={classes.items}>
+      <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
         <Nav />
       </div>
       <MenuToggle toggle={() => toggleOpen()}/>
