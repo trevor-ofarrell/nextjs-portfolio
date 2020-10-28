@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: '70vh',
     marginLeft: '20vw',
-    width: '60%',
+    width: '60vw',
     textAlign: 'left',
     [theme.breakpoints.down('md')]: {
       marginTop: '18vh',
@@ -32,20 +32,19 @@ const useStyles = makeStyles((theme) => ({
   },
   termbar: {
     backgroundColor: 'rgba(71, 71, 71);',
-    height: '2vh',
+    height: '2.3vh',
   },
   termscreen: {
-    backgroundColor: 'rgba(71, 71, 71, 0.35);',
+    backgroundColor: 'rgba(71, 71, 71, 0.45);',
     height: '60vh',
   },
   closesvg: {
-    margin: '.5px',
   },
   button: {
     height: '2vh',
     width: '2vw',
     marginLeft: '-.5vw',
-    lineHeight: '30px',
+    marginTop: '2px'
   }
 }));
 
@@ -57,11 +56,13 @@ export const HomeSection = ({content, onContentToggle}) => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.termbar}>
-        <button onClick={onContentToggle} value={content} className={classes.button}>
-          <img height="90%" src={Close} className={classes.closesvg}/>
-        </button>
-      </div>
+      <Grid container className={classes.termbar}>
+        <Grid itwm xs={1} lg={1}>
+          <button onClick={onContentToggle} value={content} className={classes.button}>
+            <img height="90%" src={Close} className={classes.closesvg}/>
+          </button>
+        </Grid>
+      </Grid>
       <Box className={classes.termscreen}>
         <Grid container>
           <Grid item xs={4} lg={4}>

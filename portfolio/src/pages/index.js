@@ -20,7 +20,7 @@ import Switch from '@material-ui/core/Switch';
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     width: "100vw",
@@ -31,10 +31,16 @@ const useStyles = makeStyles(() => ({
   },
   contentContainer: {
     paddingTop: '20vh',
-    marginTop: '2vh',
+    marginTop: '4vh',
     height: '80vh',
     width: '100vw',
-    zIndex: '3'
+    zIndex: '3',
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '8vh'
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '8vh'
+    },
   },
   iconUp: {
     textAlign: 'center',
