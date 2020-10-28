@@ -12,7 +12,7 @@ import Head from 'next/head'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color: '#ff0dbf',
+    color: '#ea3abb',
     fontSize: '1.5em',
     width: '300%',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',

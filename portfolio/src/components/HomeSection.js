@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     height: '2vh',
   },
   termscreen: {
-    backgroundColor: 'rgba(71, 71, 71, 0.5);',
+    backgroundColor: 'rgba(71, 71, 71, 0.35);',
     height: '28vh',
   },
   closesvg: {

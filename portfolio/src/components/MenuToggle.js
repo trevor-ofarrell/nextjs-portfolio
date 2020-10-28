@@ -25,20 +25,27 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '10'
     },
     toggle: {
-        top: '18px',
-        left: '15px',
-        width: '50px',
-        height: '50px',
+        top: '3em',
+        left: '2.5em',
+        width: '60px',
+        height: '60px',
+        maxWidth: '60px',
+        maxHeight: '60px',
         borderRadius: '50%',
         backgroundColor: 0x4300c0,
+        position: 'absolute'
     },
+    svg: {
+        width: '35',
+        height: '35'
+    }
   }));
 
 export const MenuToggle = ({ toggle }) => {
     const classes = useStyles()
     return(
         <button onClick={toggle} className={classes.toggle}>
-            <svg width="23" height="23" viewBox="0 0 23 23">
+            <svg width="100%" height="100%" viewBox="0 0 23 23" className={classes.svg}>
             <Path
                 variants={{
                 closed: { d: "M 2 2.5 L 20 2.5" },

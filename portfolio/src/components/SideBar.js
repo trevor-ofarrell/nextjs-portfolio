@@ -5,7 +5,7 @@ import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Nav } from "./Nav";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import graff from '../../public/graffname.png'
+import graff from '../../public/pinkdrip.png'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -38,22 +38,17 @@ const useStyles = makeStyles((theme) => ({
             width: '50vw'
         },
     },
-    nav: {
-        position: 'absolute',
-        top:'0',
-        left: '0',
-        bottom: '0',
-        width: '30vw',
-    },
     title: {
         margin: '.7em',
-        marginLeft: '5em',
-        pointerEvents: 'none'
+        pointerEvents: 'none',
+        marginLeft: '7.3em'
     },
     items: {
         marginTop: '4vh',
-
     },
+    hamburger: {
+      marginTop: '2em'
+    }
   }));
 
 export const SideBar = ({changeView, toggleView}) => {
@@ -68,14 +63,15 @@ export const SideBar = ({changeView, toggleView}) => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      className={classes.nav}
     >
-      <img src={graff} height="60vh" className={classes.title}/>
+      <img src={graff} max-height="85vh" className={classes.title}/>
       <motion.div className={classes.root} variants={sidebar} />
       <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
         <Nav changeView={changeView} toggleView={toggleView}/>
       </div>
-      <MenuToggle toggle={() => toggleOpen()}/>
+      <div className={classes.hamburger}>
+        <MenuToggle toggle={() => toggleOpen()}/>
+      </div>
     </motion.nav>
   );
 };

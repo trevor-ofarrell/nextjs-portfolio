@@ -113,24 +113,15 @@ export default function Birds() {
             <Grid item xs={12} lg={12}>
               <Grid container>
                 <Grid item xs={12} lg={12} className={classes.contentContainer}>
-                  {
-                    !contentStatus ?
-                      (
-                        <Grow in={!contentStatus} timeout={2400}>
+
+                  {changeView == 0 &&
+                    <section className={classes.section}>
+                        <Grow in={changeView == 0} timeout={2400}>
                           <div>
                             <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
                           </div>
                         </Grow>
-                      )
-                    : (
-                      <animated.div className={classes.box} style={contentProps}>
-                      </animated.div>
-                    )
-                  }
-                  {changeView == 0 &&
-                    <section className={classes.section}>
-                      hello world 1
-                    </section>                  
+                      </section>                  
                   }
                   {changeView == 1 &&
                     <section className={classes.section}>
@@ -153,23 +144,12 @@ export default function Birds() {
                    </section>                      
                   }
                 </Grid>
-                <Grid item xs={12} lg={12}>
-                <IconButton
-                    edge="start"
-                    color="inherit"
-                    aria-label="open drawer"
-                    onClick={() => displayContent(a => !a)}
-                >
-                  <KeyboardArrowUpIcon fontSize="large" className={classes.iconUp}/>
-                  </IconButton>
-                </Grid>
+              
               </Grid>
             </Grid>
           </section>
           <Grid item xs={12} lg={12}>
-            <section className={classes.section}>
-              hello world
-            </section>
+           
           </Grid>
         </Grid>
       </div>
