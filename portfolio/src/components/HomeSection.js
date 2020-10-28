@@ -13,7 +13,7 @@ import Close from '../../public/windowclose.svg'
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '70vh',
-    marginLeft: '20vw',
+    marginLeft: '20.5vw',
     width: '60vw',
     textAlign: 'left',
     [theme.breakpoints.down('md')]: {
