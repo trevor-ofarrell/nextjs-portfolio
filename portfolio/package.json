@@ -20,7 +20,8 @@
     "react-spring": "^8.0.27",
     "three": "^0.118.3",
     "typewriter-effect": "^2.13.1",
-    "vanta": "^0.5.16"
+    "vanta": "^0.5.16",
+    "vercel": "^20.1.2"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",

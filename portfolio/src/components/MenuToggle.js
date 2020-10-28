@@ -25,15 +25,19 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '10'
     },
     toggle: {
-        top: '3em',
+        top: '3.7em',
         left: '2.5em',
-        width: '60px',
-        height: '60px',
-        maxWidth: '60px',
-        maxHeight: '60px',
         borderRadius: '50%',
         backgroundColor: 0x4300c0,
-        position: 'absolute'
+        position: 'absolute',
+        [theme.breakpoints.down('md')]: {
+            maxWidth: '50px',
+            maxHeight: '50px',
+        },
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '60px',
+            maxHeight: '60px',
+        },
     },
     svg: {
         width: '35',

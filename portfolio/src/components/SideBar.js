@@ -41,7 +41,10 @@ const useStyles = makeStyles((theme) => ({
     title: {
         margin: '.7em',
         pointerEvents: 'none',
-        marginLeft: '7.3em'
+        marginLeft: '7.3em',
+        [theme.breakpoints.down('md')]: {
+          
+        },
     },
     items: {
         marginTop: '4vh',
@@ -64,7 +67,7 @@ export const SideBar = ({changeView, toggleView}) => {
       custom={height}
       ref={containerRef}
     >
-      <img src={graff} max-height="85vh" className={classes.title}/>
+      <img src={graff} max-height="60" className={classes.title}/>
       <motion.div className={classes.root} variants={sidebar} />
       <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
         <Nav changeView={changeView} toggleView={toggleView}/>
