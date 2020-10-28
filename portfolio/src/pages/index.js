@@ -68,59 +68,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const IOSSwitch = withStyles((theme) => ({
-  root: {
-    width: 42,
-    height: 26,
-    padding: 0,
-    margin: theme.spacing(1),
-  },
-  switchBase: {
-    padding: 1,
-    '&$checked': {
-      transform: 'translateX(16px)',
-      color: theme.palette.common.white,
-      '& + $track': {
-        backgroundColor: '#52d869',
-        opacity: 1,
-        border: 'none',
-      },
-    },
-    '&$focusVisible $thumb': {
-      color: '#52d869',
-      border: '6px solid #fff',
-    },
-  },
-  thumb: {
-    width: 24,
-    height: 24,
-  },
-  track: {
-    borderRadius: 26 / 2,
-    border: `1px solid ${theme.palette.grey[400]}`,
-    backgroundColor: theme.palette.grey[50],
-    opacity: 1,
-    transition: theme.transitions.create(['background-color', 'border']),
-  },
-  checked: {},
-  focusVisible: {},
-}))(({ classes, ...props }) => {
-  return (
-    <Switch
-      focusVisibleClassName={classes.focusVisible}
-      disableRipple
-      classes={{
-        root: classes.root,
-        switchBase: classes.switchBase,
-        thumb: classes.thumb,
-        track: classes.track,
-        checked: classes.checked,
-      }}
-      {...props}
-    />
-  );
-});
-
 export default function Birds() {
   const classes = useStyles()
   const [vantaEffect, setVantaEffect] = useState(0)
@@ -131,33 +78,19 @@ export default function Birds() {
     marginBottom: contentStatus ? 0 : -1000
   })
   const [changeView, toggleView] = useState(0);
-  const [colorMode, toggleColor] = useState({checked: false});
-  const [tog, setTog] = useState(false)
-  const toggle = React.useCallback(() => setTog(!tog));
-  const handleChange = (event) => {
-    toggleColor({ ...colorMode, [event.target.name]: event.target.checked });
-    toggle()
-  };
-  let darkmode = 0xfffff
 
   useEffect(() => {
-    console.log(darkmode)
-    if (tog === true) {
-      darkmode = 0x0
-    }
-    else {
-      darkmode = 0xfffff
-    }
     if (!vantaEffect) {
       setVantaEffect(BIRDS({
         el: myRef.current,
         mouseControls: true,
         touchControls: true,
+        gyroControls: true,
         minHeight: 200.00,
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: darkmode,
+        backgroundColor: 0xfffff,
         color1: 0x4300c0,
         color2: 0x505d9,
         colorMode: "lerp",
