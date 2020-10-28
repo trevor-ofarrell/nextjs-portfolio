@@ -24,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: '3.7vw'
         },
         [theme.breakpoints.up('lg')]: {
-            marginLeft: '1.5vw',
+            marginLeft: '6vw',
             marginTop: '4vh',
-            width: '17vw'
+            width: '22vw'
         }
     },
   }));

@@ -13,19 +13,8 @@ const Path = props => (
 );
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        position: 'absolute',
-        top:'0',
-        left: '0',
-        bottom: '0',
-        width: '30vw',
-        [theme.breakpoints.down('md')]: {
-            width: '50vw'
-        },
-        zIndex: '10'
-    },
     toggle: {
-        top: '3em',
+        top: '3.5em',
         left: '2.5em',
         borderRadius: '50%',
         position: 'absolute',

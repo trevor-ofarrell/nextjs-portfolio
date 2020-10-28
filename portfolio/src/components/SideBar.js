@@ -49,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
     items: {
         marginTop: '4vh',
     },
-    hamburger: {
-      marginTop: '2em'
-    }
   }));
 
 export const SideBar = ({changeView, toggleView}) => {
@@ -72,7 +69,7 @@ export const SideBar = ({changeView, toggleView}) => {
       <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
         <Nav changeView={changeView} toggleView={toggleView}/>
       </div>
-      <div className={classes.hamburger}>
+      <div>
         <MenuToggle toggle={() => toggleOpen()}/>
       </div>
     </motion.nav>

@@ -54,20 +54,20 @@ const useStyles = makeStyles((theme) => ({
     },
     iconPlaceholder: {
       borderRadius: '50%',
-      height: '50px',
+      height: '55px',
       width: 'auto',
       marginRight: '1em',
-      flex: '50px 0',
+      flex: '55px 0',
     },
     textPlaceholder: {
       width: '30vw',
       borderRadius: '5px',
-      height: '50px',
+      height: '55px',
       flex: '1',
     },
     menuIcon: {
       color: '#39FF14',
-      marginTop: '3px'
+      marginTop: '5px'
     }
   }));
 
@@ -92,8 +92,8 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
   return (
     <motion.li
       variants={variants}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={{ scale: 1.10 }}
+      whileTap={{ scale: 0.96 }}
       href={`/${titles[i]}`}
       onClick={handleToggle}
       
