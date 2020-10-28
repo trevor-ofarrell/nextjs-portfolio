@@ -4,7 +4,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 const Path = props => (
   <motion.path
-    fill="transparent"
+    fill="#FFFFFF"
     strokeWidth="3"
     stroke="hsl(0, 0%, 18%)"
     strokeLinecap="round"
@@ -25,10 +25,9 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '10'
     },
     toggle: {
-        top: '3.7em',
+        top: '3em',
         left: '2.5em',
         borderRadius: '50%',
-        backgroundColor: 0x4300c0,
         position: 'absolute',
         [theme.breakpoints.down('md')]: {
             maxWidth: '50px',
@@ -40,8 +39,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     svg: {
-        width: '35',
-        height: '35'
+        width: '35px',
+        height: '35px',
     }
   }));
 

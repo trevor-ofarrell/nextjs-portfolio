@@ -42,6 +42,19 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         color: 'white',
         height: '100%'
+    },
+    iconPlaceholder: {
+      borderRadius: '50%',
+      height: '40px',
+      width: 'auto',
+      marginRight: '1em',
+      flex: '40px 0',
+    },
+    textPlaceholder: {
+      width: '100vw',
+      borderRadius: '5px',
+      height: '40px',
+      flex: '1',
     }
   }));
 
@@ -50,7 +63,7 @@ const titles = ["home", "about", "projects", "blog", "contact"]
 
 export const MenuItem = ({ changeView, toggleView, i }) => {
   const classes = useStyles()
-  const style = { border: `2px solid ${colors[i]}` };
+  const style = { border: `4px solid ${colors[i]}` };
   const handleToggle = useCallback(event => {
     toggleView(i)
   }, [toggleView])
@@ -63,10 +76,10 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
       href={`/${titles[i]}`}
       onClick={handleToggle}
     >
-      <div className="icon-placeholder" style={style} >
+      <div className={classes.iconPlaceholder} style={style} >
         <GitHubIcon className={classes.icon}/>
       </div>
-      <div className="text-placeholder" style={style}>
+      <div className={classes.textPlaceholder} style={style}>
         <Typography variant="h5" color="secondary" className={classes.menuText}>
             {titles[i]}
         </Typography>      

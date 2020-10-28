@@ -40,7 +40,7 @@ ul {
   position: absolute;
   top: 100px;
   width: 85vw;
-  margin-top: -1vh;
+  margin-top: 2vh;
 }
 
 li {
@@ -62,7 +62,7 @@ li {
 .text-placeholder {
   width: 100vw;
   border-radius: 5px;
-  height: 30px;
+  height: 4vh;
   flex: 1;
 }
 

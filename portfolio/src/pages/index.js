@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import BIRDS from 'vanta/dist/vanta.birds.min'
 import Head from 'next/head'
 import {
@@ -14,21 +14,25 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import { NavBar, HomeSection, SideBar } from '../components'
+import { dark } from '@material-ui/core/styles/createPalette';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     margin: 0,
     width: "100vw",
     height: '100vh',
     textAlign: 'center',
     overflowX: 'hidden',
+    overflowY: 'hidden',
   },
   contentContainer: {
     paddingTop: '20vh',
-    marginTop: '10vh',
-    height: '78vh',
+    marginTop: '2vh',
+    height: '80vh',
     width: '100vw',
     zIndex: '3'
   },
@@ -39,9 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     width: '90%',
-    height: '100%',
     textAlign: 'left',
-    paddingLeft: '10em'
   },
   space: {
     height: '1vh'
@@ -60,6 +62,59 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const IOSSwitch = withStyles((theme) => ({
+  root: {
+    width: 42,
+    height: 26,
+    padding: 0,
+    margin: theme.spacing(1),
+  },
+  switchBase: {
+    padding: 1,
+    '&$checked': {
+      transform: 'translateX(16px)',
+      color: theme.palette.common.white,
+      '& + $track': {
+        backgroundColor: '#52d869',
+        opacity: 1,
+        border: 'none',
+      },
+    },
+    '&$focusVisible $thumb': {
+      color: '#52d869',
+      border: '6px solid #fff',
+    },
+  },
+  thumb: {
+    width: 24,
+    height: 24,
+  },
+  track: {
+    borderRadius: 26 / 2,
+    border: `1px solid ${theme.palette.grey[400]}`,
+    backgroundColor: theme.palette.grey[50],
+    opacity: 1,
+    transition: theme.transitions.create(['background-color', 'border']),
+  },
+  checked: {},
+  focusVisible: {},
+}))(({ classes, ...props }) => {
+  return (
+    <Switch
+      focusVisibleClassName={classes.focusVisible}
+      disableRipple
+      classes={{
+        root: classes.root,
+        switchBase: classes.switchBase,
+        thumb: classes.thumb,
+        track: classes.track,
+        checked: classes.checked,
+      }}
+      {...props}
+    />
+  );
+});
+
 export default function Birds() {
   const classes = useStyles()
   const [vantaEffect, setVantaEffect] = useState(0)
@@ -70,8 +125,23 @@ export default function Birds() {
     marginBottom: contentStatus ? 0 : -1000
   })
   const [changeView, toggleView] = useState(0);
+  const [colorMode, toggleColor] = useState({checked: false});
+  const [tog, setTog] = useState(false)
+  const toggle = React.useCallback(() => setTog(!tog));
+  const handleChange = (event) => {
+    toggleColor({ ...colorMode, [event.target.name]: event.target.checked });
+    toggle()
+  };
+  let darkmode = 0xfffff
 
   useEffect(() => {
+    console.log(darkmode)
+    if (tog === true) {
+      darkmode = 0x0
+    }
+    else {
+      darkmode = 0xfffff
+    }
     if (!vantaEffect) {
       setVantaEffect(BIRDS({
         el: myRef.current,
@@ -81,12 +151,14 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: 0x0,
+        backgroundColor: darkmode,
         color1: 0x4300c0,
         color2: 0x505d9,
         colorMode: "lerp",
         birdSize: 0.80,
         wingSpan: 40.00,
+        speedLimit: 5.00,
+        separation: 11.00,
         alignment: 7.00,
         cohesion: 75.00,
         backgroundAlpha: 0.94
@@ -109,7 +181,6 @@ export default function Birds() {
           <SideBar changeView={changeView} toggleView={toggleView}/>
         </div>
         <Grid container className={classes.scrolling}>
-          <section className={classes.section}>
             <Grid item xs={12} lg={12}>
               <Grid container>
                 <Grid item xs={12} lg={12} className={classes.contentContainer}>
@@ -144,13 +215,8 @@ export default function Birds() {
                    </section>                      
                   }
                 </Grid>
-              
               </Grid>
             </Grid>
-          </section>
-          <Grid item xs={12} lg={12}>
-           
-          </Grid>
         </Grid>
       </div>
     </>

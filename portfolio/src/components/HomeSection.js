@@ -12,10 +12,9 @@ import Close from '../../public/windowclose.svg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '28vh',
-    marginTop: '14vh',
-    marginLeft: '30vw',
-    width: '35%',
+    height: '70vh',
+    marginLeft: '20vw',
+    width: '60%',
     textAlign: 'left',
     [theme.breakpoints.down('md')]: {
       marginTop: '18vh',
@@ -37,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   termscreen: {
     backgroundColor: 'rgba(71, 71, 71, 0.35);',
-    height: '28vh',
+    height: '60vh',
   },
   closesvg: {
     margin: '.5px',
