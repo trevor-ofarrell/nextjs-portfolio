@@ -10,6 +10,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import graff from '../../public/pinkdrip.png'
 import { Grid } from "@material-ui/core";
+import IconButton from '@material-ui/core/IconButton';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -58,11 +59,17 @@ const useStyles = makeStyles((theme) => ({
     icons: {
       marginLeft: '79vw',
       marginTop: '-6em',
+      color: 'black',
       [theme.breakpoints.down('xs')]: {
         marginLeft: '62vw',
         marginTop: '-4.8em',
-      },
-    }
+      }
+    },
+    iconbutton: {
+      backgroundColor: 'black',
+      padding: '0px'
+    },
+
   }));
 
 export const SideBar = ({changeView, toggleView}) => {
@@ -81,13 +88,19 @@ export const SideBar = ({changeView, toggleView}) => {
       <img src={graff} max-height="60" className={classes.title}/>
       <Grid container className={classes.icons}>
         <Grid item xs={2} md={2} lg={4} xl={4}>
-          <GitHubIcon fontSize="large"/>
+          <a href="https://github.com/trevor-ofarrell">
+            <GitHubIcon fontSize="large"/>
+          </a>
         </Grid>
         <Grid item xs={2} md={2} lg={4} xl={4}>
-          <TwitterIcon fontSize="large"/>
+          <a href="https://twitter.com/trevorthegnar">
+            <TwitterIcon fontSize="large"/>
+          </a>
         </Grid>
         <Grid item xs={2} md={2} lg={4} xl={4}>
-          <InstagramIcon fontSize="large"/>
+          <a href="https://instagram.com/trevorthegnar">
+            <InstagramIcon fontSize="large"/>
+          </a>
         </Grid>
       </Grid>
       <motion.div className={classes.root} variants={sidebar} />
