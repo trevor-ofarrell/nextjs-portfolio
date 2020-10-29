@@ -13,19 +13,19 @@ import Head from 'next/head'
 const useStyles = makeStyles((theme) => ({
   root: {
     color: '#39FF14',
-    fontSize: '1.7em',
-    width: '95%',
+    fontSize: '1.2em',
+    width: '90%',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     fontWeight: '600',
     marginLeft: '.2em',
-    marginBottom: '40%'
+    marginBottom: '35%',
   },
   text: {
     textAlign: 'left',
   },
 }));
 
-export const HomeText = () => {
+export const YarnText = () => {
     const classes = useStyles();
     return(
         <div className={classes.root}>
@@ -36,19 +36,16 @@ export const HomeText = () => {
                 onInit={(typewriter) => {
                     typewriter.typeString(' ')
                       .deleteAll()
-                      .changeDelay(75)
-                      .pauseFor(1000)
-                    typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website.")
-                    .pauseFor(2500)
-                    .deleteAll()
-                    typewriter.typeString(
-                      'I\'m a <strong>S</strong>oft<strong>w</strong>are <strong>E</strong>ngineer from the <strong>Bay</strong> area interested in <strong>web dev</strong>elopment.')
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .start();
+                      .changeDelay(1)
+                    typewriter.typeString(`
+                      yarn install v1.22.5
+                      [1/4] 🔍  Resolving packages...
+                      success Packages already up-to-date.
+                       ✨ Done in 0.49s.
+                    `)
+                    .start()
                 }}
                 options={{
-                  loop: true,
                   deleteSpeed: .0001,
                 }}
                 className={classes.text}
