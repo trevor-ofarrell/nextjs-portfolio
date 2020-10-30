@@ -37,7 +37,7 @@ export const HomeText = () => {
                     typewriter.typeString(' ')
                       .deleteAll()
                       .changeDelay(75)
-                      .pauseFor(1000)
+                      .pauseFor(500)
                     typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website.")
                     .pauseFor(2500)
                     .deleteAll()

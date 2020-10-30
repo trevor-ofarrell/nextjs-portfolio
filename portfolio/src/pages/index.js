@@ -13,7 +13,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import { NavBar, HomeSection, SideBar, SpringCard2, SpringCard } from '../components'
+import { NavBar, HomeSection, SideBar, SpringCard2, TerminalCard } from '../components'
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
@@ -120,15 +120,14 @@ export default function Birds() {
             <Grid item xs={12} lg={12}>
               <Grid container>
                 <Grid item xs={12} lg={12} className={classes.contentContainer}>
-
                   {changeView == 0 &&
                     <section className={classes.section}>
-                        <Grow in={changeView == 0} timeout={2000}>
-                          <div>
-                            <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
-                          </div>
-                        </Grow>
-                      </section>                  
+                      <Grow in={changeView == 0} timeout={1600}>
+                        <div>
+                          <TerminalCard/>
+                        </div>
+                      </Grow>
+                    </section>                  
                   }
                   {changeView == 1 &&
                   <section className={classes.section}>
@@ -137,7 +136,7 @@ export default function Birds() {
                   }
                   {changeView == 2 &&
                     <section className={classes.section}>
-                    hello world 3
+                    <TerminalCard/>
                   </section>                      
                   }
                   {changeView == 3 &&

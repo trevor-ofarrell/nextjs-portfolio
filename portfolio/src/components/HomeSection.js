@@ -79,9 +79,8 @@ export const HomeSection = ({content, onContentToggle}) => {
       <Box className={classes.termscreen}>
         <Grid container>
           <Grid item xs={4} lg={12}>
-            <HomeText />
+            <HomeText/>
           </Grid>
-         
         </Grid>
       </Box>
     </div>
