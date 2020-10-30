@@ -123,7 +123,7 @@ export default function Birds() {
 
                   {changeView == 0 &&
                     <section className={classes.section}>
-                        <Grow in={changeView == 0} timeout={2400}>
+                        <Grow in={changeView == 0} timeout={2000}>
                           <div>
                             <HomeSection contentStatus={contentStatus} onContentToggle={displayContent}/>
                           </div>
