@@ -13,10 +13,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import { NavBar, HomeSection, SideBar } from '../components'
-import { dark } from '@material-ui/core/styles/createPalette';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
+import { NavBar, HomeSection, SideBar, SpringCard2, SpringCard } from '../components'
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
@@ -99,7 +96,7 @@ export default function Birds() {
         speedLimit: 5.00,
         separation: 11.00,
         alignment: 7.00,
-        cohesion: 75.00,
+        cohesion: 50.00,
         backgroundAlpha: 0.94
       }))
     }
@@ -134,8 +131,8 @@ export default function Birds() {
                       </section>                  
                   }
                   {changeView == 1 &&
-                    <section className={classes.section}>
-                    hello world 2
+                  <section className={classes.section}>
+                    <SpringCard2/>
                   </section>                      
                   }
                   {changeView == 2 &&

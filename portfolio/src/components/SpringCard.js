@@ -13,7 +13,10 @@ import {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%'
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden'
     },
 }));
 
