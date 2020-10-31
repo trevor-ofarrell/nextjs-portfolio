@@ -45,18 +45,18 @@ export const TerminalCard = () => {
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: props.xys.interpolate(trans) }}
     >
-        <Grid container className={classes.termbar}>
-            <Grid itwm xs={1} lg={1}>
-            <button className={classes.button}>
-                <img height="90%" src={Close} className={classes.closesvg}/>
-            </button>
-            </Grid>
-        </Grid>
-        <Grid container className={classes.typewritter}>
-          <Grid item xs={4} lg={12}>
-            <HomeText />
+      <Grid container className={classes.termbar}>
+          <Grid itwm xs={1} lg={1}>
+          <button className={classes.button}>
+              <img height="90%" src={Close} className={classes.closesvg}/>
+          </button>
           </Grid>
+      </Grid>
+      <Grid container className={classes.typewritter}>
+        <Grid item xs={4} lg={12}>
+          <HomeText />
         </Grid>
+      </Grid>
     </animated.div>
   )
 }

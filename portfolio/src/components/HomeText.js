@@ -39,13 +39,13 @@ export const HomeText = () => {
                       .changeDelay(75)
                       .pauseFor(500)
                     typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website.")
-                    .pauseFor(2500)
-                    .deleteAll()
+                      .pauseFor(2500)
+                      .deleteAll()
                     typewriter.typeString(
                       'I\'m a <strong>S</strong>oft<strong>w</strong>are <strong>E</strong>ngineer from the <strong>Bay</strong> area interested in <strong>web dev</strong>elopment.')
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .start();
+                      .pauseFor(2500)
+                      .deleteAll()
+                      .start();
                 }}
                 options={{
                   loop: true,
