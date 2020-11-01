@@ -85,20 +85,20 @@ export const SideBar = ({changeView, toggleView}) => {
       custom={height}
       ref={containerRef}
     >
-      <img src={graff} max-height="60" className={classes.title}/>
+      <img src={graff} max-height="60" className={classes.title} alt="Trevor O'Farrell"/>
       <Grid container className={classes.icons}>
         <Grid item xs={2} md={2} lg={4} xl={4}>
-          <a href="https://github.com/trevor-ofarrell">
+          <a href="https://github.com/trevor-ofarrell" aria-label="github link">
             <GitHubIcon fontSize="large"/>
           </a>
         </Grid>
         <Grid item xs={2} md={2} lg={4} xl={4}>
-          <a href="https://twitter.com/trevorthegnar">
+          <a href="https://twitter.com/trevorthegnar" aria-label="twitter link">
             <TwitterIcon fontSize="large"/>
           </a>
         </Grid>
         <Grid item xs={2} md={2} lg={4} xl={4}>
-          <a href="https://instagram.com/trevorthegnar">
+          <a href="https://instagram.com/trevorthegnar" aria-label="instagram link">
             <InstagramIcon fontSize="large"/>
           </a>
         </Grid>

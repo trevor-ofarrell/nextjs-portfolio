@@ -47,8 +47,8 @@ export const TerminalCard = () => {
     >
       <Grid container className={classes.termbar}>
           <Grid itwm xs={1} lg={1}>
-          <button className={classes.button}>
-              <img height="90%" src={Close} className={classes.closesvg}/>
+          <button className={classes.button} aria-label="button for decoration, no fuunctionality">
+              <img height="90%" src={Close} className={classes.closesvg} alt="close terminal button, for decoration"/>
           </button>
           </Grid>
       </Grid>

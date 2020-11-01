@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 export const MenuToggle = ({ toggle }) => {
     const classes = useStyles()
     return(
-        <button onClick={toggle} className={classes.toggle}>
+        <button onClick={toggle} className={classes.toggle} aria-label="toggle menu">
             <svg width="100%" height="100%" viewBox="0 0 23 23" className={classes.svg}>
             <Path
                 variants={{
