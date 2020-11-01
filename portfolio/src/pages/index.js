@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import BIRDS from 'vanta/dist/vanta.birds.min'
 import Head from 'next/head'
 import {
-  Box, Button, IconButton, Container, CssBaseline, Grid,
+  CssBaseline,
+  Grid
 } from '@material-ui/core';
 
 import Grow from '@material-ui/core/Grow';
@@ -11,11 +12,7 @@ import { useSpring, animated } from 'react-spring'
 
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-
-import { NavBar, HomeSection, SideBar, SpringCard2, TerminalCard } from '../components'
-
-// Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
+import { SideBar, TerminalCard } from '../components'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,18 +36,6 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '8vh'
     },
   },
-  iconUp: {
-    textAlign: 'center',
-    color: 'white',
-    zIndex: '10'
-  },
-  box: {
-    width: '90%',
-    textAlign: 'left',
-  },
-  space: {
-    height: '1vh'
-  },
   sidebar: {
     zIndex: '10',
   },
@@ -63,10 +48,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100vw",
     height: '100%',
   },
-  card: {
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
 }));
 
 export default function Birds() {
@@ -127,7 +108,7 @@ export default function Birds() {
                   {changeView == 0 &&
                     <section className={classes.section}>
                       <Grow in={changeView == 0} timeout={1600}>
-                        <Grid container className={classes.card}>
+                        <Grid container>
                           <Grid item xs={1} sm={1} md={2} lg={3}/>
                           <Grid item xs={10} sm={10} md={8} lg={6}>
                             <TerminalCard/>

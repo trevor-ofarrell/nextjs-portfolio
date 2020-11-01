@@ -7,8 +7,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-            <script src="three.r119.min.js"></script>
-            <script src="vanta.birds.min.js"></script>
         </Head>
         <body>
           <Main />
