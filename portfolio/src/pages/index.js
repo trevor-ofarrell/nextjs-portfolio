@@ -62,6 +62,10 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
     width: "100vw",
     height: '100%',
+  },
+  card: {
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 }));
 
@@ -123,15 +127,18 @@ export default function Birds() {
                   {changeView == 0 &&
                     <section className={classes.section}>
                       <Grow in={changeView == 0} timeout={1600}>
-                        <div>
-                          <TerminalCard/>
-                        </div>
+                        <Grid container className={classes.card}>
+                          <Grid item xs={1} sm={1} md={2} lg={3}/>
+                          <Grid item xs={10} sm={10} md={8} lg={6}>
+                            <TerminalCard/>
+                          </Grid>
+                          <Grid item xs={1} sm={1} md={2} lg={3}/>
+                        </Grid>
                       </Grow>
                     </section>                  
                   }
                   {changeView == 1 &&
                   <section className={classes.section}>
-                    <SpringCard2/>
                   </section>                      
                   }
                   {changeView == 2 &&

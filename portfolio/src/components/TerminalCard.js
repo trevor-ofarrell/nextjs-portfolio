@@ -9,16 +9,27 @@ import { HomeText } from './HomeText'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      overflow: 'hidden',
+      width: '100%',
+      height: '60vh',
+      background: 'grey',
+      borderRadius: 5,
+      backgroundColor: 'rgba(71, 71, 71, 0.7)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      boxShadow: '0px 10px 30px -5px rgba(0, 0, 0, 0.75)',
+      transition: 'box-shadow 0.5s',
+      marginTop: '-1vh',
+      '&:hover': {
+        boxShadow: '0px 30px 100px -10px rgba(0, 0, 0, 0.95)',
+        backgroundColor: 'rgba(71, 71, 71, 0.80)',
+      },
+      [theme.breakpoints.down('md')]: {
+        marginTop: '15vh'
+      },
     },
     termbar: {
         backgroundColor: 'rgba(71, 71, 71);',
         height: '2.3vh',
-    },
-    closesvg: {
     },
     button: {
         height: '2vh',
@@ -28,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
     },
     typewritter: {
         textAlign: 'left',
-
     }
 }));
 
@@ -40,20 +50,20 @@ export const TerminalCard = () => {
   const classes = useStyles()
   return (
     <animated.div
-      class="card"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: props.xys.interpolate(trans) }}
+      className={classes.root}
     >
       <Grid container className={classes.termbar}>
           <Grid itwm xs={1} lg={1}>
           <button className={classes.button} aria-label="button for decoration, no fuunctionality">
-              <img height="90%" src={Close} className={classes.closesvg} alt="close terminal button, for decoration"/>
+              <img height="90%" src={Close} alt="close terminal button, for decoration"/>
           </button>
           </Grid>
       </Grid>
       <Grid container className={classes.typewritter}>
-        <Grid item xs={4} lg={12}>
+        <Grid item xs={12} lg={12}>
           <HomeText />
         </Grid>
       </Grid>

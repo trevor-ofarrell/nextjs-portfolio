@@ -1,6 +1,4 @@
 export * from './HomeSection';
-export * from './SpringCard';
-export * from './SpringCard2';
 export * from './HomeText';
 export * from './SideBar';
 export * from './MenuItem';
