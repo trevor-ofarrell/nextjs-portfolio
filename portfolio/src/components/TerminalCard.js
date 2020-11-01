@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'rgba(71, 71, 71, 0.80)',
       },
       [theme.breakpoints.down('md')]: {
-        marginTop: '15vh'
+        marginTop: '15vh',
       },
     },
     termbar: {
@@ -56,11 +56,7 @@ export const TerminalCard = () => {
       className={classes.root}
     >
       <Grid container className={classes.termbar}>
-          <Grid itwm xs={1} lg={1}>
-          <button className={classes.button} aria-label="button for decoration, no fuunctionality">
-              <img height="90%" src={Close} alt="close terminal button, for decoration"/>
-          </button>
-          </Grid>
+         
       </Grid>
       <Grid container className={classes.typewritter}>
         <Grid item xs={12} lg={12}>
