@@ -8,8 +8,6 @@ import {
 } from "@material-ui/core";
 
 import { HomeText } from './HomeText'
-import { YarnText } from './YarnText'
-
 import Close from '../../public/windowclose.svg'
 
 const useStyles = makeStyles((theme) => ({
