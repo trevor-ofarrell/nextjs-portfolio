@@ -3,7 +3,8 @@ import BIRDS from 'vanta/dist/vanta.birds.min'
 import Head from 'next/head'
 import {
   CssBaseline,
-  Grid
+  Grid,
+  Typography
 } from '@material-ui/core';
 
 import Grow from '@material-ui/core/Grow';
@@ -41,6 +42,11 @@ const useStyles = makeStyles((theme) => ({
   },
   section: {
     height: '100vh',
+  },
+  section2: {
+    fontFamily: 'Roboto, sans-serif',
+    fontWeight: '1000',
+    fontSize: '7vh'
   },
   scrolling: {
     overflowY: 'scroll',
@@ -107,11 +113,16 @@ export default function Birds() {
                 <Grid item xs={12} lg={12} className={classes.contentContainer}>
                   {changeView == 0 &&
                     <section className={classes.section}>
-                      <Grow in={changeView == 0} timeout={1600}>
+                      <Grow in={changeView == 0} timeout={1000}>
                         <Grid container>
                           <Grid item xs={1} sm={1} md={2} lg={3}/>
                           <Grid item xs={10} sm={10} md={8} lg={6}>
                             <TerminalCard/>
+                            <section className={classes.section}>
+                              <Typography className={classes.section2}>
+                                Testing textting testing
+                              </Typography>
+                            </section>
                           </Grid>
                           <Grid item xs={1} sm={1} md={2} lg={3}/>
                         </Grid>
@@ -123,9 +134,11 @@ export default function Birds() {
                   </section>                      
                   }
                   {changeView == 2 &&
-                    <section className={classes.section}>
-                    <TerminalCard/>
-                  </section>                      
+                    <>
+                      <section className={classes.section}>
+                        <TerminalCard/>
+                      </section>
+                    </>     
                   }
                   {changeView == 3 &&
                     <section className={classes.section}>
@@ -134,7 +147,6 @@ export default function Birds() {
                   }
                   {changeView == 4 &&
                    <section className={classes.section}>
-                    hello world 5
                    </section>                      
                   }
                 </Grid>

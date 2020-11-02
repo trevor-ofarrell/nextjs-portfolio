@@ -29,9 +29,6 @@ export const HomeText = () => {
     const classes = useStyles();
     return(
         <div className={classes.root}>
-            <Head>
-                <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet" /> 
-            </Head>
             <Typewriter
                 onInit={(typewriter) => {
                     typewriter.typeString(' ')
