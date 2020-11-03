@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'rgba(71, 71, 71, 0.7)',
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
-      boxShadow: '0px 10px 30px -5px rgba(0, 0, 0, 0.75)',
+      boxShadow: '0px 10px 30px -5px #3AEA69',
       transition: 'box-shadow 0.5s',
       marginTop: '-1vh',
       '&:hover': {
-        boxShadow: '0px 30px 100px -10px rgba(0, 0, 0, 0.95)',
+        boxShadow: '0px 30px 100px -10px #3AEA69',
         backgroundColor: 'rgba(71, 71, 71, 0.80)',
       },
       [theme.breakpoints.down('md')]: {

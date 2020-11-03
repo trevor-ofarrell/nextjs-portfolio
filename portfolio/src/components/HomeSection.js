@@ -2,9 +2,7 @@ import React, { useCallback } from "react";
 import {
   Box,
   Grid,
-  Typography,
   makeStyles,
-  Divider,
 } from "@material-ui/core";
 
 import { HomeText } from './HomeText'

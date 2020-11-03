@@ -78,10 +78,9 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: 0xfffff,
-        color1: 0x4300c0,
-        color2: 0x505d9,
-        colorMode: "lerp",
+        backgroundColor: '0x0',
+        color1: '#4213C4',
+        color2: '#9A13C4',
         birdSize: 0.80,
         wingSpan: 40.00,
         speedLimit: 5.00,
@@ -120,7 +119,6 @@ export default function Birds() {
                             <TerminalCard/>
                             <section className={classes.section}>
                               <Typography className={classes.section2}>
-                                Testing textting testing
                               </Typography>
                             </section>
                           </Grid>

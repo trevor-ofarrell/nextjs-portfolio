@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { motion } from "framer-motion";
-import { Typography } from '@material-ui/core'
+import { Typography, Grid } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Link from 'next/link'
@@ -28,55 +28,46 @@ const variants = {
 };
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      position: 'absolute',
-      top:'0',
-      left: '0',
-      bottom: '0',
-      width: '30vw',
-      [theme.breakpoints.down('md')]: {
-          width: '50vw'
-      },
-    },
-    menuText: {
-      float: 'left',
-      fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
-      marginTop: '-2.5px',
-      paddingLeft: '1vw',
-      fontSize: '2.7em',
-      color: '#39FF14',
-      fontWeight: '600',
-      pointerEvents: 'none',
-    },
-    icon: {
-      color: 'white',
-      height: '100%'
-    },
-    iconPlaceholder: {
-      borderRadius: '50%',
-      height: '55px',
-      width: 'auto',
-      marginRight: '1em',
-      flex: '55px 0',
-    },
-    textPlaceholder: {
-      width: '30vw',
-      borderRadius: '5px',
-      height: '55px',
-      flex: '1',
-    },
-    menuIcon: {
-      color: '#39FF14',
-      marginTop: '5px'
+  root: {
+    marginBottom: '5.5vh',
+    '&:hover': {
+      color: '#3AEA69',
+      boxShadow: '0 0 20px 8px #3AEA69',
+      MozTransition: 'all 0.15s ease-in',
+      OTransition: 'all 0.15s ease-in',
+      WebkitTransition: 'all 0.15s ease-in',
+      transition: 'all 0.15s ease-in',
     }
-  }));
+  },
+  menuText: {
+    float: 'left',
+    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    marginTop: '.9vh',
+    paddingLeft: '.5vw',
+    fontSize: '42px',
+    color: '#39FF14',
+    fontWeight: '600',
+    pointerEvents: 'none',
+  },
+  icons: {
+    paddingTop: '1em'
+  },
+  textPlaceholder: {
+    height: '75px',
+    flex: '1',
+  },
+  menuIcon: {
+    color: '#39FF14',
+    marginTop: '5px'
+  }
+}));
 
-const colors = ["#ea3abb", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
-const titles = ["home", "about", "projects", "blog", "contact"]
+const colors = ["rgb(255, 140, 224, 0.7)", "rgb(234, 58, 187, 0.70)", "#9C1AFF", "#7700FF", "#4400FF"];
+const titles = ["home", "about me", "projects", "blog", "contact"]
 
 export const MenuItem = ({ changeView, toggleView, i }) => {
   const classes = useStyles()
-  const style = { border: `4px solid ${colors[i]}`, backgroundColor: `${colors[i]}` };
+  const style = { backgroundColor: `${colors[i]}` };
   const handleToggle = useCallback(event => {
     toggleView(i)
   }, [toggleView])
@@ -86,8 +77,7 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
     <CodeIcon fontSize="large" className={classes.menuIcon}/>,
     <LaptopMacIcon fontSize="large" className={classes.menuIcon}/>,
     <MessageIcon fontSize="large" className={classes.menuIcon}/>
-]
-
+  ]
 
   return (
     <motion.li
@@ -96,16 +86,19 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
       whileTap={{ scale: 0.96 }}
       href={`/${titles[i]}`}
       onClick={handleToggle}
-      
+      className={classes.root}
     >
-      <div className={classes.iconPlaceholder} style={style} >
-        {icons[i]}
-      </div>
-      <div className={classes.textPlaceholder} style={style}>
-        <Typography variant="h5" color="secondary" className={classes.menuText}>
-            {titles[i]}
-        </Typography>      
-      </div>
+
+      <Grid container className={classes.textPlaceholder} style={style}>
+        <Grid item xs={2} sm={2} md={2} lg={2} className={classes.icons}>
+          {icons[i]}
+        </Grid>
+        <Grid item xs={9} sm={9} md={9} lg={9}>
+          <Typography variant="h5" color="secondary" className={classes.menuText}>
+              {titles[i]}
+          </Typography>
+        </Grid>
+      </Grid>
     </motion.li>
   );
 };
