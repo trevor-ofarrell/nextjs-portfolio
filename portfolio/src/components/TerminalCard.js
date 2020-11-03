@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'rgba(71, 71, 71, 0.85)',
     },
     [theme.breakpoints.down('md')]: {
-      marginTop: '15vh',
+      marginTop: '22vh',
+      height: '40vh',
     },
   },
   termbar: {

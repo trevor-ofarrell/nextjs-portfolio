@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             maxWidth: '40px',
             maxHeight: '40px',
-            top: '2.2em',
-            left: '.5em',
+            top: '3.5em',
+            left: '.7em',
         },
     },
     svg: {

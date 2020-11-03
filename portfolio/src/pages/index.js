@@ -113,15 +113,15 @@ export default function Birds() {
                     <section className={classes.section}>
                       <Grow in={changeView == 0} timeout={600}>
                         <Grid container>
-                          <Grid item xs={1} sm={1} md={2} lg={3}/>
-                          <Grid item xs={10} sm={10} md={8} lg={6}>
+                          <Grid item xs={1} sm={2} md={2} lg={3}/>
+                          <Grid item xs={10} sm={8} md={8} lg={6}>
                             <TerminalCard/>
                             <section className={classes.section}>
                               <Typography className={classes.section2}>
                               </Typography>
                             </section>
                           </Grid>
-                          <Grid item xs={1} sm={1} md={2} lg={3}/>
+                          <Grid item xs={1} sm={2} md={2} lg={3}/>
                         </Grid>
                       </Grow>
                     </section>                  

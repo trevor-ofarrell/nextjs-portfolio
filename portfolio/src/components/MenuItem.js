@@ -29,7 +29,7 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginBottom: '5.1vh',
+    marginBottom: '4vh',
     '&:hover': {
       color: '#3AEA69',
       boxShadow: '0 0 20px 8px #3AEA69',
@@ -42,23 +42,21 @@ const useStyles = makeStyles((theme) => ({
   menuText: {
     float: 'left',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
-    paddingTop: '.45em',
-    fontSize: '2.4em',
+    paddingTop: '1vh',
+    fontSize: '3.6vh',
     color: '#39FF14',
     fontWeight: '600',
     pointerEvents: 'none',
   },
   icons: {
-    paddingTop: '1em'
+    paddingTop: '1.5vh'
   },
   textPlaceholder: {
-    height: '75px',
+    height: '7vh',
     flex: '1',
   },
   menuIcon: {
     color: '#39FF14',
-    marginTop: '5px',
-    paddingLeft: '.1em'
   }
 }));
 

@@ -19,14 +19,19 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '5vh',
     },
     [theme.breakpoints.down('sm')]: {
-      marginTop: '-3vh',
-      marginLeft: '3.7vw'
+      marginTop: '1.25vh',
+      marginLeft: '5.5vw'
     },
     [theme.breakpoints.up('lg')]: {
       marginLeft: '3.15vw',
-      marginTop: '11.5vh',
-      width: '17vw'
-    }
+      marginTop: '16vh',
+      width: '17vw',
+      minWidth: '17em'
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '1.25vh',
+      marginLeft: '3.5vw'
+    },
   },
 }));
 
