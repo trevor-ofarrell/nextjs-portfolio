@@ -33,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: '#3AEA69',
       boxShadow: '0 0 20px 8px #3AEA69',
-      MozTransition: 'all 0.15s ease-in',
-      OTransition: 'all 0.15s ease-in',
-      WebkitTransition: 'all 0.15s ease-in',
-      transition: 'all 0.15s ease-in',
+      MozTransition: 'all 0.01s ease-in',
+      OTransition: 'all 0.01s ease-in',
+      WebkitTransition: 'all 0.01s ease-in',
+      transition: 'all 0.01s ease-in',
     }
   },
   menuText: {
