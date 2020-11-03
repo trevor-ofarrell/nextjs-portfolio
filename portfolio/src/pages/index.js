@@ -78,7 +78,7 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: '0x0',
+        backgroundColor: 0x0,
         color1: '#4213C4',
         color2: '#9A13C4',
         birdSize: 0.80,

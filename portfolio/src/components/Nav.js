@@ -15,30 +15,30 @@ const variants = {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.down('md')]: {
-        marginLeft: '5.6vw',
-        paddingTop: '5vh',
+      marginLeft: '5.6vw',
+      paddingTop: '5vh',
     },
     [theme.breakpoints.down('sm')]: {
-        marginTop: '-3vh',
-        marginLeft: '3.7vw'
+      marginTop: '-3vh',
+      marginLeft: '3.7vw'
     },
     [theme.breakpoints.up('lg')]: {
-        marginLeft: '3.15vw',
-        marginTop: '13.5vh',
-        width: '17vw'
+      marginLeft: '3.15vw',
+      marginTop: '11.5vh',
+      width: '17vw'
     }
   },
 }));
 
 export const Nav = ({changeView, toggleView}) => {
-    const classes = useStyles()
+  const classes = useStyles()
 
-    return(
-        <motion.ul variants={variants} className={classes.root}>
-            {itemIds.map(i => (
-            <MenuItem i={i} key={i} changeView={changeView} toggleView={toggleView}/>
-            ))}
-        </motion.ul>
-    )
+  return(
+    <motion.ul variants={variants} className={classes.root}>
+      {itemIds.map(i => (
+      <MenuItem i={i} key={i} changeView={changeView} toggleView={toggleView}/>
+      ))}
+    </motion.ul>
+  )
 }
 const itemIds = [0, 1, 2, 3, 4];
