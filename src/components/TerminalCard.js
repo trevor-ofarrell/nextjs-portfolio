@@ -15,16 +15,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(71, 71, 71, 0.7)',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
-    boxShadow: '0px 0px 30px -5px #39FF14',
-    transition: 'box-shadow 0.5s',
+    boxShadow: '0px 0px 50px 5px rgb(57, 255, 20, 0.8)',
     marginTop: '-1vh',
     '&:hover': {
-      boxShadow: '0px 0px 100px -10px #39FF14',
+      boxShadow: '0px 0px 110px 20px rgb(57, 255, 20, 0.9)',
       backgroundColor: 'rgba(71, 71, 71, 0.85)',
     },
     [theme.breakpoints.down('md')]: {
       marginTop: '22vh',
-      height: '40vh',
+      height: '45vh',
     },
   },
   termbar: {
