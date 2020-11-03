@@ -14,6 +14,12 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: '3.15vw',
+      marginTop: '14.5vh',
+      width: '17vw',
+      minWidth: '17em'
+    },
     [theme.breakpoints.down('md')]: {
       marginLeft: '5.6vw',
       paddingTop: '5vh',
@@ -21,12 +27,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginTop: '1.25vh',
       marginLeft: '5.5vw'
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginLeft: '3.15vw',
-      marginTop: '16vh',
-      width: '17vw',
-      minWidth: '17em'
     },
     [theme.breakpoints.down('xs')]: {
       marginTop: '1.25vh',

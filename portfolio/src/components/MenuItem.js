@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Typography, Grid } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -30,29 +30,21 @@ const variants = {
 const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: '4vh',
-    '&:hover': {
-      color: '#3AEA69',
-      boxShadow: '0 0 20px 8px #3AEA69',
-      MozTransition: 'all 0.01s ease-in',
-      OTransition: 'all 0.01s ease-in',
-      WebkitTransition: 'all 0.01s ease-in',
-      transition: 'all 0.01s ease-in',
-    }
   },
   menuText: {
     float: 'left',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
-    paddingTop: '1vh',
+    paddingTop: '1.7vh',
     fontSize: '3.6vh',
     color: '#39FF14',
     fontWeight: '600',
     pointerEvents: 'none',
   },
   icons: {
-    paddingTop: '1.5vh'
+    paddingTop: '2.3vh'
   },
   textPlaceholder: {
-    height: '7vh',
+    height: '8vh',
     flex: '1',
   },
   menuIcon: {
@@ -65,7 +57,15 @@ const titles = ["home", "about me", "projects", "blog", "contact"]
 
 export const MenuItem = ({ changeView, toggleView, i }) => {
   const classes = useStyles()
-  const style = { backgroundColor: `${colors[i]}` };
+  const [onHover, Hovered] = useState(false);
+  const style = { 
+    backgroundColor: `${colors[i]}`,
+    boxShadow: onHover === true ? '0 0 20px 8px #3AEA69' : `0 0 20px 8px ${colors[i]}`,
+    MozTransition: 'all 0.01s ease-in',
+    OTransition: 'all 0.01s ease-in',
+    WebkitTransition: 'all 0.01s ease-in',
+    transition: 'all 0.01s ease-in',
+  }
   const handleToggle = useCallback(event => {
     toggleView(i)
   }, [toggleView])
@@ -82,12 +82,14 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
       variants={variants}
       whileHover={{ scale: 1.10 }}
       whileTap={{ scale: 0.96 }}
-      href={`/${titles[i]}`}
       onClick={handleToggle}
+      onMouseEnter={() => Hovered(true)}
+      onMouseLeave={() => Hovered(false)}
       className={classes.root}
+      style={style}
     >
 
-      <Grid container className={classes.textPlaceholder} style={style}>
+      <Grid container className={classes.textPlaceholder}>
         <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
           {icons[i]}
         </Grid>
