@@ -9,6 +9,12 @@ body {
   align-items: center;
 }
 
+@viewport {
+  zoom: 1.0;
+  min-zoom: 0.75;
+  max-zoom: 1.5;
+}
+
 nav {
   position: absolute;
   top: 0;

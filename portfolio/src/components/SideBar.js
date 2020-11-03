@@ -53,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '79vw',
       marginTop: '-6em',
       color: 'black',
+      [theme.breakpoints.down('sm')]: {
+        paddingRight: '5vw'
+      },
       [theme.breakpoints.down('xs')]: {
         marginLeft: '62vw',
         marginTop: '-4.8em',
@@ -81,17 +84,17 @@ export const SideBar = ({changeView, toggleView}) => {
     >
       <img src={graff} max-height="60" className={classes.title} alt="Trevor O'Farrell"/>
       <Grid container className={classes.icons}>
-        <Grid item xs={2} md={2} lg={4} xl={4}>
+        <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
           <a href="https://github.com/trevor-ofarrell" aria-label="github link">
             <GitHubIcon fontSize="large"/>
           </a>
         </Grid>
-        <Grid item xs={2} md={2} lg={4} xl={4}>
+        <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
           <a href="https://twitter.com/trevorthegnar" aria-label="twitter link">
             <TwitterIcon fontSize="large"/>
           </a>
         </Grid>
-        <Grid item xs={2} md={2} lg={4} xl={4}>
+        <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
           <a href="https://instagram.com/trevorthegnar" aria-label="instagram link">
             <InstagramIcon fontSize="large"/>
           </a>
