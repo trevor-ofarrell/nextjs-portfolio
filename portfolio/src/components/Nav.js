@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '3.7vw'
     },
     [theme.breakpoints.up('lg')]: {
-        marginLeft: '3.25vw',
-        marginTop: '12vh',
+        marginLeft: '3.15vw',
+        marginTop: '13.5vh',
         width: '17vw'
     }
   },

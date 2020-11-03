@@ -29,7 +29,7 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginBottom: '5.5vh',
+    marginBottom: '5.1vh',
     '&:hover': {
       color: '#3AEA69',
       boxShadow: '0 0 20px 8px #3AEA69',
@@ -42,9 +42,8 @@ const useStyles = makeStyles((theme) => ({
   menuText: {
     float: 'left',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
-    marginTop: '.9vh',
-    paddingLeft: '.5vw',
-    fontSize: '42px',
+    paddingTop: '.45em',
+    fontSize: '2.4em',
     color: '#39FF14',
     fontWeight: '600',
     pointerEvents: 'none',
@@ -58,11 +57,12 @@ const useStyles = makeStyles((theme) => ({
   },
   menuIcon: {
     color: '#39FF14',
-    marginTop: '5px'
+    marginTop: '5px',
+    paddingLeft: '.1em'
   }
 }));
 
-const colors = ["rgb(255, 140, 224, 0.7)", "rgb(234, 58, 187, 0.70)", "#9C1AFF", "#7700FF", "#4400FF"];
+const colors = ["rgb(255, 140, 224, 0.6)", "rgb(234, 58, 187, 0.60)", "rgb(156, 26, 255, 0.6)", "rgb(119, 0, 255, 0.6)", "rgb(68, 0, 255, 0.7)"];
 const titles = ["home", "about me", "projects", "blog", "contact"]
 
 export const MenuItem = ({ changeView, toggleView, i }) => {
@@ -90,7 +90,7 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
     >
 
       <Grid container className={classes.textPlaceholder} style={style}>
-        <Grid item xs={2} sm={2} md={2} lg={2} className={classes.icons}>
+        <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
           {icons[i]}
         </Grid>
         <Grid item xs={9} sm={9} md={9} lg={9}>

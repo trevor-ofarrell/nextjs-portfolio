@@ -14,7 +14,7 @@ const Path = props => (
 
 const useStyles = makeStyles((theme) => ({
     toggle: {
-        top: '3.5em',
+        top: '5em',
         left: '2.5em',
         borderRadius: '50%',
         position: 'absolute',

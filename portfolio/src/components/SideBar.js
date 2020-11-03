@@ -34,14 +34,7 @@ const sidebar = {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      position: 'absolute',
-      top:'0',
-      left: '0',
-      bottom: '0',
-      width: '30vw',
-      [theme.breakpoints.down('md')]: {
-          width: '50vw'
-      },
+      paddingTop: '2vh'
     },
     title: {
       margin: '.7em',
@@ -84,6 +77,7 @@ export const SideBar = ({changeView, toggleView}) => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
+      className={classes.root}
     >
       <img src={graff} max-height="60" className={classes.title} alt="Trevor O'Farrell"/>
       <Grid container className={classes.icons}>
