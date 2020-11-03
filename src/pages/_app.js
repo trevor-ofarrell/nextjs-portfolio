@@ -26,7 +26,7 @@ export default function SaveApp(props) {
         <title>Trevor O'Farrell</title>
         <meta
           name="viewport"
-          content="minimum-scale=0.75, initial-scale=1.00, maximum-scale=1.50, width=device-width, user-scalable=no, target-densityDpi=device-dpi"
+          content="minimum-scale=0.75, initial-scale=1.00, maximum-scale=1.50, width=device-width"
         />
       </Head>
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
