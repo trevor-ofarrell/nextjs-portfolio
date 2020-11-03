@@ -4,42 +4,41 @@ import {
     makeStyles,
     Grid,
 } from '@material-ui/core';
-import Close from '../../public/windowclose.svg'
 import { HomeText } from './HomeText'
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      width: '100%',
-      height: '60vh',
-      background: 'grey',
-      borderRadius: 5,
-      backgroundColor: 'rgba(71, 71, 71, 0.7)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      boxShadow: '0px 10px 30px -5px #3AEA69',
-      transition: 'box-shadow 0.5s',
-      marginTop: '-1vh',
-      '&:hover': {
-        boxShadow: '0px 30px 100px -10px #3AEA69',
-        backgroundColor: 'rgba(71, 71, 71, 0.80)',
-      },
-      [theme.breakpoints.down('md')]: {
-        marginTop: '15vh',
-      },
+  root: {
+    width: '100%',
+    height: '60vh',
+    background: 'grey',
+    borderRadius: 5,
+    backgroundColor: 'rgba(71, 71, 71, 0.7)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    boxShadow: '0px 0px 30px -5px #3AEA69',
+    transition: 'box-shadow 0.5s',
+    marginTop: '-1vh',
+    '&:hover': {
+      boxShadow: '0px 0px 100px -10px #3AEA69',
+      backgroundColor: 'rgba(71, 71, 71, 0.85)',
     },
-    termbar: {
-        backgroundColor: 'rgba(71, 71, 71);',
-        height: '2.3vh',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '15vh',
     },
-    button: {
-        height: '2vh',
-        width: '2vw',
-        marginLeft: '-2.7em',
-        marginTop: '3px'
-    },
-    typewritter: {
-        textAlign: 'left',
-    }
+  },
+  termbar: {
+      backgroundColor: 'rgba(71, 71, 71);',
+      height: '2.3vh',
+  },
+  button: {
+      height: '2vh',
+      width: '2vw',
+      marginLeft: '-2.7em',
+      marginTop: '3px'
+  },
+  typewritter: {
+      textAlign: 'left',
+  }
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -55,9 +54,7 @@ export const TerminalCard = () => {
       style={{ transform: props.xys.interpolate(trans) }}
       className={classes.root}
     >
-      <Grid container className={classes.termbar}>
-         
-      </Grid>
+      <Grid container className={classes.termbar}/>
       <Grid container className={classes.typewritter}>
         <Grid item xs={12} lg={12}>
           <HomeText />
@@ -66,4 +63,3 @@ export const TerminalCard = () => {
     </animated.div>
   )
 }
-

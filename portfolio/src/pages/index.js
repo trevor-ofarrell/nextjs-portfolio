@@ -25,8 +25,7 @@ const useStyles = makeStyles((theme) => ({
     overflowY: 'hidden',
   },
   contentContainer: {
-    paddingTop: '20vh',
-    marginTop: '4vh',
+    paddingTop: '26vh',
     height: '80vh',
     width: '100vw',
     zIndex: '3',
@@ -112,7 +111,7 @@ export default function Birds() {
                 <Grid item xs={12} lg={12} className={classes.contentContainer}>
                   {changeView == 0 &&
                     <section className={classes.section}>
-                      <Grow in={changeView == 0} timeout={1000}>
+                      <Grow in={changeView == 0} timeout={600}>
                         <Grid container>
                           <Grid item xs={1} sm={1} md={2} lg={3}/>
                           <Grid item xs={10} sm={10} md={8} lg={6}>
