@@ -60,7 +60,7 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
   const [onHover, Hovered] = useState(false);
   const style = { 
     backgroundColor: `${colors[i]}`,
-    boxShadow: onHover === true ? '0 0 20px 8px #39FF14' : `0 0 20px 8px ${colors[i]}`,
+    boxShadow: onHover === true ? '0 0 20px 8px #39FF14' : `0 0 20px 11px ${colors[i]}`,
     MozTransition: 'all 0.01s ease-in',
     OTransition: 'all 0.01s ease-in',
     WebkitTransition: 'all 0.01s ease-in',

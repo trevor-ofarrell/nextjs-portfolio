@@ -13,7 +13,7 @@ import { useSpring, animated } from 'react-spring'
 
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
-import { SideBar, TerminalCard } from '../components'
+import { SideBar, TerminalCard, TerminalCardBold } from '../components'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,9 +43,14 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   section2: {
-    fontFamily: 'Roboto, sans-serif',
-    fontWeight: '1000',
-    fontSize: '7vh'
+    fontFamily: '"HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif',
+    color: '#E660FF',
+    fontWeight: '900',
+    fontSize: '6em',
+    lineHeight: '1.2',
+    paddingTop: '30vh',
+    textAlign: 'left',
+    margin: '2em'
   },
   scrolling: {
     overflowY: 'scroll',
@@ -110,21 +115,30 @@ export default function Birds() {
               <Grid container>
                 <Grid item xs={12} lg={12} className={classes.contentContainer}>
                   {changeView == 0 &&
-                    <section className={classes.section}>
-                      <Grow in={changeView == 0} timeout={600}>
-                        <Grid container>
-                          <Grid item xs={1} sm={2} md={2} lg={3}/>
-                          <Grid item xs={10} sm={8} md={8} lg={6}>
-                            <TerminalCard/>
-                            <section className={classes.section}>
-                              <Typography className={classes.section2}>
-                              </Typography>
-                            </section>
+                    <>
+                      <section className={classes.section}>
+                        <Grow in={changeView == 0} timeout={600}>
+                          <Grid container>
+                            <Grid item xs={1} sm={2} md={2} lg={3}/>
+                            <Grid item xs={10} sm={8} md={8} lg={6}>
+                              <TerminalCard/>
+                            </Grid>
+                            <Grid item xs={1} sm={2} md={2} lg={3}/>
                           </Grid>
-                          <Grid item xs={1} sm={2} md={2} lg={3}/>
-                        </Grid>
-                      </Grow>
-                    </section>                  
+                        </Grow>
+                      </section>
+                      <section className={classes.section}>
+                        <Grow in={changeView == 0} timeout={600}>
+                          <Grid container>
+                            <Grid item xs={1} sm={2} md={2} lg={2}/>
+                            <Grid item xs={10} sm={8} md={8} lg={8}>
+                              <TerminalCardBold/>
+                            </Grid>
+                            <Grid item xs={1} sm={2} md={2} lg={2}/>
+                          </Grid>
+                        </Grow>
+                      </section>
+                    </>  
                   }
                   {changeView == 1 &&
                   <section className={classes.section}>
