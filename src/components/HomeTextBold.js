@@ -12,14 +12,19 @@ import Head from 'next/head'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    fontFamily: '"HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif',
-    color: '#E660FF',
+    fontFamily: 'Montserrat, sans-serif',
+    color: 'rgb(234, 58, 187, 0.8)',
     fontWeight: '900',
-    fontSize: '6em',
-    lineHeight: '1.2',
-    marginLeft: '.2em',
-    marginBottom: '40%',
-    textShadow: '0px 0px 30px #E660FF',
+    fontSize: '5.3em',
+    lineHeight: '1.1',
+    paddingTop: '20vh',
+    marginTop: '-20vh',
+    paddingBottom: '20vh',
+    textShadow: '0px 0px 22px rgb(234, 58, 187, 0.8)',
+    '&:hover': {
+        color: 'rgb(234, 58, 187, 0.9)',
+        textShadow: '0px 0px 30px rgb(234, 58, 187, 1)',
+    },
   },
   text: {
     textAlign: 'left',
@@ -36,13 +41,15 @@ export const HomeTextBold = () => {
                       .deleteAll()
                       .changeDelay(75)
                       .pauseFor(500)
-                    typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website.")
+                    typewriter.typeString("✨Hello✨! My name is Trevor O'Farrell, welcome to my website.")
                       .pauseFor(2500)
                       .deleteAll()
-                    typewriter.typeString(
-                      'I\'m a <strong>S</strong>oft<strong>w</strong>are <strong>E</strong>ngineer from the <strong>Bay</strong> area interested in <strong>web dev</strong>elopment.')
-                      .pauseFor(2500)
+                      typewriter.typeString(
+                        `I\'m a Software Engineer 💻🛠 from the Bay Area, who loves to use 💭creativity to solve 🧩problems. Some things that intrest me the most are motion➡️ ⬅️ ⬆️ ⬇️ ↗️ ↘️ , user experience, and design.`
+                      )
+                      .pauseFor(5500)
                       .deleteAll()
+                      .pauseFor(100)
                       .start();
                 }}
                 options={{

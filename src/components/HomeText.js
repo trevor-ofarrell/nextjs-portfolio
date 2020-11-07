@@ -35,11 +35,12 @@ export const HomeText = () => {
                       .deleteAll()
                       .changeDelay(75)
                       .pauseFor(500)
-                    typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website.")
+                    typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website!")
                       .pauseFor(2500)
                       .deleteAll()
                     typewriter.typeString(
-                      'I\'m a <strong>S</strong>oft<strong>w</strong>are <strong>E</strong>ngineer from the <strong>Bay</strong> area interested in <strong>web dev</strong>elopment.')
+                      'I\'m a Software Engineer currently specializing in web development. I am inspired to create beautiful websites & applications, intrested in motion, user experience, accesibility, and many other things.'
+                    )
                       .pauseFor(2500)
                       .deleteAll()
                       .start();

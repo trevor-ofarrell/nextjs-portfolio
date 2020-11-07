@@ -82,7 +82,7 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: 0x0,
+        backgroundColor: '#3abbea',
         color1: '#4213C4',
         color2: '#9A13C4',
         birdSize: 0.80,
@@ -119,17 +119,6 @@ export default function Birds() {
                       <section className={classes.section}>
                         <Grow in={changeView == 0} timeout={600}>
                           <Grid container>
-                            <Grid item xs={1} sm={2} md={2} lg={3}/>
-                            <Grid item xs={10} sm={8} md={8} lg={6}>
-                              <TerminalCard/>
-                            </Grid>
-                            <Grid item xs={1} sm={2} md={2} lg={3}/>
-                          </Grid>
-                        </Grow>
-                      </section>
-                      <section className={classes.section}>
-                        <Grow in={changeView == 0} timeout={600}>
-                          <Grid container>
                             <Grid item xs={1} sm={2} md={2} lg={2}/>
                             <Grid item xs={10} sm={8} md={8} lg={8}>
                               <TerminalCardBold/>
@@ -141,8 +130,19 @@ export default function Birds() {
                     </>  
                   }
                   {changeView == 1 &&
-                  <section className={classes.section}>
-                  </section>                      
+                    <>
+                     <section className={classes.section}>
+                       <Grow in={changeView == 1} timeout={600}>
+                         <Grid container>
+                           <Grid item xs={1} sm={2} md={2} lg={2}/>
+                           <Grid item xs={10} sm={8} md={8} lg={8}>
+                             <TerminalCard/>
+                           </Grid>
+                           <Grid item xs={1} sm={2} md={2} lg={2}/>
+                         </Grid>
+                       </Grow>
+                     </section>
+                   </>  
                   }
                   {changeView == 2 &&
                     <>

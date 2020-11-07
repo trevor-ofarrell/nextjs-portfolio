@@ -7,12 +7,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: '#ea693a'
 }
 
-@viewport {
-  zoom: 1.0;
-  min-zoom: 0.75;
-  max-zoom: 1.5;
+button svg {
+  fill: '%23ea693a'
+
 }
 
 nav {
@@ -83,7 +83,6 @@ img {
 .refresh {
   padding: 10px;
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   width: 20px;
   height: 20px;

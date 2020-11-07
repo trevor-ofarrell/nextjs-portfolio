@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '3.15vw',
       marginTop: '14.5vh',
       width: '17vw',
-      minWidth: '17em'
+      minWidth: '17em',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '5.6vw',
