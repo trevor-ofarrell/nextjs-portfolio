@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: '0px 0px 100px 15px rgb(127, 0, 255, 0.6)',
     },
     [theme.breakpoints.down('md')]: {
-      marginTop: '22vh',
-      height: '45vh',
+      marginTop: '10vh',
+      height: '75vh',
     },
   },
   termbar: {
