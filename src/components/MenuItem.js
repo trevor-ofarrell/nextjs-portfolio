@@ -52,15 +52,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const colors = ["rgb(255, 140, 224, 0.65)", "rgb(234, 58, 187, 0.65)", "rgb(156, 26, 255, 0.65)", "rgb(119, 0, 255, 0.65)", "rgb(68, 0, 255, 0.65)"];
+const colors = [
+  "linear-gradient(to right, #fc00ff, rgb(70, 191, 235, 0))",
+  "linear-gradient(to right, #fc00ff, rgb(70, 191, 235, 0))",
+  "linear-gradient(to right, #fc00ff, rgb(70, 191, 235, 0))",
+  "linear-gradient(to right, #fc00ff, rgb(70, 191, 235, 0))",
+  "linear-gradient(to right, #fc00ff, rgb(70, 191, 235, 0))"
+];
 const titles = ["home", "about me", "projects", "blog", "contact"]
 
 export const MenuItem = ({ changeView, toggleView, i }) => {
   const classes = useStyles()
   const [onHover, Hovered] = useState(false);
   const style = { 
-    backgroundColor: `${colors[i]}`,
-    boxShadow: onHover === true ? '0 0 20px 8px #39FF14' : `0 0 20px 11px ${colors[i]}`,
+    background: `${colors[i]}`,
     MozTransition: 'all 0.01s ease-in',
     OTransition: 'all 0.01s ease-in',
     WebkitTransition: 'all 0.01s ease-in',

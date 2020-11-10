@@ -11,7 +11,6 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import graff from '../../public/pinkdrip.png'
 import { Grid } from "@material-ui/core";
 import IconButton from '@material-ui/core/IconButton';
-import Image from 'next/image';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -78,14 +77,8 @@ export const SideBar = ({changeView, toggleView}) => {
       ref={containerRef}
       className={classes.root}
     >
-      <Image
-        src={graff}
-        alt="Trevor O'Farrell"
-        className={classes.title}
-        width={550}
-        height={200}
-        loading="eager"
-      />
+      <img src={graff} max-height="60"  alt="Trevor O'Farrell" className={classes.title}/>
+  
       <Grid container className={classes.icons}>
         <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
           <a href="https://github.com/trevor-ofarrell" aria-label="github link">

@@ -26,7 +26,7 @@ export const About = () => {
   return (
     <div className={classes.root}>
       <Grid container>
-        <Grid item xs={1} lg={12}>
+        <Grid item xs={12} lg={12}>
             <TerminalCard/>
         </Grid>
       </Grid>
