@@ -40,10 +40,7 @@ export const HomeTextBold = () => {
           </Head>
             <Typewriter
                 onInit={(typewriter) => {
-                    typewriter.typeString(' ')
-                      .deleteAll()
-                      .changeDelay(75)
-                      .pauseFor(500)
+                    
                     typewriter.typeString("Hello! My name is Trevor O'Farrell, welcome to my website.")
                       .pauseFor(2500)
                       .deleteAll()
@@ -58,7 +55,8 @@ export const HomeTextBold = () => {
                 }}
                 options={{
                   loop: true,
-                  deleteSpeed: .0001,
+                  deleteSpeed: 25,
+                  delay: 60,
                 }}
                 className={classes.text}
             />

@@ -15,7 +15,7 @@ const variants = {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up('lg')]: {
-      marginLeft: '3.15vw',
+      marginLeft: '1.5vw',
       marginTop: '12.5vh',
       width: '17vw',
       minWidth: '17em',

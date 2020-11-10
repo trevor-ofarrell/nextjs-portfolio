@@ -29,7 +29,7 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginBottom: '4vh',
+    marginBottom: '3vh',
   },
   menuText: {
     float: 'left',

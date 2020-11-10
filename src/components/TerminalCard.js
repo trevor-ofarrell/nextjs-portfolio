@@ -12,14 +12,11 @@ const useStyles = makeStyles((theme) => ({
     height: '70vh',
     background: 'grey',
     borderRadius: 5,
-    backgroundColor: 'rgba(71, 71, 71, 0.8)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    boxShadow: '0px 0px 30px 5px rgb(57, 255, 20, 0.8)',
-    marginTop: '-5vh',
+    background: 'linear-gradient(to bottom, rgb(127, 0, 255, 0.4), rgb(225, 0, 255, 0.45))',
+    boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
+    marginTop: '-6vh',
     '&:hover': {
-      boxShadow: '0px 0px 110px 20px rgb(57, 255, 20, 0.9)',
-      backgroundColor: 'rgba(71, 71, 71, 0.85)',
+      boxShadow: '0px 0px 100px 15px rgb(127, 0, 255, 0.6)',
     },
     [theme.breakpoints.down('md')]: {
       marginTop: '22vh',
