@@ -7,50 +7,52 @@ import {
 } from "@material-ui/core";
 
 import Typewriter from 'typewriter-effect';
-
+import Image from 'next/image'
 import Head from 'next/head'
+import me from '../../public/trevorprofilepic.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color: '#39FF14',
-    fontSize: '1.7em',
     width: '95%',
-    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
-    fontWeight: '600',
-    marginLeft: '.2em',
-    marginBottom: '40%'
+
+    padding: '1em'
   },
   text: {
     textAlign: 'left',
+    fontFamily: 'Zilla Slab Highlight, cursive',
+    fontWeight: '600',
+    background: 'linear-gradient(to right, #43c6ac, #f8ffae)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    fontSize: '3em',
+    marginLeft: '.5em'
   },
+  image: {
+    padding: '.2em'
+  }
 }));
 
 export const HomeText = () => {
     const classes = useStyles();
     return(
-        <div className={classes.root}>
-            <Typewriter
-                onInit={(typewriter) => {
-                    typewriter.typeString(' ')
-                      .deleteAll()
-                      .changeDelay(75)
-                      .pauseFor(500)
-                    typewriter.typeString("Hi I\'m <strong>Trevor</strong>! Welcome to my website!")
-                      .pauseFor(2500)
-                      .deleteAll()
-                    typewriter.typeString(
-                      'I\'m a Software Engineer currently specializing in web development. I am inspired to create beautiful websites & applications, intrested in motion, user experience, accesibility, and many other things.'
-                    )
-                      .pauseFor(2500)
-                      .deleteAll()
-                      .start();
-                }}
-                options={{
-                  loop: true,
-                  deleteSpeed: .0001,
-                }}
-                className={classes.text}
-            />
-        </div>
+        <Grid container className={classes.root}>
+            <Grid item xs={6} sm={6} md={4} lg={3}>
+              <Image
+                src={me}
+                alt="Picture of the author"
+                width={600}
+                height={600}
+                className={classes.image}
+              />
+            </Grid>
+            <Grid item xs={6} sm={6} md={8} lg={9}>
+              <Typography className={classes.text}>
+                About me
+              </Typography>
+              <Typography className={classes.text}>
+
+              </Typography>
+            </Grid>
+        </Grid>
     )
 }

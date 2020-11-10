@@ -13,7 +13,7 @@ import { useSpring, animated } from 'react-spring'
 
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
-import { SideBar, TerminalCard, TerminalCardBold } from '../components'
+import { SideBar, TerminalCard, TerminalCardBold, About } from '../components'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -136,7 +136,7 @@ export default function Birds() {
                          <Grid container>
                            <Grid item xs={1} sm={2} md={2} lg={2}/>
                            <Grid item xs={10} sm={8} md={8} lg={8}>
-                             <TerminalCard/>
+                             <About/>
                            </Grid>
                            <Grid item xs={1} sm={2} md={2} lg={2}/>
                          </Grid>

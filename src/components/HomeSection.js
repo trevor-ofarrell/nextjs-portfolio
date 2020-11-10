@@ -66,7 +66,7 @@ export const HomeSection = ({content, onContentToggle}) => {
   return (
     <div className={classes.root}>
       <Grid container className={classes.termbar}>
-        <Grid itwm xs={1} lg={1}>
+        <Grid item xs={1} lg={1}>
           <button onClick={onContentToggle} value={content} className={classes.button}>
             <img height="90%" src={Close} className={classes.closesvg}/>
           </button>

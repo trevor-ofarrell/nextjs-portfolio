@@ -8,3 +8,4 @@ export * from './Nav';
 export * from './use-dimensions';
 export * from './TerminalCard';
 export * from './TerminalCardBold';
+export * from './About';
