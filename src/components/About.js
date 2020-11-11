@@ -1,9 +1,7 @@
 import React, { useCallback } from "react";
 import {
-  Box,
   Grid,
   makeStyles,
-  Grow
 } from "@material-ui/core";
 
 import { TerminalCard } from './TerminalCard'

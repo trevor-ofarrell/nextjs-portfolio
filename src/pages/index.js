@@ -147,7 +147,6 @@ export default function Birds() {
                   {changeView == 2 &&
                     <>
                       <section className={classes.section}>
-                        <TerminalCard/>
                       </section>
                     </>     
                   }

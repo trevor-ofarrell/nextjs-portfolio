@@ -8,13 +8,14 @@ import { HomeText } from './HomeText'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: '58vw',
     height: '70vh',
     background: 'grey',
     borderRadius: 5,
     background: 'linear-gradient(to bottom, rgb(127, 0, 255, 0.4), rgb(225, 0, 255, 0.45))',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
     marginTop: '-6vh',
+    marginLeft: '4.5vw',
     '&:hover': {
       boxShadow: '0px 0px 100px 15px rgb(127, 0, 255, 0.6)',
     },
