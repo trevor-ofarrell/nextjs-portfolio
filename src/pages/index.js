@@ -4,16 +4,13 @@ import Head from 'next/head'
 import {
   CssBaseline,
   Grid,
-  Typography
 } from '@material-ui/core';
 
 import Grow from '@material-ui/core/Grow';
 
-import { useSpring, animated } from 'react-spring'
+import { makeStyles } from '@material-ui/core/styles';
 
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-
-import { SideBar, TerminalCard, TerminalCardBold, About } from '../components'
+import { SideBar, TerminalCardBold, About, Project1, Project2, Project3, Project4 } from '../components'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,10 +62,6 @@ export default function Birds() {
   const [vantaEffect, setVantaEffect] = useState(0)
   const myRef = useRef(null)
   const [contentStatus, displayContent] = React.useState(false);
-  const contentProps = useSpring({
-    opacity: contentStatus ? 1 : 0,
-    marginBottom: contentStatus ? 0 : -1000
-  })
   const [changeView, toggleView] = useState(0);
 
   useEffect(() => {
@@ -147,6 +140,19 @@ export default function Birds() {
                   {changeView == 2 &&
                     <>
                       <section className={classes.section}>
+                        <Grow in={changeView == 2} timeout={800}>
+                          <Grid container>
+                            <Grid item xs={1} sm={2} md={2} lg={2}/>
+                            <Grid item xs={10} sm={8} md={8} lg={8}>
+                              <Project1/>
+                              <Project2/>
+                              <Project3/>
+                              <Project4/>
+
+                            </Grid>
+                            <Grid item xs={1} sm={2} md={2} lg={2}/>
+                          </Grid>
+                        </Grow>
                       </section>
                     </>     
                   }

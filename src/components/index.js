@@ -9,3 +9,7 @@ export * from './use-dimensions';
 export * from './TerminalCard';
 export * from './TerminalCardBold';
 export * from './About';
+export * from './Project1';
+export * from './Project2';
+export * from './Project3';
+export * from './Project4';

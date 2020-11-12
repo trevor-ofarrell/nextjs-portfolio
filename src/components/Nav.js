@@ -16,21 +16,24 @@ const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up('lg')]: {
       marginLeft: '1.5vw',
-      marginTop: '12.5vh',
+      marginTop: '13.5vh',
       width: '17vw',
       minWidth: '17em',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '5.6vw',
       paddingTop: '5vh',
+      width: '40vw',
     },
     [theme.breakpoints.down('sm')]: {
       marginTop: '1.25vh',
-      marginLeft: '5.5vw'
+      marginLeft: '5.5vw',
+      width: '50vw',
     },
     [theme.breakpoints.down('xs')]: {
       marginTop: '1.25vh',
-      marginLeft: '3.5vw'
+      marginLeft: '3.5vw',
+      width: '60vw',
     },
   },
 }));

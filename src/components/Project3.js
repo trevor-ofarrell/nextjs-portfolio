@@ -1,24 +1,26 @@
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import {
     makeStyles,
     Grid,
 } from '@material-ui/core';
-import { HomeTextBold } from './HomeTextBold'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '69vw',
-    height: '100%',
+    width: '58vw',
+    height: '60vh',
+    background: 'grey',
     borderRadius: 5,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    marginTop: '10vh',
+    background: 'linear-gradient(to right, rgb(255, 0, 204, 0.5), rgb(51, 51, 153, 0.5))',
+    boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
+    marginLeft: '4.5vw',
+    marginBottom: '10vh',
     '&:hover': {
+      boxShadow: '0px 0px 110px 20px rgb(196, 113, 237, 0.5)',
     },
     [theme.breakpoints.down('md')]: {
-      marginTop: '22vh',
-      height: '45vh',
+      marginTop: '10vh',
+      height: '75vh',
     },
   },
   termbar: {
@@ -36,13 +38,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const calc = (x, y) => [-(y - window.innerHeight / 3) / 20, (x - window.innerWidth / 2) / 20, 1.175]
-const trans = (x, y, s) => `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
-export const TerminalCardBold = () => {
-  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
+export const Project3 = () => {
+  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 40 } }))
   const classes = useStyles()
-
   return (
     <animated.div
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
@@ -52,7 +53,6 @@ export const TerminalCardBold = () => {
     >
       <Grid container className={classes.typewritter}>
         <Grid item xs={12} lg={12}>
-          <HomeTextBold />
         </Grid>
       </Grid>
     </animated.div>
