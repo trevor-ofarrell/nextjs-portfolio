@@ -4,8 +4,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-import { TerminalCard } from './TerminalCard'
-
+import { AboutCard } from './AboutCard'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +24,7 @@ export const About = () => {
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12} lg={12}>
-            <TerminalCard/>
+            <AboutCard/>
         </Grid>
       </Grid>
     </div>

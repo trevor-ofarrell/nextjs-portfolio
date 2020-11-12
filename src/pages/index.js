@@ -10,7 +10,7 @@ import Grow from '@material-ui/core/Grow';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import { SideBar, TerminalCardBold, About, Project1, Project2, Project3, Project4 } from '../components'
+import { SideBar, Title, About, Project1, Project2, Project3, Project4 } from '../components'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -114,7 +114,7 @@ export default function Birds() {
                           <Grid container>
                             <Grid item xs={1} sm={2} md={2} lg={2}/>
                             <Grid item xs={10} sm={8} md={8} lg={8}>
-                              <TerminalCardBold/>
+                              <Title/>
                             </Grid>
                             <Grid item xs={1} sm={2} md={2} lg={2}/>
                           </Grid>

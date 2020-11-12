@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 const calc = (x, y) => [-(y - window.innerHeight / 3) / 20, (x - window.innerWidth / 2) / 20, 1.175]
 const trans = (x, y, s) => `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
-export const TerminalCardBold = () => {
+export const Title = () => {
   const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
   const classes = useStyles()
 
