@@ -3,7 +3,11 @@ import { useSpring, animated } from 'react-spring'
 import {
     makeStyles,
     Grid,
+    Typography
 } from '@material-ui/core';
+
+import Image from 'next/image';
+import pgnbuddy from '../../public/pgnbuddy.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     height: '60vh',
     background: 'grey',
     borderRadius: 5,
-    background: 'linear-gradient(to right, rgb(18, 194, 233, 0.6), rgb(196, 113, 237, 0.7), rgb(246, 79, 89, 0.5))',
+    background: 'linear-gradient(to right, rgb(0, 219, 222, 0.7), rgb(252, 0, 255, 0.6))',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
     marginTop: '-6vh',
     marginLeft: '4.5vw',
@@ -26,19 +30,50 @@ const useStyles = makeStyles((theme) => ({
       height: '60vh',
     },
   },
-  termbar: {
-      backgroundColor: 'rgba(71, 71, 71);',
-      height: '2.3vh',
+  root2: {
+    width: '98%',
+    padding: '3.5em',
+    paddingTop: '3em'
   },
-  button: {
-      height: '2vh',
-      width: '2vw',
-      marginLeft: '-2.7em',
-      marginTop: '3px'
+  texttitle: {
+    textAlign: 'center',
+    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontWeight: '600',
+    fontSize: '7vh',
+    color: '#000000',
+    paddingTop: '1.1em',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '5vh',
+      paddingLeft: '2vw',
+      paddingTop: '1.1em',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '4vh',
+      paddingLeft: '2vw'
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.7vh',
+
+    }
   },
-  typewritter: {
-      textAlign: 'left',
-  }
+  textbody: {
+    textAlign: 'center',
+    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontWeight: '600',
+    fontSize: '2.5vh',
+    color: '#000000',
+    paddingTop: '0.6em',
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '.5em'
+    }
+  },
+  image: {
+    padding: '.2em',
+    opacity: '0.85',
+    borderRadius: '5%',
+    pointerEvents: 'none',
+  },
+
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -54,10 +89,27 @@ export const Project1 = () => {
       style={{ transform: props.xys.interpolate(trans) }}
       className={classes.root}
     >
-      <Grid container className={classes.typewritter}>
-        <Grid item xs={12} lg={12}>
+      <Grid container className={classes.root2}>
+            <Grid item xs={4} sm={4} md={6} lg={6}>
+              <Image
+                src={pgnbuddy}
+                alt="Picture of the author"
+                width={1400}
+                height={820}
+                className={classes.image}
+              />
+            </Grid>
+            <Grid item xs={7} sm={7} md={5} lg={6}>
+              <Typography className={classes.texttitle}>
+                PGNBuddy
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Typography className={classes.textbody}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </Typography>
+          </Grid>
         </Grid>
-      </Grid>
     </animated.div>
   )
 }

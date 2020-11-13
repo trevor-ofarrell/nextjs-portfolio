@@ -59,7 +59,7 @@ const colors = [
   "linear-gradient(to right, #fc00ff, rgb(70, 191, 235, 0))",
   "linear-gradient(to right, #fc00ff, rgb(70, 191, 235, 0))"
 ];
-const titles = ["home", "about me", "projects", "blog", "contact"]
+const titles = ["home", "about me", "portfolio", "blog", "contact"]
 
 export const MenuItem = ({ changeView, toggleView, i }) => {
   const classes = useStyles()

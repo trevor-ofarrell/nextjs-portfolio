@@ -14,7 +14,7 @@ const Path = props => (
 const useStyles = makeStyles((theme) => ({
     toggle: {
         top: '4.5em',
-        left: '2.0em',
+        left: '2.3em',
         borderRadius: '50%',
         position: 'absolute',
         [theme.breakpoints.down('md')]: {

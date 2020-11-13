@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     height: '60vh',
     background: 'grey',
     borderRadius: 5,
-    background: 'linear-gradient(to right, rgb(0, 219, 222, 0.7), rgb(252, 0, 255, 0.6))',
+    background: 'linear-gradient(to right, rgb(18, 194, 233, 0.6), rgb(196, 113, 237, 0.7), rgb(246, 79, 89, 0.5))',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
     marginLeft: '4.5vw',
     marginBottom: '10vh',
