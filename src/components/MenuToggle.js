@@ -4,9 +4,8 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 const Path = props => (
   <motion.path
-    fill="#ea693a"
     strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
+    stroke="#693aea"
     strokeLinecap="round"
     {...props}
   />
@@ -14,8 +13,8 @@ const Path = props => (
 
 const useStyles = makeStyles((theme) => ({
     toggle: {
-        top: '5em',
-        left: '2.5em',
+        top: '4.5em',
+        left: '2.0em',
         borderRadius: '50%',
         position: 'absolute',
         [theme.breakpoints.down('md')]: {
@@ -44,7 +43,7 @@ export const MenuToggle = ({ toggle }) => {
     const classes = useStyles()
     return(
         <button onClick={toggle} className={classes.toggle} aria-label="toggle menu">
-            <svg width="100%" height="100%" viewBox="0 0 23 23" fill="%23ea693a" className={classes.svg}>
+            <svg width="100%" height="100%" viewBox="0 0 23 23" className="svg">
             <Path
                 variants={{
                 closed: { d: "M 2 2.5 L 20 2.5" },

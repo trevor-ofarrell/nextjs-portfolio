@@ -20,19 +20,11 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: '0px 0px 100px 15px rgb(127, 0, 255, 0.6)',
     },
     [theme.breakpoints.down('md')]: {
-      marginTop: '10vh',
+      width: '83.5vw',
+      marginTop: '8vh',
       height: '75vh',
+      marginLeft: '0vw',
     },
-  },
-  termbar: {
-      backgroundColor: 'rgba(71, 71, 71);',
-      height: '2.3vh',
-  },
-  button: {
-      height: '2vh',
-      width: '2vw',
-      marginLeft: '-2.7em',
-      marginTop: '3px'
   },
   typewritter: {
       textAlign: 'left',

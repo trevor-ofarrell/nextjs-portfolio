@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: '10',
   },
   section: {
-    height: '100vh',
+    height: '70vh',
   },
   section2: {
     fontFamily: '"HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif',
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '2em'
   },
   scrolling: {
-    overflowY: 'scroll',
+    overflowY: 'auto',
     overflowX: 'hidden',
     width: "100vw",
     height: '100%',
@@ -127,11 +127,11 @@ export default function Birds() {
                      <section className={classes.section}>
                        <Grow in={changeView == 1} timeout={800}>
                          <Grid container>
-                           <Grid item xs={1} sm={2} md={2} lg={2}/>
-                           <Grid item xs={10} sm={8} md={8} lg={8}>
+                           <Grid item xs={1} sm={1} md={1} lg={2}/>
+                           <Grid item xs={10} sm={10} md={10} lg={8}>
                              <About/>
                            </Grid>
-                           <Grid item xs={1} sm={2} md={2} lg={2}/>
+                           <Grid item xs={1} sm={1} md={1} lg={2}/>
                          </Grid>
                        </Grow>
                      </section>
@@ -140,15 +140,14 @@ export default function Birds() {
                   {changeView == 2 &&
                     <>
                       <section className={classes.section}>
-                        <Grow in={changeView == 2} timeout={800}>
+                        <Grow in={changeView == 2} timeout={600}>
                           <Grid container>
                             <Grid item xs={1} sm={2} md={2} lg={2}/>
                             <Grid item xs={10} sm={8} md={8} lg={8}>
-                              <Project1/>
                               <Project2/>
                               <Project3/>
+                              <Project1/>
                               <Project4/>
-
                             </Grid>
                             <Grid item xs={1} sm={2} md={2} lg={2}/>
                           </Grid>

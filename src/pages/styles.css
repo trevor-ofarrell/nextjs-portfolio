@@ -11,8 +11,12 @@ body {
 }
 
 button svg {
-  fill: '%23ea693a'
+  fill: '#ea693a'
 
+}
+
+svg {
+  fill: '#ea693a'
 }
 
 nav {
