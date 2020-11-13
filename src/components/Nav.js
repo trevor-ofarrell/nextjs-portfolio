@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme) => ({
       width: '40vw',
     },
     [theme.breakpoints.down('sm')]: {
-      marginTop: '1.25vh',
+      paddingTop: '4vh',
       marginLeft: '5.5vw',
       width: '50vw',
     },
     [theme.breakpoints.down('xs')]: {
-      marginTop: '1.25vh',
+      paddingTop: '1vh',
       marginLeft: '3.5vw',
       width: '60vw',
     },

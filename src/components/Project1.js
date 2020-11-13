@@ -13,14 +13,17 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 5,
     background: 'linear-gradient(to right, rgb(18, 194, 233, 0.6), rgb(196, 113, 237, 0.7), rgb(246, 79, 89, 0.5))',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
+    marginTop: '-6vh',
     marginLeft: '4.5vw',
     marginBottom: '10vh',
     '&:hover': {
       boxShadow: '0px 0px 110px 20px rgb(196, 113, 237, 0.5)',
     },
     [theme.breakpoints.down('md')]: {
+      marginLeft: '0vw',
+      width: '100%',
       marginTop: '10vh',
-      height: '75vh',
+      height: '60vh',
     },
   },
   termbar: {

@@ -11,17 +11,18 @@ const useStyles = makeStyles((theme) => ({
     height: '60vh',
     background: 'grey',
     borderRadius: 5,
-    background: 'linear-gradient(to right, rgb(0, 219, 222, 0.7), rgb(252, 0, 255, 0.6))',
+    background: 'linear-gradient(to right, rgb(255, 0, 204, 0.5), rgb(51, 51, 153, 0.5))',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
     marginLeft: '4.5vw',
-    marginTop: '-6vh',
     marginBottom: '10vh',
     '&:hover': {
       boxShadow: '0px 0px 110px 20px rgb(196, 113, 237, 0.5)',
     },
     [theme.breakpoints.down('md')]: {
-      marginTop: '10vh',
-      height: '75vh',
+        marginLeft: '0vw',
+        width: '100%',
+        marginTop: '10vh',
+        height: '60vh',
     },
   },
   termbar: {
