@@ -3,7 +3,8 @@ import { useSpring, animated } from 'react-spring'
 import {
     makeStyles,
     Grid,
-    Typography
+    Typography,
+    Chip,
 } from '@material-ui/core';
 
 import Image from 'next/image';
@@ -12,7 +13,7 @@ import pgnbuddy from '../../public/pgnbuddy.png';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
-    height: '60vh',
+    height: '65vh',
     background: 'grey',
     borderRadius: 5,
     background: 'linear-gradient(to right, rgb(0, 219, 222, 0.7), rgb(252, 0, 255, 0.6))',
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '600',
     fontSize: '7vh',
     color: '#000000',
-    paddingTop: '1.1em',
+    paddingTop: '0.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',
       paddingLeft: '2vw',
@@ -62,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '600',
     fontSize: '2.5vh',
     color: '#000000',
-    paddingTop: '0.6em',
+    paddingTop: '0.8em',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
     }
@@ -73,7 +74,16 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '5%',
     pointerEvents: 'none',
   },
-
+  chip: {
+    marginTop: '7vh',
+    marginLeft: '0.1vw',
+    width: '87%',
+    textAlign: 'left',
+    backgroundColor: 'rgb(250, 250, 250, 0.7)'
+  },
+  gridtitle: {
+    paddingLeft: '2vw'
+  }
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -90,16 +100,17 @@ export const Project1 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-            <Grid item xs={4} sm={4} md={6} lg={6}>
+            <Grid item xs={4} sm={4} md={7} lg={7}>
               <Image
                 src={pgnbuddy}
                 alt="Picture of the author"
-                width={1400}
-                height={820}
+                width={1900}
+                height={1120}
                 className={classes.image}
               />
             </Grid>
-            <Grid item xs={7} sm={7} md={5} lg={6}>
+            <Grid item xs={7} sm={7} md={5} lg={5} className={classes.gridtitle}>
+            <Chip label="Personal Project" className={classes.chip}/>
               <Typography className={classes.texttitle}>
                 PGNBuddy
               </Typography>

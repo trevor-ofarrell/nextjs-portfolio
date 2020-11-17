@@ -15,9 +15,9 @@ const variants = {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up('lg')]: {
-      marginLeft: '1.4vw',
-      marginTop: '13.5vh',
-      width: '17vw',
+      marginLeft: '-0.2vw',
+      marginTop: '10vh',
+      width: '19vw',
       minWidth: '17em',
     },
     [theme.breakpoints.down('md')]: {
@@ -26,13 +26,13 @@ const useStyles = makeStyles((theme) => ({
       width: '40vw',
     },
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '4vh',
-      marginLeft: '5.5vw',
+      paddingTop: '2vh',
+      marginLeft: '0vw',
       width: '50vw',
     },
     [theme.breakpoints.down('xs')]: {
-      paddingTop: '1vh',
-      marginLeft: '3.5vw',
+      marginTop: '-3vh',
+      marginLeft: '-6vw',
       width: '60vw',
     },
   },
