@@ -10,14 +10,6 @@ body {
   color: '#ea693a'
 }
 
-button svg {
-  fill: '#ea693a'
-
-}
-
-svg {
-  fill: '#ea693a'
-}
 
 nav {
   position: absolute;

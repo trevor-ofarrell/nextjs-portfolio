@@ -5,7 +5,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-import { HomeText } from './HomeText'
+import { AboutText } from './AboutText'
 import Close from '../../public/windowclose.svg'
 
 const useStyles = makeStyles((theme) => ({

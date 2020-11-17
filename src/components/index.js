@@ -1,5 +1,5 @@
 export * from './HomeSection';
-export * from './HomeText';
+export * from './AboutText';
 export * from './HomeTextBold';
 export * from './SideBar';
 export * from './MenuItem';

@@ -1,28 +1,26 @@
 import React from "react";
 import {
-  Box,
   Grid,
   Typography,
   makeStyles,
 } from "@material-ui/core";
 
-import Typewriter from 'typewriter-effect';
 import Image from 'next/image'
-import Head from 'next/head'
 import me from '../../public/trevorprofilepic.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '98%',
     padding: '1.5em',
-    paddingTop: '2em'
+    paddingTop: '5vh'
   },
   texttitle: {
     textAlign: 'center',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     fontWeight: '600',
     fontSize: '7vh',
-    color: '#39FF14',
+    color: '#121212',
+    textShadow: '2px 2px #ff00a0',
     paddingTop: '1.1em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',
@@ -42,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     fontWeight: '600',
-    fontSize: '2.5vh',
-    color: '#39FF14',
+    fontSize: '2.6vh',
+    color: '#121212',
     paddingTop: '1.5em',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
@@ -57,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const HomeText = () => {
+export const AboutText = () => {
     const classes = useStyles();
     return(
         <Grid container className={classes.root}>

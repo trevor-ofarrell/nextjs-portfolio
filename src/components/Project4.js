@@ -3,40 +3,85 @@ import { useSpring, animated } from 'react-spring'
 import {
     makeStyles,
     Grid,
+    Typography,
+    Chip,
 } from '@material-ui/core';
+
+import Image from 'next/image';
+import pgnbuddy from '../../public/pgnbuddy.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
-    height: '60vh',
+    height: '69vh',
     background: 'grey',
     borderRadius: 5,
     background: 'linear-gradient(to right, rgb(92, 37, 141, 0.5), rgb(67, 137, 162, 0.5))',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
     marginLeft: '4.5vw',
-    marginBottom: '19vh',
+    marginBottom: '9vh',
     '&:hover': {
       boxShadow: '0px 0px 110px 20px rgb(196, 113, 237, 0.5)',
     },
     [theme.breakpoints.down('md')]: {
-        marginLeft: '0vw',
-        width: '100%',
-        marginTop: '10vh',
-        height: '60vh',
+      marginLeft: '0vw',
+      width: '100%',
+      marginTop: '10vh',
+      height: '60vh',
     },
   },
-  termbar: {
-      backgroundColor: 'rgba(71, 71, 71);',
-      height: '2.3vh',
+  root2: {
+    width: '98%',
+    padding: '3.5em',
+    paddingTop: '3em'
   },
-  button: {
-      height: '2vh',
-      width: '2vw',
-      marginLeft: '-2.7em',
-      marginTop: '3px'
+  texttitle: {
+    textAlign: 'center',
+    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontWeight: '600',
+    fontSize: '7vh',
+    color: '#000000',
+    paddingTop: '0.2em',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '5vh',
+      paddingLeft: '2vw',
+      paddingTop: '1.1em',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '4vh',
+      paddingLeft: '2vw'
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.7vh',
+
+    }
   },
-  typewritter: {
-      textAlign: 'left',
+  textbody: {
+    textAlign: 'center',
+    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontWeight: '600',
+    fontSize: '2.5vh',
+    color: '#000000',
+    paddingTop: '0.8em',
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '.5em'
+    }
+  },
+  image: {
+    padding: '.2em',
+    opacity: '0.85',
+    borderRadius: '5%',
+    pointerEvents: 'none',
+  },
+  chip: {
+    marginTop: '7vh',
+    marginLeft: '0.1vw',
+    width: '87%',
+    textAlign: 'left',
+    backgroundColor: 'rgb(18, 18, 18, 0.6)'
+  },
+  gridtitle: {
+    paddingLeft: '2vw'
   }
 }));
 
@@ -53,10 +98,28 @@ export const Project4 = () => {
       style={{ transform: props.xys.interpolate(trans) }}
       className={classes.root}
     >
-      <Grid container className={classes.typewritter}>
-        <Grid item xs={12} lg={12}>
+      <Grid container className={classes.root2}>
+            <Grid item xs={4} sm={4} md={7} lg={7}>
+              <Image
+                src={pgnbuddy}
+                alt="Picture of the author"
+                width={1900}
+                height={1120}
+                className={classes.image}
+              />
+            </Grid>
+            <Grid item xs={7} sm={7} md={5} lg={5} className={classes.gridtitle}>
+            <Chip label="Personal Project" color="primary" className={classes.chip}/>
+              <Typography className={classes.texttitle}>
+                PGNBuddy
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Typography className={classes.textbody}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </Typography>
+          </Grid>
         </Grid>
-      </Grid>
     </animated.div>
   )
 }

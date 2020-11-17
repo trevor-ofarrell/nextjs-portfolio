@@ -8,7 +8,7 @@ import { HomeTextBold } from './HomeTextBold'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '69vw',
+    width: '100%',
     height: '100%',
     borderRadius: 5,
     backgroundSize: 'cover',

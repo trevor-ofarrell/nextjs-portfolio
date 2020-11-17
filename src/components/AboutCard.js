@@ -4,7 +4,7 @@ import {
     makeStyles,
     Grid,
 } from '@material-ui/core';
-import { HomeText } from './HomeText'
+import { AboutText } from './AboutText'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     height: '70vh',
     background: 'grey',
     borderRadius: 5,
-    background: 'linear-gradient(to bottom, rgb(127, 0, 255, 0.4), rgb(225, 0, 255, 0.45))',
+    background: 'linear-gradient(to bottom, rgb(127, 0, 255, 0.75), rgb(225, 0, 255, 0.75))',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
     marginTop: '-6vh',
     marginLeft: '4.5vw',
@@ -46,7 +46,7 @@ export const AboutCard = () => {
     >
       <Grid container className={classes.typewritter}>
         <Grid item xs={12} lg={12}>
-          <HomeText />
+          <AboutText />
         </Grid>
       </Grid>
     </animated.div>

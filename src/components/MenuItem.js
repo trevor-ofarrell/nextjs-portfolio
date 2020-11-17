@@ -39,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     paddingTop: '3.3vh',
     fontSize: '3.2vh',
-    color: '#39FF14',
+    color: '#ff00a0',
+    textShadow: '-3px 3px #121212',
     fontWeight: '600',
     pointerEvents: 'none',
   },
@@ -50,16 +51,16 @@ const useStyles = makeStyles((theme) => ({
     flex: '1',
   },
   menuIcon: {
-    color: '#39FF14',
+    color: '#ff00a0',
   }
 }));
 
 const colors = [
-  "linear-gradient(to right, rgb(225, 0, 255, 1), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(225, 0, 255, 1), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(225, 0, 255, 1), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(225, 0, 255, 1), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(225, 0, 255, 1), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
 ];
 const titles = ["home", "about me", "portfolio", "blog", "contact"]
 

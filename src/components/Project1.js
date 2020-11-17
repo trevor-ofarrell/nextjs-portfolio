@@ -13,14 +13,14 @@ import pgnbuddy from '../../public/pgnbuddy.png';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
-    height: '65vh',
+    height: '69vh',
     background: 'grey',
     borderRadius: 5,
     background: 'linear-gradient(to right, rgb(0, 219, 222, 0.7), rgb(252, 0, 255, 0.6))',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
-    marginTop: '-6vh',
+    marginTop: '-6.25vh',
     marginLeft: '4.5vw',
-    marginBottom: '10vh',
+    marginBottom: '9vh',
     '&:hover': {
       boxShadow: '0px 0px 110px 20px rgb(196, 113, 237, 0.5)',
     },
@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     fontWeight: '600',
     fontSize: '7vh',
-    color: '#000000',
+    color: '#121212',
+    textShadow: '2px 2px #ff00a0',
     paddingTop: '0.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',
@@ -62,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     fontWeight: '600',
     fontSize: '2.5vh',
-    color: '#000000',
+    color: '#121212',
     paddingTop: '0.8em',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '0.1vw',
     width: '87%',
     textAlign: 'left',
-    backgroundColor: 'rgb(250, 250, 250, 0.7)'
+    backgroundColor: 'rgb(18, 18, 18, 0.7)'
   },
   gridtitle: {
     paddingLeft: '2vw'
@@ -110,7 +111,7 @@ export const Project1 = () => {
               />
             </Grid>
             <Grid item xs={7} sm={7} md={5} lg={5} className={classes.gridtitle}>
-            <Chip label="Personal Project" className={classes.chip}/>
+            <Chip label="Personal Project" color="primary" className={classes.chip}/>
               <Typography className={classes.texttitle}>
                 PGNBuddy
               </Typography>
