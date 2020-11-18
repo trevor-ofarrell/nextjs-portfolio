@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     padding: '.2em',
-    opacity: '0.75',
+    opacity: '0.70',
     borderRadius: '50%',
     pointerEvents: 'none',
   },

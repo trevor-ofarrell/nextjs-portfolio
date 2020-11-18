@@ -14,17 +14,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: 'Zilla Slab Highlight, cursive',
     fontWeight: '900',
-    fontSize: '5.4em',
+    fontSize: '6.5em',
     lineHeight: '1.1',
-    paddingTop: '20vh',
+    paddingTop: '15vh',
     marginTop: '-20vh',
     paddingBottom: '20vh',
     background: 'linear-gradient(to right, #ff577d, #ff184c); ',
-    opacity: '0.95',
+    opacity: '0.98',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     '&:hover': {
-      color: 'rgb(0, 0, 0, 1)',
+      opacity: '1',
     },
   },
   text: {

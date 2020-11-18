@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '3vh',
     listStyle: 'none',
     height: '10.4vh',
-    borderRadius: '7px'
+    borderRadius: '5px'
   },
   menuText: {
     float: 'left',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '3.3vh',
     fontSize: '3.2vh',
     color: '#ff00a0',
-    textShadow: '-3px 3px #121212',
+    textShadow: '-2px 2px #121212',
     fontWeight: '600',
     pointerEvents: 'none',
   },
@@ -56,11 +56,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const colors = [
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .5), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .5), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .5), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .5), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .5), rgb(127, 0, 255, 0))",
 ];
 const titles = ["home", "about me", "portfolio", "blog", "contact"]
 
