@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '15vh',
     marginTop: '-20vh',
     paddingBottom: '20vh',
+    marginLeft: '1vw',
     background: 'linear-gradient(to right, #ff577d, #ff184c); ',
     opacity: '0.98',
     WebkitBackgroundClip: 'text',

@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   menuText: {
     float: 'left',
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
-    paddingTop: '3.3vh',
+    paddingTop: '3.4vh',
     fontSize: '3.2vh',
     color: '#ff00a0',
     textShadow: '-2px 2px #121212',

@@ -39,16 +39,6 @@ const useStyles = makeStyles((theme) => ({
   section: {
     height: '70vh',
   },
-  section2: {
-    fontFamily: '"HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif',
-    color: '#E660FF',
-    fontWeight: '900',
-    fontSize: '6em',
-    lineHeight: '1.2',
-    paddingTop: '30vh',
-    textAlign: 'left',
-    margin: '2em'
-  },
   scrolling: {
     overflowY: 'auto',
     overflowX: 'hidden',
@@ -157,8 +147,7 @@ export default function Birds() {
                   }
                   {changeView == 3 &&
                     <section className={classes.section}>
-                    hello world 4
-                  </section>                      
+                    </section>                      
                   }
                   {changeView == 4 &&
                    <section className={classes.section}>
