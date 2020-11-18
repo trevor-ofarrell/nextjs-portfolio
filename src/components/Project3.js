@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '600',
     fontSize: '7vh',
     color: '#000000',
+    textShadow: '2px 2px #ff00a0',
     paddingTop: '0.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',

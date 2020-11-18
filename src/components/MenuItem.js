@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     pointerEvents: 'none',
   },
   icons: {
-    paddingTop: '3.5vh'
+    paddingTop: '3.8vh'
   },
   textPlaceholder: {
     flex: '1',

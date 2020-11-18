@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     height: '69vh',
     background: 'grey',
     borderRadius: 5,
-    background: 'linear-gradient(to right, rgb(92, 37, 141, 0.5), rgb(67, 137, 162, 0.5))',
+    background: 'linear-gradient(to right, rgb(92, 37, 141, 0.7), rgb(67, 137, 162, 0.7))',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
     marginLeft: '4.5vw',
     marginBottom: '9vh',
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '600',
     fontSize: '7vh',
     color: '#000000',
+    textShadow: '2px 2px #ff00a0',
     paddingTop: '0.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',

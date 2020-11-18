@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '20vh',
     marginTop: '-20vh',
     paddingBottom: '20vh',
-    background: 'linear-gradient(to right, #7f00ff, #e100ff)',
+    background: 'linear-gradient(to right, #ff577d, #ff184c); ',
+    opacity: '0.95',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     '&:hover': {
