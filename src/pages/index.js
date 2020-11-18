@@ -115,7 +115,7 @@ export default function Birds() {
                   {changeView == 1 &&
                     <>
                      <section className={classes.section}>
-                       <Grow in={changeView == 1} timeout={800}>
+                       <Grow in={changeView == 1} timeout={600}>
                          <Grid container>
                            <Grid item xs={1} sm={1} md={1} lg={2}/>
                            <Grid item xs={10} sm={10} md={10} lg={8}>

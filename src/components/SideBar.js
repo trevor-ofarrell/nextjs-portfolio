@@ -8,7 +8,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import graff from '../../public/pinkdrip.png'
+import graff from '../../public/pinkdrip5.png'
 import { Grid } from "@material-ui/core";
 import IconButton from '@material-ui/core/IconButton';
 

@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '600',
     fontSize: '7vh',
     color: '#121212',
-    textShadow: '2px 2px #ff00a0',
+    textShadow: '2px 2px #ff124f',
     paddingTop: '1.1em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',
