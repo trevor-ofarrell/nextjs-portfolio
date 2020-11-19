@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '3.4vh',
     fontSize: '3.2vh',
     color: '#ff124f',
-    textShadow: '-2px 2px #120458',
     fontWeight: '600',
     pointerEvents: 'none',
   },

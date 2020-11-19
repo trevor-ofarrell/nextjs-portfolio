@@ -1,6 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React,
+{
+  useState,
+  useEffect,
+  useRef 
+} from 'react'
+
 import BIRDS from 'vanta/dist/vanta.birds.min'
 import Head from 'next/head'
+
 import {
   CssBaseline,
   Grid,
@@ -10,7 +17,16 @@ import Grow from '@material-ui/core/Grow';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import { SideBar, Title, About, Project1, Project2, Project3, Project4 } from '../components'
+import {
+  SideBar,
+  Title,
+  About,
+  Project1,
+  Project2,
+  Project3,
+  Project4,
+  Contact
+} from '../components'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -150,8 +166,19 @@ export default function Birds() {
                     </section>                      
                   }
                   {changeView == 4 &&
-                   <section className={classes.section}>
-                   </section>                      
+                    <>
+                      <section className={classes.section}>
+                        <Grow in={changeView == 4} timeout={600}>
+                          <Grid container>
+                            <Grid item xs={1} sm={1} md={1} lg={2}/>
+                            <Grid item xs={10} sm={10} md={10} lg={8}>
+                              <Contact/>
+                            </Grid>
+                            <Grid item xs={1} sm={1} md={1} lg={2}/>
+                          </Grid>
+                        </Grow>
+                      </section>
+                    </>                   
                   }
                 </Grid>
               </Grid>

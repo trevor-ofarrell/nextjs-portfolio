@@ -13,3 +13,4 @@ export * from './Project1';
 export * from './Project2';
 export * from './Project3';
 export * from './Project4';
+export * from './Contact'
