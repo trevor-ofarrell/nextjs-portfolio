@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 5,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
-    marginTop: '10vh',
+    marginTop: '-10vh',
     '&:hover': {
     },
     [theme.breakpoints.down('md')]: {
