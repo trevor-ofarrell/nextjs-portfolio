@@ -1,16 +1,15 @@
 import React from "react";
 import {
-  Grid,
-  Typography,
   makeStyles,
   TextField,
   Button
 } from "@material-ui/core";
+import { createMuiTheme, withStyles, ThemeProvider } from '@material-ui/core/styles';
 import { useForm, ValidationError } from '@formspree/react';
 
 const useStyles = makeStyles(() => ({
     root: {
-        marginTop: '-3vh',
+        marginTop: '-2vh',
         marginLeft: '4.5vw',
     },
     card: {
@@ -21,14 +20,30 @@ const useStyles = makeStyles(() => ({
         borderRadius: '5px',
         background: 'radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%)',
         backgroundBlendMode: 'overlay, hard-light, overlay, normal',
-        opacity: '0.88',
+        opacity: '0.9',
         width: '100%',
         marginBottom: '5vh',
     },
     input: {
         color: '#ffccdc',
+    },
+    button: {
+        color: '#ffccdc',
     }
 }))
+
+const ColorButton = withStyles((theme) => ({
+    root: {
+        background: 'radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%)',
+        backgroundBlendMode: 'overlay, hard-light, overlay, normal',
+        opacity: '0.9',
+      '&:hover': {
+            background: 'radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%)',
+            backgroundBlendMode: 'overlay, hard-light, overlay, normal',
+            opacity: '0.8',
+      },
+    },
+}))(Button);
 
 
 
@@ -99,9 +114,14 @@ export const Contact = () => {
                         field="message"
                         errors={state.errors}
                     />
-                    <Button type="submit" disabled={state.submitting}>
+                    <ColorButton
+                        variant="contained"
+                        type="submit"
+                        disabled={state.submitting}
+                        className={classes.button}
+                    >
                         Submit
-                    </Button>
+                    </ColorButton>
                 </form>
             </div>
         </div>
