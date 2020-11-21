@@ -17,14 +17,14 @@ const useStyles = makeStyles(() => ({
     },
     textfield: {
         borderRadius: '5px',
-        background: 'linear-gradient(180deg, #0C003C 0%, #BFFFAF 100%), linear-gradient(165deg, #480045 25%, #E9EAAF 100%), linear-gradient(145deg, #480045 25%, #E9EAAF 100%), linear-gradient(300deg, rgba(233, 223, 255, 0) 0%, #AF89FF 100%), linear-gradient(90deg, #45EBA5 0%, #45EBA5 30%, #21ABA5 30%, #21ABA5 60%, #1D566E 60%, #1D566E 70%, #163A5F 70%, #163A5F 100%)',
-        backgroundBlendMode: 'overlay, overlay, overlay, multiply, normal',
-        opacity: '0.95',
+        background: 'linear-gradient(121.28deg, #03002C 0%, #00FF94 100%), linear-gradient(180deg, #00647A 0%, #FFFFFF 100%), linear-gradient(244.35deg, #FF8282 0%, #E86B6B 50.58%, #001B29 100%), linear-gradient(244.35deg, #E03F3F 0%, #00114B 49.48%, #FF0000 100%), radial-gradient(100% 216.55% at 0% 0%, #2400FF 0%, #FF0000 44.27%, #610051 100%), linear-gradient(307.27deg, #096F5C 0.37%, #687EB5 50.19%, #8877CE 100%), radial-gradient(56.34% 100% at 36.02% 0%, #FF00C7 0%, #006C7A 38.54%, #FF9900 100%)',
+        backgroundBlendMode: 'overlay, difference, overlay, overlay, difference, color-dodge, normal',
+        opacity: '0.9',
         width: '100%',
         marginBottom: '5vh',
     },
     input: {
-        color: '#ffccdc'
+        color: '#ffccdc',
     }
 }))
 
@@ -45,7 +45,7 @@ export const Contact = () => {
                         className: classes.input
                     }}
                     InputLabelProps={{
-                        className: classes.input
+                        className: classes.input,
                     }}
                 />
                 <TextField

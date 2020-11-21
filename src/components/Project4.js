@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: '0.89',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
     marginLeft: '4.5vw',
-    marginBottom: '9vh',
+    marginBottom: '11vh',
     '&:hover': {
       boxShadow: '0px 0px 110px 20px rgb(196, 113, 237, 0.5)',
     },
