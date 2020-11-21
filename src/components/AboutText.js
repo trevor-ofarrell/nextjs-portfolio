@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
     fontWeight: '600',
     fontSize: '2.6vh',
-    color: '#121212',
+    color: '#dd2476',
     paddingTop: '1.5em',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     padding: '.2em',
-    opacity: '0.70',
+    opacity: '0.90',
     borderRadius: '50%',
     pointerEvents: 'none',
   },

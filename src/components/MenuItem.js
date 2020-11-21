@@ -32,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '3vh',
     listStyle: 'none',
     height: '10.4vh',
-    borderRadius: '1.5px'
+    borderRadius: '4px'
   },
   menuText: {
     float: 'left',
-    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontFamily: 'Helvetica',
     paddingTop: '3.4vh',
     fontSize: '3.2vh',
-    color: '#ff124f',
+    color: '#000000',
     fontWeight: '600',
     pointerEvents: 'none',
   },
@@ -50,16 +50,16 @@ const useStyles = makeStyles((theme) => ({
     flex: '1',
   },
   menuIcon: {
-    color: '#ff124f',
+    color: '#00000',
   }
 }));
 
 const colors = [
-  "linear-gradient(to right, rgb(122, 4, 235, 0.9), rgb(122, 4, 235, .4), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .4), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .4), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .4), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(122, 4, 235, .4), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(255, 18, 79, 0.9), rgb(122, 4, 235, .4), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(94, 78, 248, 0.9), rgb(255, 24, 77, 0.9), rgb(122, 4, 235, .9), rgb(12, 157, 244, 0.7), rgb(255, 18, 79, .6), rgb(61, 67, 180, 0.4), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(255, 18, 79, 0.9), rgb(238, 9, 121, 0.8), rgb(255, 106, 0, 0.8), rgb(252, 176, 69, 0.7), rgb(122, 4, 235, .9), rgb(255, 18, 79, 0.9), rgb(122, 4, 235, .4), rgb(255, 18, 79, .4), rgb(238, 9, 121, 0.0))",
+  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(255, 18, 79, 0.9), rgb(122, 4, 235, .4), rgb(255, 18, 79, 0.4), rgb(127, 0, 255, 0))",
+  "linear-gradient(to right, rgb(20, 2, 154, 0.9), rgb(178, 31, 31, 0.7), rgb(253, 187, 45, 0.0))",
 ];
 const titles = ["home", "about me", "portfolio", "blog", "contact"]
 

@@ -21,10 +21,6 @@ const useStyles = makeStyles((theme) => ({
       height: '45vh',
     },
   },
-  termbar: {
-      backgroundColor: 'rgba(71, 71, 71);',
-      height: '2.3vh',
-  },
   button: {
       height: '2vh',
       width: '2vw',

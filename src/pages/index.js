@@ -81,7 +81,7 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: '#120458',
+        backgroundColor: '#030303',
         color1: '#7a04eb',
         color2: '#ff124f',
         birdSize: 0.80,
@@ -90,7 +90,8 @@ export default function Birds() {
         separation: 11.00,
         alignment: 7.00,
         cohesion: 50.00,
-        backgroundAlpha: 0.94
+        backgroundAlpha: 0.94,
+        colorMode: 'lerp',
       }))
     }
     return () => {

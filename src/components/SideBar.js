@@ -8,7 +8,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import graff from '../../public/pinkdrip5.png'
+import graff from '../../public/blackname.png'
 import { Grid } from "@material-ui/core";
 import IconButton from '@material-ui/core/IconButton';
 
@@ -82,17 +82,17 @@ export const SideBar = ({changeView, toggleView}) => {
       <Grid container className={classes.icons}>
         <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
           <a href="https://github.com/trevor-ofarrell" aria-label="github link">
-            <GitHubIcon fontSize="large" style={{ fill: '#ff00a0' }} className={classes.icon}/>
+            <GitHubIcon fontSize="large" style={{ fill: '#000000' }} className={classes.icon}/>
           </a>
         </Grid>
         <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
           <a href="https://twitter.com/trevorthegnar" aria-label="twitter link">
-            <TwitterIcon fontSize="large" style={{ fill: '#ff00a0' }} className={classes.icon}/>
+            <TwitterIcon fontSize="large" style={{ fill: '#000000' }} className={classes.icon}/>
           </a>
         </Grid>
         <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
           <a href="https://instagram.com/trevorthegnar" aria-label="instagram link">
-            <InstagramIcon fontSize="large"  style={{ fill: '#ff00a0' }} className={classes.icon}/>
+            <InstagramIcon fontSize="large"  style={{ fill: '#000000' }} className={classes.icon}/>
           </a>
         </Grid>
       </Grid>
