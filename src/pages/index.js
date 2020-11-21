@@ -81,7 +81,7 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: '#030303',
+        backgroundColor: '#060606',
         color1: '#7a04eb',
         color2: '#ff124f',
         birdSize: 0.80,
@@ -119,11 +119,11 @@ export default function Birds() {
                       <section className={classes.section}>
                         <Grow in={changeView == 0} timeout={600}>
                           <Grid container>
-                            <Grid item xs={1} sm={2} md={2} lg={2}/>
-                            <Grid item xs={10} sm={8} md={8} lg={8}>
+                            <Grid item xs={1} sm={1} md={1} lg={2}/>
+                            <Grid item xs={10} sm={10} md={10} lg={8}>
                               <Title/>
                             </Grid>
-                            <Grid item xs={1} sm={2} md={2} lg={2}/>
+                            <Grid item xs={1} sm={1} md={1} lg={2}/>
                           </Grid>
                         </Grow>
                       </section>

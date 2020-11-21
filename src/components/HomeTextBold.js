@@ -19,11 +19,15 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '15vh',
     marginTop: '-20vh',
     paddingBottom: '20vh',
-    marginLeft: '1vw',
+    marginLeft: '4vw',
     background: 'linear-gradient(to right, #ff512f, #dd2476);',
     opacity: '0.98',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '4vw',
+      fontSize: '5em',
+    },
     '&:hover': {
       opacity: '1',
     },

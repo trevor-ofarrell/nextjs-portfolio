@@ -8,7 +8,7 @@ import { HomeTextBold } from './HomeTextBold'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '69vw',
+    width: '66vw',
     height: '100%',
     borderRadius: 5,
     backgroundSize: 'cover',
@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
     },
     [theme.breakpoints.down('md')]: {
-      marginTop: '22vh',
+      width: '80vw',
+      marginTop: '18vh',
       height: '45vh',
     },
   },
