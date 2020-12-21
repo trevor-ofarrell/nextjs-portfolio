@@ -32,23 +32,22 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '3vh',
     listStyle: 'none',
     height: '10.4vh',
-    borderRadius: '4px'
-  },
-  menuText: {
-    float: 'left',
-    fontFamily: 'Helvetica',
-    paddingTop: '3.4vh',
-    fontSize: '3.2vh',
-    color: '#000000',
-    fontWeight: '600',
-    pointerEvents: 'none',
-  },
-  icons: {
-    paddingTop: '3.8vh'
+    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
   },
   textPlaceholder: {
     flex: '1',
+    marginLeft: '1vw',
   },
+  menuText: {
+    paddingTop: '1.6vh',
+    fontWeight: '600',
+    pointerEvents: 'none',
+    textAlign: 'left'
+  },
+  icons: {
+    paddingTop: '2.5vh'
+  },
+
   menuIcon: {
     color: '#00000',
   }
@@ -93,18 +92,19 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
       onMouseEnter={() => Hovered(true)}
       onMouseLeave={() => Hovered(false)}
       className={classes.root}
-      style={style}
     >
+      <button class="cybr-btn" style={style}>
       <Grid container className={classes.textPlaceholder}>
         <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
           {icons[i]}
         </Grid>
-        <Grid item xs={9} sm={9} md={9} lg={9}>
-          <Typography variant="h5" color="secondary" className={classes.menuText}>
-              {titles[i]}
-          </Typography>
+        <Grid item xs={9} sm={9} md={9} lg={9} className={classes.menuText}>
+          {titles[i]}
         </Grid>
       </Grid>
+        <span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
+      </button>
     </motion.li>
   );
 };

@@ -3,13 +3,15 @@ import { useSpring, animated } from 'react-spring'
 import {
     makeStyles,
     Grid,
+    Container,
+    Fade
 } from '@material-ui/core';
 import { HomeTextBold } from './HomeTextBold'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '66vw',
-    height: '100%',
+    height: '100vh',
     borderRadius: 5,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
@@ -30,7 +32,26 @@ const useStyles = makeStyles((theme) => ({
   },
   typewritter: {
       textAlign: 'left',
-  }
+  },
+  grid: {
+    height: '80vh',
+    marginBottom: '5vh',
+  },
+  grid1: {
+    background: 'conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red)',
+    width: '95%',
+    height: '37vh',
+    opacity: '0.6',
+    boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
+  },
+  grid2: {
+    background: 'radial-gradient(circle at 50% 50%, #FFFFFF 0%, #000000 100%), conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red)',
+    backgroundBlendMode: 'color-dodge, normal',
+    width: '95%',
+    height: '37vh',
+    opacity: 0.6,
+    boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
+  },
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 3) / 20, (x - window.innerWidth / 2) / 20, 1.175]
@@ -41,17 +62,43 @@ export const Title = () => {
   const classes = useStyles()
 
   return (
-    <animated.div
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{ transform: props.xys.interpolate(trans) }}
-      className={classes.root}
-    >
-      <Grid container className={classes.typewritter}>
-        <Grid item xs={12} lg={12}>
-          <HomeTextBold />
+    <>
+      <animated.div
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+        onMouseLeave={() => set({ xys: [0, 0, 1] })}
+        style={{ transform: props.xys.interpolate(trans) }}
+        className={classes.root}
+      >
+        <Grid container className={classes.typewritter}>
+          <Grid item xs={12} lg={12}>
+            <HomeTextBold />
+          </Grid>
         </Grid>
-      </Grid>
-    </animated.div>
+      </animated.div>
+      <div>
+        <Grid container className={classes.grid}>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+            <Container className={classes.grid1}>
+              1
+            </Container>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+          <Container className={classes.grid2}>
+              1
+            </Container>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+          <Container className={classes.grid1}>1
+              1
+            </Container>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+          <Container className={classes.grid1}>
+              1
+            </Container>
+          </Grid>
+        </Grid>
+      </div>
+    </>
   )
 }

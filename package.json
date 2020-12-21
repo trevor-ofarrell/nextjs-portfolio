@@ -13,7 +13,7 @@
     "@material-ui/icons": "^4.9.1",
     "@svgr/webpack": "^5.4.0",
     "autodll-webpack-plugin": "^0.4.2",
-    "framer-motion": "^2.9.1",
+    "framer-motion": "^3.1.1",
     "next": "^10.0.0",
     "next-images": "^1.4.0",
     "react": "^17.0.1",

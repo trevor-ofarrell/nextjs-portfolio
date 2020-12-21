@@ -4,6 +4,7 @@ import {
   Grid,
   Typography,
   makeStyles,
+  Container,
 } from "@material-ui/core";
 
 import Typewriter from 'typewriter-effect';
@@ -33,13 +34,13 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     textAlign: 'left',
-
   },
 }));
 
 export const HomeTextBold = () => {
     const classes = useStyles();
     return(
+      <>
         <div className={classes.root}>
           <Head>
           </Head>
@@ -66,5 +67,6 @@ export const HomeTextBold = () => {
                 className={classes.text}
             />
         </div>
+      </>
     )
 }
