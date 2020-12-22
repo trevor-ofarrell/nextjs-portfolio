@@ -16,19 +16,19 @@ const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up('lg')]: {
       marginLeft: '-0.6vw',
-      marginTop: '10vh',
+      marginTop: '13vh',
       width: '19vw',
       minWidth: '17em',
     },
     [theme.breakpoints.down('md')]: {
-      marginLeft: '5.6vw',
+      marginLeft: '2vw',
       paddingTop: '5vh',
-      width: '40vw',
+      width: '90vw',
     },
     [theme.breakpoints.down('sm')]: {
       paddingTop: '2vh',
       marginLeft: '0vw',
-      width: '50vw',
+      width: '94vw',
     },
     [theme.breakpoints.down('xs')]: {
       marginTop: '-3vh',
@@ -49,4 +49,4 @@ export const Nav = ({changeView, toggleView}) => {
     </motion.ul>
   )
 }
-const itemIds = [0, 1, 2, 3, 4];
+const itemIds = [0, 1, 2, 3];

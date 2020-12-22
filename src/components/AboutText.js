@@ -16,11 +16,10 @@ const useStyles = makeStyles((theme) => ({
   },
   texttitle: {
     textAlign: 'center',
-    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontFamily: 'Cyber',
     fontWeight: '600',
     fontSize: '7vh',
     color: '#121212',
-    textShadow: '2px 2px #ff124f',
     paddingTop: '1.1em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',
@@ -38,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
   },
   textbody: {
     textAlign: 'center',
-    fontFamily: 'Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;',
+    fontFamily: 'Cyber',
     fontWeight: '600',
     fontSize: '2.6vh',
-    color: '#dd2476',
+    color: '#',
     paddingTop: '1.5em',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'

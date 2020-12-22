@@ -11,17 +11,18 @@ import { HomeTextBold } from './HomeTextBold'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '66vw',
-    height: '100vh',
+    height: '100%',
     borderRadius: 5,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     marginTop: '-10vh',
+    zIndex: '100',
     '&:hover': {
     },
     [theme.breakpoints.down('md')]: {
       width: '80vw',
-      marginTop: '18vh',
-      height: '45vh',
+      marginTop: '1vh',
+      height: '100vh',
     },
   },
   button: {
@@ -34,22 +35,25 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'left',
   },
   grid: {
-    height: '80vh',
+    marginTop: '-10vh',
+    height: '0vh',
     marginBottom: '5vh',
+    zIndex: '11000',
+
   },
   grid1: {
     background: 'conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red)',
-    width: '95%',
+    width: '100%',
     height: '37vh',
-    opacity: '0.6',
+    opacity: '0.075',
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
   },
   grid2: {
     background: 'radial-gradient(circle at 50% 50%, #FFFFFF 0%, #000000 100%), conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red)',
     backgroundBlendMode: 'color-dodge, normal',
-    width: '95%',
+    width: '100%',
     height: '37vh',
-    opacity: 0.6,
+    opacity: 0.075,
     boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
   },
 }));
@@ -75,30 +79,6 @@ export const Title = () => {
           </Grid>
         </Grid>
       </animated.div>
-      <div>
-        <Grid container className={classes.grid}>
-          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
-            <Container className={classes.grid1}>
-              1
-            </Container>
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
-          <Container className={classes.grid2}>
-              1
-            </Container>
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
-          <Container className={classes.grid1}>1
-              1
-            </Container>
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
-          <Container className={classes.grid1}>
-              1
-            </Container>
-          </Grid>
-        </Grid>
-      </div>
     </>
   )
 }

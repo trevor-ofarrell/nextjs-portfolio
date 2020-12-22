@@ -10,14 +10,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
     height: '70vh',
-    background: 'grey',
     borderRadius: 5,
-    background: 'linear-gradient(151.47deg, #0500FF 0.49%, rgba(1, 0, 26, 0) 32.86%), linear-gradient(238.72deg, #FFFFFF 0%, #1F001C 100%), radial-gradient(100% 143.09% at 100% 0%, #000000 0%, #FFC700 100%), radial-gradient(100% 143.09% at 100% 0%, #5200FF 0%, #00113D 100%), radial-gradient(59.5% 100% at 49.32% 0%, #FF8A00 0%, #001AFF 100%), linear-gradient(121.28deg, #DBFF00 0%, #3300FF 100%), linear-gradient(121.28deg, #FF8A00 0%, #001AFF 100%), linear-gradient(180deg, #33FF00 0%, #FF0000 100%), radial-gradient(70.71% 99% at 100% 39.75%, #8000FF 0%, #FF0000 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #00AA96 100%)',
-    backgroundBlendMode: 'luminosity, soft-light, color-dodge, overlay, overlay, difference, difference, exclusion, difference, normal',
-    opacity: '0.9',
+    background: 'radial-gradient(111% 111% at 74.29% -11%, #A93300 0%, #005570 100%), linear-gradient(127.43deg, #00D5C8 0%, #2200AA 100%)',
+    backgroundBlendMode: 'difference, normal',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
     marginTop: '-6vh',
     marginLeft: '4.5vw',
+    opacity: '0.9',
     '&:hover': {
       boxShadow: '0px 0px 100px 15px rgb(127, 0, 255, 0.6)',
     },

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     overflow: 'hidden',
     [theme.breakpoints.down('md')]: {
-      marginTop: '18vh',
+      marginTop: '8vh',
     },
     [theme.breakpoints.down('sm')]: {
       width: '80%',
@@ -79,6 +79,33 @@ export const HomeSection = ({content, onContentToggle}) => {
           </Grid>
         </Grid>
       </Box>
+
+      <div>
+        <Grid container className={classes.grid}>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+            <Container className={classes.grid1}>
+              1
+            </Container>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+          <Container className={classes.grid2}>
+              1
+            </Container>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+          <Container className={classes.grid1}>1
+              1
+            </Container>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6} x={6}>
+          <Container className={classes.grid1}>
+              1
+            </Container>
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 };
+
+

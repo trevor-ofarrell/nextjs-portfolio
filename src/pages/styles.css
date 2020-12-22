@@ -72,11 +72,14 @@ body .cybr-btn + .cybr-btn {
   --primary-hue: 0;
   --primary-lightness: 0;
   --color: hsl(0, 0%, 100%);
-  --font-size: 26px;
-  --shadow-primary-hue: 80;
+  --font-size: 28px;
+  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+  --shadow-primary-hue: 270;
+  --shadow-secondary-hue: 20;
+  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
   --clip: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 20%);
-  --border: 4px;
-  --shimmy-distance: 5;
+  --border: 6px;
+  --shimmy-distance: 4;
   --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
   --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
   --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
@@ -95,9 +98,9 @@ body .cybr-btn + .cybr-btn {
   position: relative;
   font-weight: 700;
   border: 0;
-  min-width: 300px;
+  width: 100%;
   height: 100%;
-  line-height: 75px;
+  line-height: 55px;
   transition: background 0.2s;
 }
 
@@ -121,7 +124,6 @@ body .cybr-btn + .cybr-btn {
 }
 
 .cybr-btn:before {
-  background: var(--shadow-primary);
   transform: translate(var(--border), 0);
 }
 
@@ -140,7 +142,7 @@ body .cybr-btn + .cybr-btn {
   background: var(--shadow-primary);
   text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
   clip-path: var(--clip);
-  animation: glitch 2s infinite;
+  animation: glitch 1.5s infinite;
   display: none;
 }
 
