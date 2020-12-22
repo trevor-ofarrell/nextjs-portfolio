@@ -14,8 +14,13 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('xl')]: {
       marginLeft: '-0.6vw',
+      marginTop: '13vh',
+      width: '15vw',
+      minWidth: '17em',
+    },
+    [theme.breakpoints.up('lg')]: {
       marginTop: '13vh',
       width: '19vw',
       minWidth: '17em',
@@ -28,12 +33,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       paddingTop: '2vh',
       marginLeft: '0vw',
-      width: '94vw',
+      width: '94.5vw',
     },
     [theme.breakpoints.down('xs')]: {
       marginTop: '-3vh',
       marginLeft: '-6vw',
-      width: '60vw',
+      width: '100vw',
     },
   },
 }));

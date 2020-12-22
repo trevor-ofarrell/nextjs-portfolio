@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
     fontSize: '7.25em',
     lineHeight: '1.1',
-    paddingTop: '12vh',
-    paddingBottom: '15vh',
+    paddingTop: '11vh',
+    paddingBottom: '12vh',
     marginLeft: '3.5vw',
     background: '#000000',
     opacity: 0.98,
@@ -27,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       marginLeft: '4vw',
       fontSize: '5em',
+      paddingTop: '14vh',
+      paddingBottom: '1vh',
     },
     '&:hover': {
       opacity: '1',

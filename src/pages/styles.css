@@ -78,7 +78,7 @@ body .cybr-btn + .cybr-btn {
   --shadow-secondary-hue: 20;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
   --clip: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 20%);
-  --border: 6px;
+  --border: 5px;
   --shimmy-distance: 4;
   --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
   --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
