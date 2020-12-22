@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       width: '80vw',
       marginTop: '1vh',
-      height: '100vh',
+      height: '60vh',
     },
   },
   button: {

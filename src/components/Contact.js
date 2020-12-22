@@ -7,13 +7,25 @@ import {
 import { createMuiTheme, withStyles, ThemeProvider } from '@material-ui/core/styles';
 import { useForm, ValidationError } from '@formspree/react';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         marginLeft: '4.5vw',
+        [theme.breakpoints.down('md')]: {
+            marginLeft: '0vw',
+        }
     },
     card: {
         width: '58vw',
         height: '71vh',
+        [theme.breakpoints.down('md')]: {
+            marginTop: '13vh',
+            width: '100%',
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '10vh',
+            width: '100%',
+            height: '60vh',
+        }
     },
     textfield: {
         borderRadius: '5px',
@@ -22,12 +34,20 @@ const useStyles = makeStyles(() => ({
         opacity: '0.9',
         width: '100%',
         marginBottom: '5vh',
+        fontFamily: 'Cyber',
     },
     input: {
         color: '#ffffff',
+        fontFamily: 'Cyber',
+        fontSize: '1.5em',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.2em',
+        },
     },
     button: {
         color: '#ffffff',
+        fontFamily: 'Cyber',
+        fontSize: '1.2em',
     }
 }))
 
@@ -97,7 +117,7 @@ export const Contact = () => {
                         name="message"
                         label="Send a message.."
                         multiline
-                        rows={15}
+                        rows={12}
                         variant="outlined"
                         className={classes.textfield}
                         color="primary"

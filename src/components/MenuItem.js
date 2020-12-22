@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     listStyle: 'none',
     height: '11vh',
     clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '2vh',
+    }
   },
   textPlaceholder: {
     flex: '1',
