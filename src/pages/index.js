@@ -81,17 +81,18 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: '#060606',
-        color1: '#7a04eb',
-        color2: '#ff124f',
-        birdSize: 0.80,
+        backgroundColor: '#141414',
+        color1: '#000000',
+        color2: '#606060',
+        birdSize: 3,
         wingSpan: 40.00,
-        speedLimit: 5.00,
-        separation: 11.00,
+        speedLimit: 4,
+        separation: 60.00,
+        quantity: 3,
         alignment: 7.00,
-        cohesion: 50.00,
+        cohesion: 10.00,
         backgroundAlpha: 0.94,
-        colorMode: 'lerp',
+        colorMode: 'variance',
       }))
     }
     return () => {
@@ -106,7 +107,7 @@ export default function Birds() {
         <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.birds.min.js"></script>
       </Head>
       <CssBaseline />
-      <div ref={myRef} className={classes.root}>
+      <div className={classes.root} ref={myRef}>
         <div className={classes.sidebar}>
           <SideBar changeView={changeView} toggleView={toggleView}/>
         </div>
@@ -163,13 +164,9 @@ export default function Birds() {
                     </>     
                   }
                   {changeView == 3 &&
-                    <section className={classes.section}>
-                    </section>                      
-                  }
-                  {changeView == 4 &&
                     <>
                       <section className={classes.section}>
-                        <Grow in={changeView == 4} timeout={600}>
+                        <Grow in={changeView == 3} timeout={600}>
                           <Grid container>
                             <Grid item xs={1} sm={1} md={1} lg={2}/>
                             <Grid item xs={10} sm={10} md={10} lg={8}>

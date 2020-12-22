@@ -29,39 +29,37 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginBottom: '3vh',
+    marginBottom: '3.25vh',
     listStyle: 'none',
-    height: '10.4vh',
-    borderRadius: '4px'
-  },
-  menuText: {
-    float: 'left',
-    fontFamily: 'Helvetica',
-    paddingTop: '3.4vh',
-    fontSize: '3.2vh',
-    color: '#000000',
-    fontWeight: '600',
-    pointerEvents: 'none',
-  },
-  icons: {
-    paddingTop: '3.8vh'
+    height: '11vh',
+    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
   },
   textPlaceholder: {
     flex: '1',
+    marginLeft: '1vw',
   },
+  menuText: {
+    paddingTop: '1.6vh',
+    fontWeight: '600',
+    pointerEvents: 'none',
+    textAlign: 'left'
+  },
+  icons: {
+    paddingTop: '2.5vh'
+  },
+
   menuIcon: {
     color: '#00000',
   }
 }));
 
 const colors = [
-  "linear-gradient(to right, rgb(255, 18, 79, 0.9), rgb(122, 4, 235, .4), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(94, 78, 248, 0.9), rgb(255, 24, 77, 0.9), rgb(122, 4, 235, .9), rgb(12, 157, 244, 0.7), rgb(255, 18, 79, .6), rgb(61, 67, 180, 0.4), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(255, 18, 79, 0.9), rgb(238, 9, 121, 0.8), rgb(255, 106, 0, 0.8), rgb(252, 176, 69, 0.7), rgb(122, 4, 235, .9), rgb(255, 18, 79, 0.9), rgb(122, 4, 235, .4), rgb(255, 18, 79, .4), rgb(238, 9, 121, 0.0))",
-  "linear-gradient(to right, rgb(122, 4, 235, .9), rgb(255, 18, 79, 0.9), rgb(122, 4, 235, .4), rgb(255, 18, 79, 0.4), rgb(127, 0, 255, 0))",
-  "linear-gradient(to right, rgb(20, 2, 154, 0.9), rgb(178, 31, 31, 0.7), rgb(253, 187, 45, 0.0))",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
 ];
-const titles = ["home", "about me", "portfolio", "blog", "contact"]
+const titles = ["home", "about me", "portfolio", "contact"]
 
 export const MenuItem = ({ changeView, toggleView, i }) => {
   const classes = useStyles()
@@ -80,7 +78,6 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
     <HomeIcon fontSize="large" className={classes.menuIcon}/>,
     <InfoIcon fontSize="large" className={classes.menuIcon}/>,
     <CodeIcon fontSize="large" className={classes.menuIcon}/>,
-    <LaptopMacIcon fontSize="large" className={classes.menuIcon}/>,
     <MessageIcon fontSize="large" className={classes.menuIcon}/>
   ]
 
@@ -93,18 +90,19 @@ export const MenuItem = ({ changeView, toggleView, i }) => {
       onMouseEnter={() => Hovered(true)}
       onMouseLeave={() => Hovered(false)}
       className={classes.root}
-      style={style}
     >
+      <button class="cybr-btn" style={style}>
       <Grid container className={classes.textPlaceholder}>
         <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
           {icons[i]}
         </Grid>
-        <Grid item xs={9} sm={9} md={9} lg={9}>
-          <Typography variant="h5" color="secondary" className={classes.menuText}>
-              {titles[i]}
-          </Typography>
+        <Grid item xs={9} sm={9} md={9} lg={9} className={classes.menuText}>
+          {titles[i]}
         </Grid>
       </Grid>
+        <span aria-hidden></span>
+        <span aria-hidden class="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
+      </button>
     </motion.li>
   );
 };

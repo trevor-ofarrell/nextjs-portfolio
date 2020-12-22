@@ -5,7 +5,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 const Path = props => (
   <motion.path
     strokeWidth="2.5"
-    strokeLinecap="round"
+    strokeLinecap="flat"
     {...props}
   />
 );

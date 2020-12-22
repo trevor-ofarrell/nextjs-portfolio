@@ -9,7 +9,6 @@ import { useForm, ValidationError } from '@formspree/react';
 
 const useStyles = makeStyles(() => ({
     root: {
-        marginTop: '-2vh',
         marginLeft: '4.5vw',
     },
     card: {
@@ -18,29 +17,29 @@ const useStyles = makeStyles(() => ({
     },
     textfield: {
         borderRadius: '5px',
-        background: 'radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%)',
-        backgroundBlendMode: 'overlay, hard-light, overlay, normal',
+        background: 'radial-gradient(111% 111% at 74.29% -11%, #A93300 0%, #005570 100%), linear-gradient(127.43deg, #00D5C8 0%, #2200AA 100%)',
+        backgroundBlendMode: 'difference, normal',
         opacity: '0.9',
         width: '100%',
         marginBottom: '5vh',
     },
     input: {
-        color: '#ffccdc',
+        color: '#ffffff',
     },
     button: {
-        color: '#ffccdc',
+        color: '#ffffff',
     }
 }))
 
 const ColorButton = withStyles((theme) => ({
     root: {
-        background: 'radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%)',
-        backgroundBlendMode: 'overlay, hard-light, overlay, normal',
-        opacity: '0.9',
+        background: 'linear-gradient(180deg, #0C003C 0%, #BFFFAF 100%), linear-gradient(165deg, #480045 25%, #E9EAAF 100%), linear-gradient(145deg, #480045 25%, #E9EAAF 100%), linear-gradient(300deg, rgba(233, 223, 255, 0) 0%, #AF89FF 100%), linear-gradient(90deg, #45EBA5 0%, #45EBA5 30%, #21ABA5 30%, #21ABA5 60%, #1D566E 60%, #1D566E 70%, #163A5F 70%, #163A5F 100%)',
+        backgroundBlendMode: 'overlay, overlay, overlay, multiply, normal',
+        opacity: 0.8,
       '&:hover': {
-            background: 'radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%)',
-            backgroundBlendMode: 'overlay, hard-light, overlay, normal',
-            opacity: '0.8',
+            background: 'linear-gradient(180deg, #0C003C 0%, #BFFFAF 100%), linear-gradient(165deg, #480045 25%, #E9EAAF 100%), linear-gradient(145deg, #480045 25%, #E9EAAF 100%), linear-gradient(300deg, rgba(233, 223, 255, 0) 0%, #AF89FF 100%), linear-gradient(90deg, #45EBA5 0%, #45EBA5 30%, #21ABA5 30%, #21ABA5 60%, #1D566E 60%, #1D566E 70%, #163A5F 70%, #163A5F 100%)',
+            backgroundBlendMode: 'overlay, overlay, overlay, multiply, normal',
+            opacity: '1',
       },
     },
 }))(Button);
@@ -65,7 +64,7 @@ export const Contact = () => {
                         label="Name"
                         variant="outlined"
                         className={classes.textfield}
-                        color="secondary"
+                        color="primary"
                         InputProps={{
                             className: classes.input
                         }}
@@ -80,7 +79,7 @@ export const Contact = () => {
                         label="email"
                         variant="outlined"
                         className={classes.textfield}
-                        color="secondary"
+                        color="primary"
                         InputProps={{
                             className: classes.input
                         }}
@@ -101,7 +100,7 @@ export const Contact = () => {
                         rows={15}
                         variant="outlined"
                         className={classes.textfield}
-                        color="secondary"
+                        color="primary"
                         InputProps={{
                             className: classes.input
                         }}

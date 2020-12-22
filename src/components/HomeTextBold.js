@@ -4,6 +4,7 @@ import {
   Grid,
   Typography,
   makeStyles,
+  Container,
 } from "@material-ui/core";
 
 import Typewriter from 'typewriter-effect';
@@ -12,15 +13,15 @@ import Head from 'next/head'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    fontFamily: 'Zilla Slab Highlight, cursive',
-    fontWeight: '900',
-    fontSize: '6.5em',
+    fontFamily: 'Cyber',
+    fontWeight: '700',
+    fontSize: '7.25em',
     lineHeight: '1.1',
     paddingTop: '12vh',
     paddingBottom: '15vh',
     marginLeft: '3.5vw',
-    background: 'linear-gradient(to right, #ff512f, #dd2476);',
-    opacity: '0.98',
+    background: '#000000',
+    opacity: 0.98,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     [theme.breakpoints.down('md')]: {
@@ -33,13 +34,13 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     textAlign: 'left',
-
   },
 }));
 
 export const HomeTextBold = () => {
     const classes = useStyles();
     return(
+      <>
         <div className={classes.root}>
           <Head>
           </Head>
@@ -50,7 +51,7 @@ export const HomeTextBold = () => {
                       .pauseFor(2500)
                       .deleteAll()
                       typewriter.typeString(
-                        `I\'m a Software Engineer 💻🛠 from the Bay Area, who loves to use 💭 creativity to solve 🧩 problems.`
+                        `I\'m a full stack web developer from the Bay Area, who loves to use 💭 creativity to solve 🧩 problems.`
                       )
                       .pauseFor(1000)
                       .pauseFor(5500)
@@ -66,5 +67,6 @@ export const HomeTextBold = () => {
                 className={classes.text}
             />
         </div>
+      </>
     )
 }
