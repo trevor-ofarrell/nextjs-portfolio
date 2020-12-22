@@ -15,15 +15,15 @@ const useStyles = makeStyles((theme) => ({
     width: '58vw',
     height: '69vh',
     background: 'grey',
-    borderRadius: 5,
+    borderRadius: 0,
     background: 'linear-gradient(158.09deg, rgba(255, 255, 255, 0.5) 9.62%, rgba(86, 18, 79, 0.5) 81.19%), linear-gradient(127.43deg, #27F2FF 0%, #CB0031 100%), radial-gradient(107% 142.8% at 15.71% 104.5%, #F3D0FC 0%, #1700A4 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, #0095D5 0%, #0E0048 100%)',
     backgroundBlendMode: 'overlay, difference, difference, exclusion, normal',
     opacity: '0.89',
-    boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
+    boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
     marginLeft: '4.5vw',
     marginBottom: '9vh',
     '&:hover': {
-      boxShadow: '0px 0px 110px 20px rgb(196, 113, 237, 0.5)',
+      boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.8)',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',

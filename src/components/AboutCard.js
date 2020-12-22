@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
     height: '70vh',
-    borderRadius: 5,
+    borderRadius: 0,
     background: 'radial-gradient(111% 111% at 74.29% -11%, #A93300 0%, #005570 100%), linear-gradient(127.43deg, #00D5C8 0%, #2200AA 100%)',
     backgroundBlendMode: 'difference, normal',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
