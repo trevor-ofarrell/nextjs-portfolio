@@ -17,6 +17,8 @@ import Grow from '@material-ui/core/Grow';
 
 import { makeStyles } from '@material-ui/core/styles';
 
+import LinkIcon from '@material-ui/icons/Link';
+
 import {
   SideBar,
   Title,

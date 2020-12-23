@@ -45,18 +45,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
+
     [theme.breakpoints.down('md')]: {
-      fontSize: '5vh',
-      paddingLeft: '2vw',
-      paddingTop: '1.1em',
-    },
-    [theme.breakpoints.down('sm')]: {
       fontSize: '4vh',
-      paddingLeft: '2vw'
+      paddingLeft: '4vw',
+      paddingTop: '1vh',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '3.7vh',
-
     }
   },
   textbody: {
@@ -68,7 +64,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '0.8em',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
-    }
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.25vh',
+      marginTop: '2vh',
+    },
   },
   image: {
     padding: '.2em',
@@ -81,7 +81,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '0.5vw',
     width: '87%',
     textAlign: 'left',
-    backgroundColor: 'rgb(18, 18, 18, 0.7)'
+    backgroundColor: 'rgb(18, 18, 18, 0.7)',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '4.5vw',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '95%',
+      marginLeft: '2vw',
+    },
   },
   gridtitle: {
     paddingLeft: '2vw'
@@ -102,16 +109,17 @@ export const Project1 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-            <Grid item xs={4} sm={4} md={7} lg={7}>
+            <Grid item xs={12} sm={8} md={7} lg={7}>
               <Image
                 src={pgnbuddy}
                 alt="Picture of the author"
                 width={1900}
                 height={1120}
+                layout="responsive"
                 className={classes.image}
               />
             </Grid>
-            <Grid item xs={7} sm={7} md={5} lg={5} className={classes.gridtitle}>
+            <Grid item xs={7} sm={4} md={4} lg={5} className={classes.gridtitle}>
             <Chip label="Personal Project" color="primary" className={classes.chip}/>
               <Typography className={classes.texttitle}>
                 PGNBuddy

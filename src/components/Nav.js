@@ -1,7 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core';
 
 const variants = {
   open: {
@@ -12,15 +12,28 @@ const variants = {
   }
 };
 
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+})
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    [theme.breakpoints.up('xl')]: {
-      marginLeft: '-0.6vw',
+    [theme.breakpoints.down('xl')]: {
+      marginLeft: '1vw',
       marginTop: '13vh',
-      width: '15vw',
+      width: '13vw',
       minWidth: '17em',
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.down('lg')]: {
+      marginLeft: '-0.25vw',
       marginTop: '13vh',
       width: '19vw',
       minWidth: '17em',

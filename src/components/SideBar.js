@@ -40,6 +40,8 @@ const useStyles = makeStyles((theme) => ({
       margin: '.7em',
       pointerEvents: 'none',
       marginLeft: '7.3em',
+      height: '10vh',
+      width: '35vw',
       [theme.breakpoints.down('xs')]: {
         height: '9vh',
         width: '45vw',
@@ -77,7 +79,7 @@ export const SideBar = ({changeView, toggleView}) => {
       ref={containerRef}
       className={classes.root}
     >
-      <img src={graff} max-height="60"  alt="Trevor O'Farrell" className={classes.title}/>
+      <img src={graff} max-height="70"  alt="Trevor O'Farrell" className={classes.title}/>
   
       <Grid container className={classes.icons}>
         <Grid item xs={2} sm={2} md={2} lg={4} xl={4}>
