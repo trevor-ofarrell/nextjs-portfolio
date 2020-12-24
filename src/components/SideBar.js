@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '7.3em',
       height: '10vh',
       width: '35vw',
+      [theme.breakpoints.up('xl')]: {
+        height: '8vh',
+        width: '18vw',
+      },
       [theme.breakpoints.down('xs')]: {
         height: '9vh',
         width: '45vw',
@@ -55,6 +59,9 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '79vw',
       marginTop: '-6em',
       fill: '#000000',
+      [theme.breakpoints.up('xl')]: {
+        marginLeft: '88vw',
+      },
       [theme.breakpoints.down('sm')]: {
         paddingRight: '5vw'
       },

@@ -12,10 +12,15 @@ const Path = props => (
 
 const useStyles = makeStyles((theme) => ({
     toggle: {
-        top: '4.3em',
-        left: '2.6em',
+        top: '6.15vh',
+        left: '3em',
         borderRadius: '50%',
         position: 'absolute',
+        width: '4vw',
+        height: 'auto',
+        [theme.breakpoints.up('xl')]: {
+            top: '5.15vh',
+        },
         [theme.breakpoints.down('md')]: {
             maxWidth: '50px',
             maxHeight: '50px',
