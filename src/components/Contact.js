@@ -82,7 +82,7 @@ export const Contact = () => {
                         type="name" 
                         name="name"                        
                         label="Name"
-                        variant="outlined"
+                        variant="filled"
                         className={classes.textfield}
                         color="primary"
                         InputProps={{
@@ -97,7 +97,7 @@ export const Contact = () => {
                         type="email" 
                         name="email"      
                         label="email"
-                        variant="outlined"
+                        variant="filled"
                         className={classes.textfield}
                         color="primary"
                         InputProps={{
@@ -118,7 +118,7 @@ export const Contact = () => {
                         label="Send a message.."
                         multiline
                         rows={12}
-                        variant="outlined"
+                        variant="filled"
                         className={classes.textfield}
                         color="primary"
                         InputProps={{
