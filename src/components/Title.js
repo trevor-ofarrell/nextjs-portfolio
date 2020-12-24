@@ -10,15 +10,14 @@ import { HomeTextBold } from './HomeTextBold'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '66vw',
+    width: '100%',
     height: '100%',
     borderRadius: 5,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     marginTop: '-10vh',
     zIndex: '100',
-    '&:hover': {
-    },
+
     [theme.breakpoints.down('md')]: {
       width: '80vw',
       marginTop: '1vh',
@@ -32,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '3px'
   },
   typewritter: {
-      textAlign: 'left',
+      textAlign: 'center',
   },
   grid: {
     marginTop: '-10vh',

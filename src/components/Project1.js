@@ -13,6 +13,12 @@ import pgnbuddy from '../../public/pgnbuddy.png';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
+    [theme.breakpoints.up('xl')]: {
+      width: '100%',
+      marginLeft: '0vw',
+      marginTop: '-10vh',
+      marginBottom: '12vh',
+    },
     height: '69vh',
     background: 'grey',
     borderRadius: 0,

@@ -122,11 +122,11 @@ export default function Birds() {
                       <section className={classes.section}>
                         <Grow in={changeView == 0} timeout={600}>
                           <Grid container>
-                            <Grid item xs={1} sm={1} md={1} lg={2}/>
-                            <Grid item xs={10} sm={10} md={10} lg={8}>
+                            <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
+                            <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
                               <Title/>
                             </Grid>
-                            <Grid item xs={1} sm={1} md={1} lg={2}/>
+                            <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
                           </Grid>
                         </Grow>
                       </section>
@@ -137,11 +137,11 @@ export default function Birds() {
                      <section className={classes.section}>
                        <Grow in={changeView == 1} timeout={600}>
                          <Grid container>
-                           <Grid item xs={1} sm={1} md={1} lg={2}/>
-                           <Grid item xs={10} sm={10} md={10} lg={8}>
+                           <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
+                           <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
                              <About/>
                            </Grid>
-                           <Grid item xs={1} sm={1} md={1} lg={2}/>
+                           <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
                          </Grid>
                        </Grow>
                      </section>
@@ -152,14 +152,14 @@ export default function Birds() {
                       <section className={classes.section}>
                         <Grow in={changeView == 2} timeout={600}>
                           <Grid container>
-                            <Grid item xs={1} sm={1} md={1} lg={2}/>
-                            <Grid item xs={10} sm={10} md={10} lg={8}>
+                            <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
+                            <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
                               <Project1/>
                               <Project2/>
                               <Project3/>
                               <Project4/>
                             </Grid>
-                            <Grid item xs={1} sm={1} md={1} lg={2}/>
+                            <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
                           </Grid>
                         </Grow>
                       </section>

@@ -9,6 +9,11 @@ import { AboutText } from './AboutText'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
+    [theme.breakpoints.up('xl')]: {
+      width: '100%',
+      marginLeft: '0vw',
+      marginTop: '-10vh',
+    },
     height: '70vh',
     borderRadius: 0,
     background: 'radial-gradient(111% 111% at 74.29% -11%, #A93300 0%, #005570 100%), linear-gradient(127.43deg, #00D5C8 0%, #2200AA 100%)',

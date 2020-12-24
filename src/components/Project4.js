@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
     height: '69vh',
+    [theme.breakpoints.up('xl')]: {
+      width: '100%',
+      marginLeft: '0vw',
+      marginBottom: '12vh',
+    },
     background: 'grey',
     borderRadius: 0,
     background: 'linear-gradient(127.43deg, #00F0FF 0%, #A80028 100%), radial-gradient(107% 142.8% at 15.71% 104.5%, #F3D0FC 0%, #1700A4 100%), radial-gradient(111% 111% at 74.29% -11%, #A90000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #2200AA 100%)',
