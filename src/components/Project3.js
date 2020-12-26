@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 
 import Image from 'next/image';
-import pgnbuddy from '../../public/pgnbuddy.png';
+import pgnbuddy from '../../public/ochre.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '7vh',
+    fontSize: '6vh',
     color: '#121212',
     paddingTop: '0.2em',
 
@@ -76,7 +76,6 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     padding: '.2em',
-    opacity: '0.95',
     borderRadius: '5%',
     pointerEvents: 'none',
   },
@@ -123,9 +122,9 @@ export const Project3 = () => {
               />
             </Grid>
             <Grid item xs={7} sm={4} md={5} lg={5} className={classes.gridtitle}>
-            <Chip label="Personal Project" color="primary" className={classes.chip}/>
+            <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip}/>
               <Typography className={classes.texttitle}>
-                PGNBuddy
+                Shop Ochre
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
