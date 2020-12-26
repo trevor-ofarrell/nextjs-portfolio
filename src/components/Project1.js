@@ -53,11 +53,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
-
     [theme.breakpoints.down('md')]: {
       fontSize: '4vh',
       paddingLeft: '4vw',
       paddingTop: '1vh',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '3.5vh',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '3.7vh',
@@ -70,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2.7vh',
     color: '#121212',
     paddingTop: '0.8em',
+    marginBottom: '2vh',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
     },
@@ -94,12 +97,15 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       width: '95%',
-      marginLeft: '2vw',
+      marginLeft: '3vw',
     },
   },
   gridtitle: {
-    paddingLeft: '2vw'
-  }
+    paddingLeft: '2vw',
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: '1vw'
+    },
+  },
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -127,12 +133,12 @@ export const Project1 = () => {
               />
             </Grid>
             <Grid item xs={7} sm={4} md={4} lg={5} className={classes.gridtitle}>
-            <Chip label="Personal Project" color="primary" className={classes.chip}/>
+              <Chip label="Personal Project" color="primary" className={classes.chip}/>
               <Typography className={classes.texttitle}>
                 PGNBuddy
               </Typography>
               <Link href="https://pgnbuddy.com">
-                <LinkIcon style={{fontSize: "3em"}}/>
+              <LinkIcon style={{fontSize: "3em"}}/>
               </Link>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>

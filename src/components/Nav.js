@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       minWidth: '17em',
     },
     [theme.breakpoints.down('lg')]: {
-      marginLeft: '-0.25vw',
+      marginLeft: '-.75vw',
       marginTop: '13vh',
       width: '19vw',
       minWidth: '17em',
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
       width: '90vw',
     },
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '2vh',
+      paddingTop: '0vh',
       marginLeft: '0vw',
       width: '94.5vw',
     },
@@ -56,13 +56,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Nav = ({changeView, toggleView}) => {
+export const Nav = ({toggleView}) => {
   const classes = useStyles()
 
   return(
     <motion.ul variants={variants} className={classes.root}>
       {itemIds.map(i => (
-      <MenuItem i={i} key={i} changeView={changeView} toggleView={toggleView}/>
+      <MenuItem i={i} key={i} toggleView={toggleView}/>
       ))}
     </motion.ul>
   )

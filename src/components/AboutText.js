@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Cyber',
     fontWeight: '600',
     fontSize: '7vh',
-    color: '#121212',
+    color: '#FFFFFF',
     paddingTop: '1.1em',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Cyber',
     fontWeight: '600',
     fontSize: '2.6vh',
-    color: '#',
+    color: '#FFFFFF',
     paddingTop: '1.5em',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'

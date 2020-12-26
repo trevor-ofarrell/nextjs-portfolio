@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
       margin: '.7em',
       pointerEvents: 'none',
-      marginLeft: '7.3em',
+      marginLeft: '8.3em',
       height: '10vh',
       width: '33vw',
       [theme.breakpoints.up('xl')]: {
@@ -107,7 +107,7 @@ export const SideBar = ({changeView, toggleView}) => {
       </Grid>
       <motion.div className={classes.root} variants={sidebar} />
       <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
-        <Nav changeView={changeView} toggleView={toggleView}/>
+        <Nav toggleView={toggleView}/>
       </div>
       <div>
         <MenuToggle toggle={() => toggleOpen()}/>

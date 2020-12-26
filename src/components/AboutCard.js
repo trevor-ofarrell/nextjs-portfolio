@@ -16,14 +16,12 @@ const useStyles = makeStyles((theme) => ({
     },
     height: '70vh',
     borderRadius: 0,
-    background: 'radial-gradient(111% 111% at 74.29% -11%, #A93300 0%, #005570 100%), linear-gradient(127.43deg, #00D5C8 0%, #2200AA 100%)',
-    backgroundBlendMode: 'difference, normal',
-    boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
+    background: 'radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%)',
+    backgroundBlendMode: 'overlay, hard-light, overlay, normal',
     marginTop: '-6vh',
     marginLeft: '4.5vw',
-    opacity: '0.9',
+    opacity: '0.75',
     '&:hover': {
-      boxShadow: '0px 0px 100px 15px rgb(127, 0, 255, 0.6)',
     },
     [theme.breakpoints.down('md')]: {
       width: '83.5vw',

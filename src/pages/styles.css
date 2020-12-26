@@ -102,6 +102,7 @@ body .cybr-btn + .cybr-btn {
   height: 100%;
   line-height: 55px;
   transition: background 0.2s;
+  opacity: 0.85;
 }
 
 .cybr-btn:hover {
