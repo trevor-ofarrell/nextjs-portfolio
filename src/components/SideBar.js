@@ -41,14 +41,14 @@ const useStyles = makeStyles((theme) => ({
       pointerEvents: 'none',
       marginLeft: '7.3em',
       height: '10vh',
-      width: '35vw',
+      width: '33vw',
       [theme.breakpoints.up('xl')]: {
         height: '8vh',
         width: '18vw',
       },
       [theme.breakpoints.down('xs')]: {
         height: '9vh',
-        width: '45vw',
+        width: '44vw',
         marginLeft: '0em',
       },
     },

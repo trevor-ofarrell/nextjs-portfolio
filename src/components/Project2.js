@@ -9,6 +9,8 @@ import {
 
 import Image from 'next/image';
 import pgnbuddy from '../../public/tacklehunger.png';
+import LinkIcon from '@material-ui/icons/Link'; 
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '6vh',
+    fontSize: '5.5vh',
     color: '#121212',
     paddingTop: '0.2em',
 
@@ -126,7 +128,9 @@ export const Project2 = () => {
               <Typography className={classes.texttitle}>
                 Tackle Hunger
               </Typography>
-            </Grid>
+              <Link href="https://tacklehunger.org">
+                <LinkIcon style={{fontSize: "3em"}}/>
+              </Link>            </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

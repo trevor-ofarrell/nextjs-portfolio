@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({
             top: '5.15vh',
         },
         [theme.breakpoints.down('md')]: {
-            maxWidth: '50px',
-            maxHeight: '50px',
+            width: '5vw',
+            height: 'auto',
         },
-        [theme.breakpoints.up('md')]: {
-            maxWidth: '60px',
-            maxHeight: '60px',
+        [theme.breakpoints.down('sm')]: {
+            width: '7vw',
+            height: 'auto',
         },
         [theme.breakpoints.down('xs')]: {
-            maxWidth: '40px',
-            maxHeight: '40px',
+            width: '10vw',
+            height: 'auto',
             top: '3.5em',
             left: '.7em',
         },

@@ -9,6 +9,8 @@ import {
 
 import Image from 'next/image';
 import pgnbuddy from '../../public/withcurrent.png';
+import LinkIcon from '@material-ui/icons/Link';
+import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -124,9 +126,11 @@ export const Project4 = () => {
             <Grid item xs={7} sm={4} md={5} lg={5} className={classes.gridtitle}>
             <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip}/>
               <Typography className={classes.texttitle}>
-                With Current
+                WithCurrent
               </Typography>
-            </Grid>
+              <Link href="https://withcurrent.com">
+                <LinkIcon style={{fontSize: "3em"}}/>
+              </Link>            </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

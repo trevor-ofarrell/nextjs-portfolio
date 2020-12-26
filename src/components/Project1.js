@@ -9,6 +9,8 @@ import {
 
 import Image from 'next/image';
 import pgnbuddy from '../../public/pgn.png';
+import LinkIcon from '@material-ui/icons/Link';
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -129,6 +131,9 @@ export const Project1 = () => {
               <Typography className={classes.texttitle}>
                 PGNBuddy
               </Typography>
+              <Link href="https://pgnbuddy.com">
+                <LinkIcon style={{fontSize: "3em"}}/>
+              </Link>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
