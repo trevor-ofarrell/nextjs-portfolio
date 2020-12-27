@@ -15,10 +15,11 @@ const useStyles = makeStyles((theme) => ({
         top: '6.15vh',
         left: '3em',
         borderRadius: '50%',
-        position: 'absolute',
         width: '4vw',
         height: 'auto',
         [theme.breakpoints.up('xl')]: {
+            height: 'auto', 
+            width: '2.05vw',
             top: '5.15vh',
         },
         [theme.breakpoints.down('md')]: {
