@@ -24,10 +24,14 @@ const useStyles = makeStyles((theme) => ({
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     [theme.breakpoints.down('md')]: {
-      marginLeft: '4vw',
+      marginLeft: '2vw',
       fontSize: '5em',
       paddingTop: '14vh',
       paddingBottom: '1vh',
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: '8vh',
+      fontSize: '4em',
     },
     '&:hover': {
       opacity: '1',

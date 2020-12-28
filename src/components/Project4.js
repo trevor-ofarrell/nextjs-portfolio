@@ -16,11 +16,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
     height: '69vh',
-    [theme.breakpoints.up('xl')]: {
-      width: '100%',
-      marginLeft: '0vw',
-      marginBottom: '12vh',
-    },
     background: 'grey',
     borderRadius: 0,
     background: 'linear-gradient(127.43deg, #00F0FF 0%, #A80028 100%), radial-gradient(107% 142.8% at 15.71% 104.5%, #F3D0FC 0%, #1700A4 100%), radial-gradient(111% 111% at 74.29% -11%, #A90000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #2200AA 100%)',
@@ -32,36 +27,53 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.8)',
     },
+    [theme.breakpoints.up('xl')]: {
+      width: '100%',
+      marginLeft: '0vw',
+      marginTop: '-10vh',
+      marginBottom: '12vh',
+    },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',
       width: '100%',
       marginTop: '10vh',
       height: '60vh',
     },
+    [theme.breakpoints.down('xs')]: {
+      height: '73vh',
+    },
   },
   root2: {
     width: '98%',
     padding: '3.5em',
-    paddingTop: '3em'
+    paddingTop: '3em',
+    [theme.breakpoints.down('md')]: {
+      padding: '2em',
+      paddingTop: '3em',
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: '1.5em',
+    },
   },
   texttitle: {
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '6vh',
+    fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
-
     [theme.breakpoints.down('md')]: {
       fontSize: '4vh',
       paddingLeft: '4vw',
       paddingTop: '1vh',
     },
     [theme.breakpoints.down('sm')]: {
+      lineHeight: '1.25em',
       fontSize: '3.5vh',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '3.7vh',
+      paddingLeft: '0vw',
     }
   },
   textbody: {
@@ -71,12 +83,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2.7vh',
     color: '#121212',
     paddingTop: '0.8em',
+    marginBottom: '2vh',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '2.25vh',
       marginTop: '2vh',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '-2vh',
     },
   },
   image: {
@@ -91,19 +107,29 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     backgroundColor: 'rgb(18, 18, 18, 0.7)',
     [theme.breakpoints.down('md')]: {
-      marginLeft: '4.5vw',
-    },
-    [theme.breakpoints.down('sm')]: {
+      marginTop: '2vh',
       width: '95%',
       marginLeft: '3vw',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: '0vw',
     },
   },
   gridtitle: {
     paddingLeft: '2vw',
     [theme.breakpoints.down('sm')]: {
-      paddingLeft: '1vw'
+      paddingLeft: '0vw'
     },
   },
+  link: {
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+      marginLeft: '3vw'
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: '0vw',
+    },
+  }
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -120,7 +146,7 @@ export const Project4 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-            <Grid item xs={4} sm={8} md={7} lg={7}>
+            <Grid item xs={12} sm={8} md={7} lg={7}>
               <Image
                 src={pgnbuddy}
                 alt="Picture of the author"
@@ -129,18 +155,18 @@ export const Project4 = () => {
                 className={classes.image}
               />
             </Grid>
-            <Grid item xs={7} sm={4} md={5} lg={5} className={classes.gridtitle}>
-            <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip}/>
+            <Grid item xs={12} sm={4} md={5} lg={5} className={classes.gridtitle}>
+              <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip}/>
               <Typography className={classes.texttitle}>
-                WithCurrent
+                With Current
               </Typography>
               <Link href="https://withcurrent.com">
-              <LinkIcon style={{fontSize: "3em"}}/>
+              <LinkIcon style={{fontSize: "3em"}} className={classes.link}/>
               </Link>            
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </Typography>
           </Grid>
         </Grid>

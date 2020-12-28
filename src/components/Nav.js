@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '2vw',
-      paddingTop: '5vh',
+      paddingTop: '0vh',
       width: '90vw',
     },
     [theme.breakpoints.down('sm')]: {
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
       marginTop: '-3vh',
-      marginLeft: '-6vw',
+      marginLeft: '-5vw',
       width: '100vw',
     },
   },

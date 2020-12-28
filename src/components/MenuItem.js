@@ -35,7 +35,10 @@ const useStyles = makeStyles((theme) => ({
     clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
     [theme.breakpoints.down('md')]: {
       marginBottom: '2vh',
-    }
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '13vh',
+    },
   },
   textPlaceholder: {
     flex: '1',
@@ -45,7 +48,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '1.6vh',
     fontWeight: '600',
     pointerEvents: 'none',
-    textAlign: 'left'
+    textAlign: 'left',
+    [theme.breakpoints.down('xs')]: {
+    },
   },
   icons: {
     paddingTop: '2.5vh'
@@ -53,6 +58,9 @@ const useStyles = makeStyles((theme) => ({
 
   menuIcon: {
     color: '#00000',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1em'
+    },
   }
 }));
 
