@@ -167,7 +167,9 @@ export const Project1 = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
-              A database to store & view your PGN(playable game notation) files, made using the lichess.org API. Export any game played on the site, or export multiple at once by game ID, or with username. Analyze the game, download the PGN, save the PGN's to folders for later study, and many other uses/features in the works.          </Grid>
+              A database to store & view your PGN(playable game notation) files, made using the lichess.org API. Export any game played on the site, or export multiple at once by game ID, or with username. Analyze the game, download the PGN, save the PGN's to folders for later study, and many other uses/features in the works.          
+              </Typography>
+            </Grid>
         </Grid>
     </animated.div>
   )

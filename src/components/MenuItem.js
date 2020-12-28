@@ -30,6 +30,7 @@ const variants = {
 const useStyles = makeStyles((theme) => ({
   root: {
     clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
+    WebkitClipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
     marginBottom: '3.25vh',
     listStyle: 'none',
     height: '11.75vh',
@@ -38,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
       clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
+      WebkitClipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
       height: '13vh',
     },
   },
@@ -78,6 +80,7 @@ export const MenuItem = ({ toggleView, i }) => {
   const [onHover, Hovered] = useState(false);
   const style = {
     clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
+    WebkitClipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
     background: `${colors[i]}`,
     MozTransition: 'all 0.01s ease-in',
     OTransition: 'all 0.01s ease-in',
