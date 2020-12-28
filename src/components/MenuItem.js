@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     listStyle: 'none',
     height: '11.75vh',
     clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
+    background: 'black',
     [theme.breakpoints.down('md')]: {
       marginBottom: '2vh',
     },
@@ -77,7 +78,7 @@ export const MenuItem = ({ toggleView, i }) => {
   const classes = useStyles()
   const [onHover, Hovered] = useState(false);
   const style = { 
-    background: `${colors[i]}`,
+    background: `transparent`,
     MozTransition: 'all 0.01s ease-in',
     OTransition: 'all 0.01s ease-in',
     WebkitTransition: 'all 0.01s ease-in',

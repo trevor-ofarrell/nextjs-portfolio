@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         top: '6.15vh',
         left: '3em',
         borderRadius: '50%',
-        width: '4vw',
+        width: '3.7vw',
         height: 'auto',
         [theme.breakpoints.up('xl')]: {
             height: 'auto', 
@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
             height: 'auto',
         },
         [theme.breakpoints.down('xs')]: {
-            width: '10.75vw',
+            width: '11vw',
             height: 'auto',
-            top: '3.4em',
+            top: '3.5em',
             left: '1em',
         },
     },
