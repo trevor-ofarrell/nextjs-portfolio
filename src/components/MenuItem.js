@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '2vh',
     },
     [theme.breakpoints.down('xs')]: {
+      clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
       height: '13vh',
     },
   },
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const colors = [
-  "red",
+  "#000000",
   "#000000",
   "#000000",
   "#000000",
