@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const colors = [
-  "#000000",
+  "red",
   "#000000",
   "#000000",
   "#000000",
