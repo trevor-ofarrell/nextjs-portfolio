@@ -29,11 +29,10 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
     marginBottom: '3.25vh',
     listStyle: 'none',
     height: '11.75vh',
-    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
-    background: 'black',
     [theme.breakpoints.down('md')]: {
       marginBottom: '2vh',
     },
@@ -77,13 +76,13 @@ const titles = ["home", "about me", "portfolio", "contact"]
 export const MenuItem = ({ toggleView, i }) => {
   const classes = useStyles()
   const [onHover, Hovered] = useState(false);
-  const style = { 
-    background: `transparent`,
+  const style = {
+    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
+    background: `${colors[i]}`,
     MozTransition: 'all 0.01s ease-in',
     OTransition: 'all 0.01s ease-in',
     WebkitTransition: 'all 0.01s ease-in',
     transition: 'all 0.01s ease-in',
-    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
   }
   const handleToggle = useCallback(event => {
     toggleView(i)
