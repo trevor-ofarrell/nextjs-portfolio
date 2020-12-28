@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
         width: '18vw',
       },
       [theme.breakpoints.down('xs')]: {
-        height: '9vh',
-        width: '44vw',
+        height: '8.2vh',
+        width: '41vw',
         marginLeft: '0em',
       },
     },
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     },
     icons: {
       marginLeft: '79vw',
-      marginTop: '-6em',
+      marginTop: '-6.6em',
       fill: '#000000',
       [theme.breakpoints.up('xl')]: {
         marginLeft: '88vw',
@@ -77,8 +77,14 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down('xs')]: {
         marginLeft: '62vw',
         marginTop: '-4.8em',
+        fontSize: '0.8em'
       }
     },
+    icon: {
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '2.4em'
+      }
+    }
   }));
 
 export const SideBar = ({changeView, toggleView}) => {

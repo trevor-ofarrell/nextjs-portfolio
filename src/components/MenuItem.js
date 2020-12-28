@@ -81,6 +81,7 @@ export const MenuItem = ({ toggleView, i }) => {
     OTransition: 'all 0.01s ease-in',
     WebkitTransition: 'all 0.01s ease-in',
     transition: 'all 0.01s ease-in',
+    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
   }
   const handleToggle = useCallback(event => {
     toggleView(i)
