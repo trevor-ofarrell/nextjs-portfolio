@@ -26,10 +26,10 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    [theme.breakpoints.down('xl')]: {
+    [theme.breakpoints.up('xl')]: {
       marginLeft: '1vw',
       marginTop: '13vh',
-      width: '13vw',
+      width: '15vw',
       minWidth: '17em',
     },
     [theme.breakpoints.down('lg')]: {

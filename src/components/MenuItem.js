@@ -38,8 +38,6 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '2vh',
     },
     [theme.breakpoints.down('xs')]: {
-      clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
-      WebkitClipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
       height: '13vh',
     },
   },
@@ -52,7 +50,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '600',
     pointerEvents: 'none',
     textAlign: 'left',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.up('xl')]: {
+      fontSize: '1.3em',
+      paddingTop: '2vh',
     },
   },
   icons: {
@@ -63,6 +63,9 @@ const useStyles = makeStyles((theme) => ({
     color: '#00000',
     [theme.breakpoints.down('xs')]: {
       fontSize: '1em'
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: '1.5em'
     },
   }
 }));
@@ -79,8 +82,6 @@ export const MenuItem = ({ toggleView, i }) => {
   const classes = useStyles()
   const [onHover, Hovered] = useState(false);
   const style = {
-    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
-    WebkitClipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
     background: `${colors[i]}`,
     MozTransition: 'all 0.01s ease-in',
     OTransition: 'all 0.01s ease-in',

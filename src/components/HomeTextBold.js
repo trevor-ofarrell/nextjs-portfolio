@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       paddingTop: '9vh',
       paddingBottom: '5vh',
-      fontSize: '3.75em',
+      fontSize: '3.25em',
     },
     '&:hover': {
       opacity: '1',

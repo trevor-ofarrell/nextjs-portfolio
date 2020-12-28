@@ -12,10 +12,10 @@ const Path = props => (
 
 const useStyles = makeStyles((theme) => ({
     toggle: {
-        top: '6.15vh',
-        left: '3em',
+        top: '5.75vh',
+        left: '2.8em',
         borderRadius: '50%',
-        width: '3.7vw',
+        width: '3.6vw',
         height: 'auto',
         [theme.breakpoints.up('xl')]: {
             height: 'auto', 

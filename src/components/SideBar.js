@@ -41,10 +41,17 @@ const useStyles = makeStyles((theme) => ({
       pointerEvents: 'none',
       marginLeft: '8.3em',
       height: '10vh',
-      width: '32vw',
+      width: '29vw',
       [theme.breakpoints.up('xl')]: {
         height: '8vh',
         width: '18vw',
+      },
+      [theme.breakpoints.down('md')]: {
+        width: '40vw',
+      },
+      [theme.breakpoints.down('sm')]: {
+        height: '9vh',
+        width: '42vw',
       },
       [theme.breakpoints.down('xs')]: {
         height: '8.2vh',
@@ -73,6 +80,7 @@ const useStyles = makeStyles((theme) => ({
       },
       [theme.breakpoints.down('sm')]: {
         marginLeft: '72vw',
+        marginTop: '-5.5em',
       },
       [theme.breakpoints.down('xs')]: {
         marginLeft: '62vw',
@@ -83,7 +91,13 @@ const useStyles = makeStyles((theme) => ({
     icon: {
       [theme.breakpoints.down('xs')]: {
         fontSize: '2.4em'
-      }
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '3em'
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '3.5em',
+      },
     }
   }));
 

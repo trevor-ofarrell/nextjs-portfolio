@@ -10,9 +10,15 @@ import { useForm, ValidationError } from '@formspree/react';
 const useStyles = makeStyles((theme) => ({
     root: {
         marginLeft: '4.5vw',
+        [theme.breakpoints.down('lg')]: {
+            marginTop: '-4vh',
+        },
         [theme.breakpoints.down('md')]: {
             marginLeft: '0vw',
-        }
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '-2vh',
+        },
     },
     card: {
         width: '58vw',
