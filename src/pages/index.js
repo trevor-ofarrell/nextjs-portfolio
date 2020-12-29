@@ -18,7 +18,7 @@ import Grow from '@material-ui/core/Grow';
 import { makeStyles } from '@material-ui/core/styles';
 
 import {
-  SideBar,
+  NavBar,
   Title,
   About,
   Project1,
@@ -109,7 +109,7 @@ export default function Birds() {
       <CssBaseline />
       <div className={classes.root} ref={myRef}>
         <div className={classes.sidebar}>
-          <SideBar changeView={changeView} toggleView={toggleView}/>
+          <NavBar changeView={changeView} toggleView={toggleView}/>
         </div>
         <Grid container className={classes.scrolling}>
             <Grid item xs={12} lg={12}>

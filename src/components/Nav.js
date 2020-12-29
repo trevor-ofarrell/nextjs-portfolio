@@ -28,28 +28,28 @@ const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up('xl')]: {
       marginLeft: '1vw',
-      marginTop: '13vh',
+      marginTop: '20vh',
       width: '15vw',
       minWidth: '17em',
     },
     [theme.breakpoints.down('lg')]: {
       marginLeft: '-.75vw',
-      marginTop: '13vh',
+      marginTop: '25vh',
       width: '19vw',
       minWidth: '17em',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '2vw',
-      paddingTop: '0vh',
+      marginTop: '17vh',
       width: '90vw',
     },
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '0vh',
+      marginTop: '17vh',
       marginLeft: '0vw',
       width: '94.5vw',
     },
     [theme.breakpoints.down('xs')]: {
-      marginTop: '-3vh',
+      marginTop: '14vh',
       marginLeft: '-5vw',
       width: '100vw',
     },

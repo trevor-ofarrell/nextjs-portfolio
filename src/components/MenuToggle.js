@@ -13,8 +13,7 @@ const Path = props => (
 const useStyles = makeStyles((theme) => ({
     toggle: {
         top: '5.75vh',
-        left: '2.8em',
-        borderRadius: '50%',
+        left: '2vw',
         width: '3.6vw',
         height: 'auto',
         [theme.breakpoints.up('xl')]: {
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
             top: '5.15vh',
         },
         [theme.breakpoints.down('md')]: {
-            width: '5vw',
+            width: '6.85vw',
             height: 'auto',
         },
         [theme.breakpoints.down('sm')]: {
@@ -31,10 +30,9 @@ const useStyles = makeStyles((theme) => ({
             height: 'auto',
         },
         [theme.breakpoints.down('xs')]: {
-            width: '11vw',
+            width: '10vw',
             height: 'auto',
-            top: '3.5em',
-            left: '1em',
+            top: '5.25vh',
         },
     },
     svg: {
