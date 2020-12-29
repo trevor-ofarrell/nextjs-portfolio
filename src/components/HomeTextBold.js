@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.98,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
+    overflow: 'hidden',
     [theme.breakpoints.down('md')]: {
       marginLeft: '2vw',
       fontSize: '5em',
@@ -54,7 +55,7 @@ export const HomeTextBold = () => {
                 onInit={(typewriter) => {
                     
                     typewriter.typeString("Hello! My name is Trevor O'Farrell, welcome to my website.")
-                      .pauseFor(3500)
+                      .pauseFor(2000)
                       .deleteAll()
                       typewriter.typeString(
                         `I\'m a full stack web developer from the Bay Area, who loves to use 💭 creativity to solve 🧩 problems.`
@@ -68,7 +69,7 @@ export const HomeTextBold = () => {
                 options={{
                   loop: true,
                   deleteSpeed: 25,
-                  delay: 80,
+                  delay: 75,
                 }}
                 className={classes.text}
             />

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: '0.89',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
     marginLeft: '4.5vw',
-    marginBottom: '11vh',
+    marginBottom: '12vh',
     '&:hover': {
       boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.8)',
     },
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       marginLeft: '0vw',
       marginTop: '12vh',
-      marginBottom: '14vh',
+      marginBottom: '16vh',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',

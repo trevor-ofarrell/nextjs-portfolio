@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         marginLeft: '4.5vw',
         [theme.breakpoints.down('lg')]: {
-            marginTop: '-4vh',
+            marginTop: '1vh',
         },
         [theme.breakpoints.down('md')]: {
             marginLeft: '0vw',
@@ -123,7 +123,7 @@ export const Contact = () => {
                         name="message"
                         label="Send a message.."
                         multiline
-                        rows={12}
+                        rows={9}
                         variant="filled"
                         className={classes.textfield}
                         color="primary"

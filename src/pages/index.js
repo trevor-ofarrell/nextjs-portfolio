@@ -38,22 +38,33 @@ const useStyles = makeStyles((theme) => ({
     overflowY: 'hidden',
   },
   contentContainer: {
-    paddingTop: '26vh',
-    height: '80vh',
+    height: '100vh',
     width: '100vw',
     zIndex: '3',
-    [theme.breakpoints.down('md')]: {
-      paddingTop: '8vh'
-    },
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: '8vh'
-    },
   },
   sidebar: {
     zIndex: '10',
   },
   section: {
-    height: '70vh',
+    height: '100%',
+    paddingTop: '24vh',
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '9vh'
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '8vh'
+    },
+  },
+  homesection: {
+    height: '100%',
+    paddingTop: '24vh',
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '9vh'
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '8vh'
+    },
+    overflow: 'hidden',
   },
   scrolling: {
     overflowY: 'auto',
@@ -117,7 +128,7 @@ export default function Birds() {
                 <Grid item xs={12} lg={12} className={classes.contentContainer}>
                   {changeView == 0 &&
                     <>
-                      <section className={classes.section}>
+                      <section className={classes.homesection}>
                         <Grow in={changeView == 0} timeout={600}>
                           <Grid container>
                             <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
