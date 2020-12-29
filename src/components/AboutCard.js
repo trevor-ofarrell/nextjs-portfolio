@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     background: 'linear-gradient(to right, #232526, #414345)',
     marginTop: '-6vh',
     marginLeft: '4.5vw',
-    opacity: 0.5,
+    opacity: 0.75,
     '&:hover': {
     },
     [theme.breakpoints.down('md')]: {

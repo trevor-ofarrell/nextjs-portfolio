@@ -17,11 +17,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center center',
     marginTop: '-10vh',
     zIndex: '100',
-
+    overflow: 'hidden',
     [theme.breakpoints.down('md')]: {
       width: '80vw',
       marginTop: '1vh',
-      height: '60vh',
     },
   },
   button: {
