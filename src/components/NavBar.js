@@ -52,8 +52,9 @@ const useStyles = makeStyles((theme) => ({
     height: '10vh',
     width: '29vw',
     [theme.breakpoints.up('xl')]: {
-      height: '8vh',
-      width: '18vw',
+      marginLeft: '4vw',
+      height: '9vh',
+      width: '22vw',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '7vw',

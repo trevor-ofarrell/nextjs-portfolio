@@ -18,21 +18,22 @@ const useStyles = makeStyles((theme) => ({
         height: 'auto',
         [theme.breakpoints.up('xl')]: {
             height: 'auto', 
-            width: '2.05vw',
+            width: '5.15em',
             top: '5.15vh',
+            left: '1.75vw',
         },
         [theme.breakpoints.down('md')]: {
-            width: '6.85vw',
+            width: '5.4em',
             height: 'auto',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '7vw',
+            width: '4.20em',
             height: 'auto',
         },
         [theme.breakpoints.down('xs')]: {
-            width: '10vw',
+            width: '3.2em',
             height: 'auto',
-            top: '5.25vh',
+            top: '5.5vh',
         },
     },
     svg: {
