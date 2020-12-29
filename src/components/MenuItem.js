@@ -54,6 +54,18 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '1.3em',
       paddingTop: '2vh',
     },
+    [theme.breakpoints.down('md')]: {
+      paddingTop: '2vh',
+      fontSize: '1.6em',
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '1.6vh',
+      fontSize: '1.3em',
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: '1.5vh',
+      fontSize: '1.1em',
+    },
   },
   icons: {
     paddingTop: '2.5vh'
@@ -61,6 +73,12 @@ const useStyles = makeStyles((theme) => ({
 
   menuIcon: {
     color: '#00000',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.6em',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.3em'
+    },
     [theme.breakpoints.down('xs')]: {
       fontSize: '1em'
     },
