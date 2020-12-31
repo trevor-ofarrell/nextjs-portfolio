@@ -15,7 +15,7 @@ import Link from 'next/link'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
-    height: '69vh',
+    height: 'auto',
     background: 'grey',
     borderRadius: 0,
     background: 'linear-gradient(158.09deg, rgba(255, 255, 255, 0.5) 9.62%, rgba(86, 18, 79, 0.5) 81.19%), linear-gradient(127.43deg, #27F2FF 0%, #CB0031 100%), radial-gradient(107% 142.8% at 15.71% 104.5%, #F3D0FC 0%, #1700A4 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, #0095D5 0%, #0E0048 100%)',
@@ -37,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '0vw',
       width: '100%',
       marginTop: '10vh',
-      height: '60vh',
+      height: 'auto',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '73vh',
+      height: 'auto',
     },
   },
   root2: {
@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
+    lineHeight: '1.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '4vh',
       paddingLeft: '4vw',
@@ -167,7 +168,8 @@ export const Project2 = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.              </Typography>
+              In this project I wrote the initial code for the front-end of the Admin console, and the Edit Charity page for TackleHunger, a "youth-inspired movement working across the nation to tackle hunger in their local communities". Along with coding those two pages, I was a consultant on what technologies to use for the initial frontend development.
+              </Typography>
           </Grid>
         </Grid>
     </animated.div>

@@ -54,7 +54,7 @@ export const HomeTextBold = () => {
             <Typewriter
                 onInit={(typewriter) => {
                     
-                    typewriter.typeString("Hello! My name is Trevor O'Farrell, welcome to my website.")
+                    typewriter.typeString("Hello! I'm Trevor O'Farrell, welcome to my website.")
                       .pauseFor(2000)
                       .deleteAll()
                       typewriter.typeString(

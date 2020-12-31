@@ -15,7 +15,7 @@ import Link from 'next/link';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
-    height: '69vh',
+    height: 'auto',
     background: 'grey',
     borderRadius: 0,
     background: 'linear-gradient(127.43deg, #00F0FF 0%, #A80028 100%), radial-gradient(107% 142.8% at 15.71% 104.5%, #F3D0FC 0%, #1700A4 100%), radial-gradient(111% 111% at 74.29% -11%, #A90000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #2200AA 100%)',
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: '0.89',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
     marginLeft: '4.5vw',
-    marginBottom: '12vh',
+    marginBottom: '22vh',
     '&:hover': {
       boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.8)',
     },
@@ -31,16 +31,16 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       marginLeft: '0vw',
       marginTop: '12vh',
-      marginBottom: '16vh',
+      marginBottom: '22vh',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',
       width: '100%',
       marginTop: '10vh',
-      height: '60vh',
+      height: 'auto',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '73vh',
+      height: 'auto',
     },
   },
   root2: {
@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
+    lineHeight: '1.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '4vh',
       paddingLeft: '4vw',
@@ -166,7 +167,7 @@ export const Project4 = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              A coming soon/contact site I was hired to design/code.
               </Typography>
           </Grid>
         </Grid>

@@ -15,14 +15,14 @@ import Link from 'next/link'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
-    height: '69vh',
+    height: 'auto',
     background: 'grey',
     borderRadius: 0,
     background: 'linear-gradient(114.95deg, rgba(235, 0, 255, 0.5) 0%, rgba(0, 71, 255, 0) 34.35%), linear-gradient(180deg, #004B5B 0%, #FFA7A7 100%), linear-gradient(244.35deg, #FFB26A 0%, #3676B1 50.58%, #00A3FF 100%), linear-gradient(244.35deg, #FFFFFF 0%, #004A74 49.48%, #FF0000 100%), radial-gradient(100% 233.99% at 0% 100%, #B70000 0%, #AD00FF 100%), linear-gradient(307.27deg, #1DAC92 0.37%, #2800C6 100%), radial-gradient(100% 140% at 100% 0%, #EAFF6B 0%, #006C7A 57.29%, #2200AA 100%)',
     backgroundBlendMode: 'hard-light, overlay, overlay, overlay, difference, difference, normal',
     opacity: '0.88',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
-    marginTop: '-6.25vh',
+    marginTop: '-1.5vh',
     marginLeft: '4.5vw',
     marginBottom: '9vh',
     '&:hover': {
@@ -38,10 +38,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '0vw',
       width: '100%',
       marginTop: '10vh',
-      height: '60vh',
+      height: 'auto',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '73vh',
+      height: 'auto',
     },
   },
   root2: {
@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
+    lineHeight: '1.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '4vh',
       paddingLeft: '4vw',

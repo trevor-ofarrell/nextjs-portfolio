@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         marginLeft: '4.5vw',
         [theme.breakpoints.down('lg')]: {
-            marginTop: '1vh',
+            marginTop: '1.5vh',
         },
         [theme.breakpoints.down('md')]: {
             marginLeft: '0vw',
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '5px',
         background: 'radial-gradient(111% 111% at 74.29% -11%, #A93300 0%, #005570 100%), linear-gradient(127.43deg, #00D5C8 0%, #2200AA 100%)',
         backgroundBlendMode: 'difference, normal',
-        opacity: '0.9',
+        opacity: '0.8',
         width: '100%',
         marginBottom: '5vh',
         fontFamily: 'Cyber',

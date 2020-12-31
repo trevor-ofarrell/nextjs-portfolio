@@ -3,8 +3,6 @@ import { useSpring, animated } from 'react-spring'
 import {
     makeStyles,
     Grid,
-    Container,
-    Fade
 } from '@material-ui/core';
 import { HomeTextBold } from './HomeTextBold'
 
