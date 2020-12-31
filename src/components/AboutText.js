@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '2.9vh',
+    fontSize: '3vh',
     color: '#000000',
     paddingTop: '1.5em',
     paddingBottom: '2.5vh',
