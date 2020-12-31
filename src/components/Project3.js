@@ -15,7 +15,7 @@ import Link from 'next/link'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '58vw',
-    height: '69vh',
+    height: 'auto',
     background: 'grey',
     borderRadius: 0,
     background: 'linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%)',
@@ -37,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '0vw',
       width: '100%',
       marginTop: '10vh',
-      height: '60vh',
+      height: 'auto',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '73vh',
+      height: 'auto',
     },
   },
   root2: {
@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
+    lineHeight: '1.2em',
     [theme.breakpoints.down('md')]: {
       fontSize: '4vh',
       paddingLeft: '4vw',
@@ -165,8 +166,10 @@ export const Project3 = () => {
               </Link>            
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
+              <br/>
               <Typography className={classes.textbody}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.              </Typography>
+              A demo site for a online shopping tool. I was hired to implement a redesign.
+              </Typography>
           </Grid>
         </Grid>
     </animated.div>

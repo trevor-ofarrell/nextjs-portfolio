@@ -14,20 +14,21 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '0vw',
       marginTop: '-10vh',
     },
-    height: '70vh',
+    height: 'auto',
     borderRadius: 0,
-    background: '#232526',
-    background: '-webkit-linear-gradient(to right, #232526, #414345)',
-    background: 'linear-gradient(to right, #232526, #414345)',
     marginTop: '-6vh',
     marginLeft: '4.5vw',
-    opacity: 0.75,
+    opacity: 0.7,
+    background: 'linear-gradient(to right, #616161, #9bc5c3)',
+    boxShadow: '0px 0px 55px 5px #fafafa',
     '&:hover': {
+      boxShadow: '0px 0px 80px 7.5px #fafafa',
+      opacity: 0.85,
     },
     [theme.breakpoints.down('md')]: {
-      width: '83.5vw',
+      width: '100%',
       marginTop: '8vh',
-      height: '75vh',
+      height: 'auto',
       marginLeft: '0vw',
     },
   },
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const trans = (x, y, s) => `perspective(5000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 export const AboutCard = () => {
   const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 40 } }))
