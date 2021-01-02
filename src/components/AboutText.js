@@ -76,7 +76,7 @@ export const AboutText = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
-              I’m a east Bay Area native who loves mountain biking, chess, the outdoors, JavaScript, and making beautiful websites. Currently I’m seeking full-time employment, and interested in anything in the full stack web development/frontend spectrum.
+              I’m a Bay Area native who loves mountain biking, chess, the outdoors, and making beautiful websites. Currently I’m seeking full-time employment, and interested in anything in the full stack web development/frontend spectrum.
               </Typography>
               <Typography className={classes.textbody}>
               Feel free to reach out with inquires about hiring me for freelancing/consulting as well.
