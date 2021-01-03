@@ -56,13 +56,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Nav = ({toggleView}) => {
+export const Nav = ({toggleView, toggle}) => {
   const classes = useStyles()
 
   return(
     <motion.ul variants={variants} className={classes.root}>
       {itemIds.map(i => (
-      <MenuItem i={i} key={i} toggleView={toggleView}/>
+      <MenuItem i={i} key={i} toggleView={toggleView} toggle={toggle}/>
       ))}
     </motion.ul>
   )

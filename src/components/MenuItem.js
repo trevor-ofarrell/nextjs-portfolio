@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
-import { Typography, Grid } from '@material-ui/core'
+import { Typography, Grid, Hidden} from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Link from 'next/link'
@@ -96,7 +96,9 @@ const colors = [
 ];
 const titles = ["home", "about me", "portfolio", "contact"]
 
-export const MenuItem = ({ toggleView, i }) => {
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+export const MenuItem = ({ toggleView, i, toggle }) => {
   const classes = useStyles()
   const [onHover, Hovered] = useState(false);
   const style = {
@@ -106,9 +108,18 @@ export const MenuItem = ({ toggleView, i }) => {
     WebkitTransition: 'all 0.01s ease-in',
     transition: 'all 0.01s ease-in',
   }
+
   const handleToggle = useCallback(event => {
     toggleView(i)
   }, [toggleView])
+
+  const handleToggleMobile = useCallback(async event => {
+    toggleView(i)
+    await delay(700).then(() => {
+      toggle()
+    })
+  }, [toggleView])
+
   const icons = [
     <HomeIcon fontSize="large" className={classes.menuIcon}/>,
     <InfoIcon fontSize="large" className={classes.menuIcon}/>,
@@ -117,27 +128,55 @@ export const MenuItem = ({ toggleView, i }) => {
   ]
 
   return (
-    <motion.li
-      variants={variants}
-      whileHover={{ scale: 1.10 }}
-      whileTap={{ scale: 0.96 }}
-      onClick={handleToggle}
-      onMouseEnter={() => Hovered(true)}
-      onMouseLeave={() => Hovered(false)}
-      className={classes.root}
-    >
-      <button class="cybr-btn" style={style}>
-      <Grid container className={classes.textPlaceholder}>
-        <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
-          {icons[i]}
+    <>
+      <Hidden mdDown>
+      <motion.li
+        variants={variants}
+        whileHover={{ scale: 1.10 }}
+        whileTap={{ scale: 0.96 }}
+        onClick={handleToggle}
+        onMouseEnter={() => Hovered(true)}
+        onMouseLeave={() => Hovered(false)}
+        className={classes.root}
+      >
+        <button class="cybr-btn" style={style}>
+        <Grid container className={classes.textPlaceholder}>
+          <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
+            {icons[i]}
+          </Grid>
+          <Grid item xs={9} sm={9} md={9} lg={9} className={classes.menuText}>
+            {titles[i]}
+          </Grid>
         </Grid>
-        <Grid item xs={9} sm={9} md={9} lg={9} className={classes.menuText}>
-          {titles[i]}
+          <span aria-hidden></span>
+          <span aria-hidden class="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
+        </button>
+      </motion.li>
+      </Hidden>
+      <Hidden lgUp>
+      <motion.li
+        variants={variants}
+        whileHover={{ scale: 1.10 }}
+        whileTap={{ scale: 0.96 }}
+        onClick={handleToggleMobile}
+        onMouseEnter={() => Hovered(true)}
+        onMouseLeave={() => Hovered(false)}
+        className={classes.root}
+      >
+        <button class="cybr-btn" style={style}>
+        <Grid container className={classes.textPlaceholder}>
+          <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
+            {icons[i]}
+          </Grid>
+          <Grid item xs={9} sm={9} md={9} lg={9} className={classes.menuText}>
+            {titles[i]}
+          </Grid>
         </Grid>
-      </Grid>
-        <span aria-hidden></span>
-        <span aria-hidden class="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
-      </button>
-    </motion.li>
+          <span aria-hidden></span>
+          <span aria-hidden class="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
+        </button>
+      </motion.li>
+      </Hidden>
+    </>
   );
 };

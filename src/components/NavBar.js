@@ -147,7 +147,7 @@ export const NavBar = ({changeView, toggleView}) => {
       >
         <motion.div className={classes.root} variants={sidebar} />
           <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
-            <Nav toggleView={toggleView}/>
+            <Nav toggleView={toggleView} toggle={() => toggleOpen()}/>
           </div>
           <div>
             <MenuToggle toggle={() => toggleOpen()}/>

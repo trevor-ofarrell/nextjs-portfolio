@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     height: '100%',
     paddingTop: '24vh',
+    scrollBehavior: 'smooth',
     [theme.breakpoints.down('md')]: {
       paddingTop: '9vh'
     },
@@ -71,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
     width: "100vw",
     height: '100%',
+    scrollBehavior: 'smooth',
   },
 }));
 

@@ -12,7 +12,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '98%',
     padding: '2em',
-    paddingTop: '5vh'
+    paddingTop: '5vh',
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+      padding: '1.1em',
+      paddingTop: '3.5vh',
+    }
   },
   texttitle: {
     textAlign: 'center',
@@ -32,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '3.7vh',
-
+      paddingTop: '0em',
+      lineHeight: '4.2vh'
     }
   },
   textbody: {
@@ -45,13 +51,19 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '2.5vh',
     [theme.breakpoints.down('md')]: {
       paddingTop: '.5em'
-    }
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '2.7vh',
+    },
   },
   image: {
     padding: '.2em',
     opacity: '0.90',
     borderRadius: '50%',
     pointerEvents: 'none',
+    [theme.breakpoints.down('xs')]: {
+      padding: '0em',
+    },
   },
 }));
 
@@ -69,14 +81,14 @@ export const AboutText = () => {
                 className={classes.image}
               />
             </Grid>
-            <Grid item xs={7} sm={7} md={8} lg={7}>
+            <Grid item xs={8} sm={7} md={8} lg={7}>
               <Typography className={classes.texttitle}>
               Hi, I'm Trevor O'Farrell
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Typography className={classes.textbody}>
-              I’m a east Bay Area native who loves mountain biking, chess, the outdoors, JavaScript, and making beautiful websites. Currently I’m seeking full-time employment, and interested in anything in the full stack web development/frontend spectrum.
+              I’m a Bay Area native who loves mountain biking, chess, spending time outdoors, and coding. Currently I’m seeking full-time employment, and interested in anything in the full stack web development/frontend spectrum.
               </Typography>
               <Typography className={classes.textbody}>
               Feel free to reach out with inquires about hiring me for freelancing/consulting as well.
