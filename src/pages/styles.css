@@ -7,6 +7,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 
