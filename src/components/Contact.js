@@ -4,7 +4,7 @@ import {
   TextField,
   Button
 } from "@material-ui/core";
-import { createMuiTheme, withStyles, ThemeProvider } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { useForm, ValidationError } from '@formspree/react';
 
 const useStyles = makeStyles((theme) => ({

@@ -1,12 +1,8 @@
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
-import { Typography, Grid, Hidden} from '@material-ui/core'
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import Link from 'next/link'
+import { Grid, Hidden, makeStyles, withStyles } from '@material-ui/core'
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
 import CodeIcon from '@material-ui/icons/Code';
 import MessageIcon from '@material-ui/icons/Message';
 

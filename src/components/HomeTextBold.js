@@ -1,10 +1,6 @@
 import React from "react";
 import {
-  Box,
-  Grid,
-  Typography,
   makeStyles,
-  Container,
 } from "@material-ui/core";
 
 import Typewriter from 'typewriter-effect';
