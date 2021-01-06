@@ -1,4 +1,3 @@
-export * from './HomeSection';
 export * from './AboutText';
 export * from './HomeTextBold';
 export * from './NavBar';

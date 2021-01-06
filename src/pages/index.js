@@ -1,5 +1,4 @@
-import React,
-{
+import React, {
   useState,
   useEffect,
   useRef 
@@ -36,10 +35,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     overflowX: 'hidden',
     overflowY: 'hidden',
-    WebkitAnimationTimingFunction: 'linear',
-    MozAnimationTimingFunction: 'linear',
-    OAnimationTimingFunction: 'linear',
-    animationTimingFunction: 'linear',
   },
   contentContainer: {
     height: '100vh',
@@ -84,7 +79,6 @@ export default function Birds() {
   const classes = useStyles()
   const [vantaEffect, setVantaEffect] = useState(0)
   const myRef = useRef(null)
-  const [contentStatus, displayContent] = React.useState(false);
   const [changeView, toggleView] = useState(0);
 
   useEffect(() => {

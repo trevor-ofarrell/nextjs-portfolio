@@ -4,16 +4,11 @@ import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Nav } from "./Nav";
-import { makeStyles, withStyles, Typography, Toolbar, AppBar } from '@material-ui/core';
+import { makeStyles, Toolbar, AppBar, Grid } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import graff from '../../public/blackname.png'
-import { Grid } from "@material-ui/core";
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Button from '@material-ui/core/Button';
-
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -34,7 +29,6 @@ const sidebar = {
     }
   }
 };
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
