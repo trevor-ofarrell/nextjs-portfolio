@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 
 import Image from 'next/image';
-import pgnbuddy from '../../public/pgn.png';
+import pgnbuddy from '../../public/pgnbuddyredesign.png';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link'
 
