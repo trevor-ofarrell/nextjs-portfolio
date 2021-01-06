@@ -1,7 +1,6 @@
 import React from "react";
 
 import Head from "next/head";
-import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { FormspreeProvider } from '@formspree/react';
 import './styles.css'
@@ -30,7 +29,6 @@ export default function SaveApp(props) {
             name="viewport"
             content="minimum-scale=0.100, initial-scale=1.00, width=device-width"
           />
-          <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet"/>
         </Head>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
