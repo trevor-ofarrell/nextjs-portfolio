@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import {
     makeStyles,
@@ -21,36 +21,8 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '1vh',
     },
   },
-  button: {
-      height: '2vh',
-      width: '2vw',
-      marginLeft: '-2.7em',
-      marginTop: '3px'
-  },
   typewritter: {
       textAlign: 'center',
-  },
-  grid: {
-    marginTop: '-10vh',
-    height: '0vh',
-    marginBottom: '5vh',
-    zIndex: '11000',
-
-  },
-  grid1: {
-    background: 'conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red)',
-    width: '100%',
-    height: '37vh',
-    opacity: '0.075',
-    boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
-  },
-  grid2: {
-    background: 'radial-gradient(circle at 50% 50%, #FFFFFF 0%, #000000 100%), conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red)',
-    backgroundBlendMode: 'color-dodge, normal',
-    width: '100%',
-    height: '37vh',
-    opacity: 0.075,
-    boxShadow: '0px 0px 80px 10px rgb(196, 113, 237, 0.5)',
   },
 }));
 
