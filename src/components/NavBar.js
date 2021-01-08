@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
@@ -98,12 +98,19 @@ const useStyles = makeStyles((theme) => ({
 
 export const NavBar = ({ toggleView }) => {
   const classes = useStyles();
-  const [isOpen, toggleOpen] = useCycle(false, true);
+
+  const [isOpen, toggleOpen] = useState(false);
+
   const containerRef = useRef(null);
+  
   const { height } = useDimensions(containerRef);
 
+  const handleClick = () => {
+    toggleOpen((prev) => !prev);
+  };
+
   const handleClickAway = () => {
-    toggleOpen(false);
+    toggleOpen(false)
   };
 
   return (
@@ -146,10 +153,10 @@ export const NavBar = ({ toggleView }) => {
         >
           <motion.div className={classes.root} variants={sidebar} />
             <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
-              <Nav toggleView={toggleView} toggle={() => toggleOpen()}/>
+              <Nav toggleView={toggleView}/>
             </div>
             <div>
-              <MenuToggle toggle={() => toggleOpen()}/>
+              <MenuToggle toggle={() => handleClick()}/>
             </div>
         </motion.nav>
       </div>
