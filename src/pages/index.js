@@ -8,6 +8,7 @@ import BIRDS from 'vanta/dist/vanta.birds.min'
 import Head from 'next/head'
 
 import {
+  ClickAwayListener,
   CssBaseline,
   Grid,
 } from '@material-ui/core';
@@ -143,18 +144,18 @@ export default function Birds() {
                   }
                   {changeView == 1 &&
                     <>
-                     <section className={classes.homesection}>
-                       <Grow in={changeView == 1} timeout={600}>
-                         <Grid container>
-                           <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
-                           <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
-                             <About/>
-                           </Grid>
-                           <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
-                         </Grid>
-                       </Grow>
-                     </section>
-                   </>  
+                    <section className={classes.homesection}>
+                      <Grow in={changeView == 1} timeout={600}>
+                        <Grid container>
+                          <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
+                          <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
+                            <About/>
+                          </Grid>
+                          <Grid item xs={1} sm={1} md={1} lg={2} xl={3}/>
+                        </Grid>
+                      </Grow>
+                    </section>
+                  </>  
                   }
                   {changeView == 2 &&
                     <>
