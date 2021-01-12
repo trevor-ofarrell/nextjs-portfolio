@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 
 import Image from 'next/image';
-import pgnbuddy from '../../public/pgnbuddyredesign.png';
+import pgnbuddy from '../../public/pgnbuddy.png';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link'
 
@@ -135,10 +135,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const trans = (x, y, s) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 export const Project1 = () => {
-  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 40 } }))
+  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }))
   const classes = useStyles()
   return (
     <animated.div
