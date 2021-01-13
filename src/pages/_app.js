@@ -35,6 +35,10 @@ function PreventFlashOfUnstyledContent() {
           __html: `*, *::before, *::after { transition: none !important; }`,
         }}
       />
+      <meta
+        name="viewport"
+        content="minimum-scale=0.100, initial-scale=1.00, width=device-width"
+      />
     </Head>
   );
 }
