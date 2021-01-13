@@ -153,7 +153,7 @@ export const NavBar = ({ toggleView }) => {
         >
           <motion.div className={classes.root} variants={sidebar} />
             <div className={classes.items} style={{pointerEvents: isOpen ? 'all' : 'none'}}>
-              <Nav toggleView={toggleView}/>
+              <Nav toggleView={toggleView} toggle={handleClick}/>
             </div>
             <div>
               <MenuToggle toggle={() => handleClick()}/>
