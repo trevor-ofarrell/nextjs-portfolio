@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -9,6 +9,36 @@ import './styles.css'
 // A note about Server Side Rendering w/ stylesheets & Material UI
 // https://material-ui.com/guides/server-rendering/#server-rendering
 // -
+
+function useIsMounted() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return mounted;
+}
+
+function PreventFlashOfUnstyledContent() {
+  const mounted = useIsMounted();
+
+  if (mounted) {
+    return null;
+  }
+
+  return (
+    <Head>
+      <style
+        id="preventFlashOfUnstyledContent"
+        dangerouslySetInnerHTML={{
+          __html: `*, *::before, *::after { transition: none !important; }`,
+        }}
+      />
+    </Head>
+  );
+}
+
 export default function SaveApp(props) {
   const { Component, pageProps } = props;
 
@@ -32,6 +62,7 @@ export default function SaveApp(props) {
         </Head>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+        <PreventFlashOfUnstyledContent/>
         <Component {...pageProps} />
       </React.Fragment>
     </FormspreeProvider>
