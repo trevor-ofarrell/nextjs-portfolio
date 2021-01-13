@@ -1,5 +1,4 @@
 import React from "react";
-
 import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { FormspreeProvider } from '@formspree/react';
@@ -9,6 +8,7 @@ import './styles.css'
 // A note about Server Side Rendering w/ stylesheets & Material UI
 // https://material-ui.com/guides/server-rendering/#server-rendering
 // -
+
 export default function SaveApp(props) {
   const { Component, pageProps } = props;
 
