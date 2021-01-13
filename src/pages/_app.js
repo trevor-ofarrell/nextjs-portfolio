@@ -33,7 +33,7 @@ export default function SaveApp(props) {
         </Head>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+          <Component {...pageProps} />
       </React.Fragment>
     </FormspreeProvider>
   );

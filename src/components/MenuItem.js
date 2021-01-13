@@ -135,7 +135,7 @@ export const MenuItem = ({ toggleView, i, toggle }) => {
         onMouseLeave={() => Hovered(false)}
         className={classes.root}
       >
-        <button class="cybr-btn" style={style}>
+        <button className="cybr-btn" style={style}>
         <Grid container className={classes.textPlaceholder}>
           <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
             {icons[i]}
@@ -145,7 +145,7 @@ export const MenuItem = ({ toggleView, i, toggle }) => {
           </Grid>
         </Grid>
           <span aria-hidden></span>
-          <span aria-hidden class="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
+          <span aria-hidden className="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
         </button>
       </motion.li>
       </Hidden>
@@ -159,7 +159,7 @@ export const MenuItem = ({ toggleView, i, toggle }) => {
         onMouseLeave={() => Hovered(false)}
         className={classes.root}
       >
-        <button class="cybr-btn" style={style}>
+        <button className="cybr-btn" style={style}>
         <Grid container className={classes.textPlaceholder}>
           <Grid item xs={3} sm={3} md={3} lg={3} className={classes.icons}>
             {icons[i]}
@@ -169,7 +169,7 @@ export const MenuItem = ({ toggleView, i, toggle }) => {
           </Grid>
         </Grid>
           <span aria-hidden></span>
-          <span aria-hidden class="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
+          <span aria-hidden className="cybr-btn__glitch">{icons[i]}{titles[i]}</span>
         </button>
       </motion.li>
       </Hidden>
