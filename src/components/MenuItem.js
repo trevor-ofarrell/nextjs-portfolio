@@ -111,7 +111,7 @@ export const MenuItem = ({ toggleView, i, toggle }) => {
 
   const handleToggleMobile = useCallback(async event => {
     toggleView(i)
-    await delay(700).then(() => {
+    await delay(650).then(() => {
       toggle()
     })
   }, [toggleView])

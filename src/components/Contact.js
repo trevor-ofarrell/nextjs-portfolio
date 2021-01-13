@@ -54,6 +54,15 @@ const useStyles = makeStyles((theme) => ({
         color: '#ffffff',
         fontFamily: 'Cyber',
         fontSize: '1.2em',
+    },
+    success: {
+        color: '#ffffff',
+        fontFamily: 'Cyber',
+        fontSize: '1.8em',
+        marginTop: '23vh',
+        [theme.breakpoints.down('md')]: {
+            marginTop: '37vh',
+        },
     }
 }))
 
@@ -76,7 +85,7 @@ export const Contact = () => {
     const classes = useStyles();
     const [state, handleSubmit] = useForm("contactForm");
     if (state.succeeded) {
-      return <div>Thank you for the message, I'll get back to you ASAP.!</div>;
+      return <div className={classes.success}>Thanks for the message, I'll get back to you ASAP.</div>;
     }
 
     return(
