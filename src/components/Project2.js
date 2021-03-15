@@ -1,16 +1,16 @@
-import React from 'react'
-import { useSpring, animated } from 'react-spring'
+import React from 'react';
+import { useSpring, animated } from 'react-spring';
 import {
-    makeStyles,
-    Grid,
-    Typography,
-    Chip,
+  makeStyles,
+  Grid,
+  Typography,
+  Chip,
 } from '@material-ui/core';
 
 import Image from 'next/image';
+import LinkIcon from '@material-ui/icons/Link';
+import Link from 'next/link';
 import pgnbuddy from '../../public/tacklehunger.png';
-import LinkIcon from '@material-ui/icons/Link'; 
-import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       fontSize: '3.7vh',
       paddingLeft: '0vw',
-    }
+    },
   },
   textbody: {
     textAlign: 'center',
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '0.8em',
     marginBottom: '2vh',
     [theme.breakpoints.down('md')]: {
-      paddingTop: '.5em'
+      paddingTop: '.5em',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '2.25vh',
@@ -120,26 +120,28 @@ const useStyles = makeStyles((theme) => ({
   gridtitle: {
     paddingLeft: '2vw',
     [theme.breakpoints.down('sm')]: {
-      paddingLeft: '0vw'
+      paddingLeft: '0vw',
     },
   },
   link: {
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
-      marginLeft: '3vw'
+      marginLeft: '3vw',
     },
     [theme.breakpoints.down('xs')]: {
       marginLeft: '0vw',
     },
-  }
+  },
 }));
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
+const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 export const Project2 = () => {
-  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }))
-  const classes = useStyles()
+  const [props, set] = useSpring(
+    () => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }),
+  );
+  const classes = useStyles();
   return (
     <animated.div
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
@@ -148,30 +150,35 @@ export const Project2 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-            <Grid item xs={12} sm={8} md={7} lg={7}>
-              <Image
-                src={pgnbuddy}
-                alt="Picture of the author"
-                width={1900}
-                height={1120}
-                className={classes.image}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4} md={5} lg={5} className={classes.gridtitle}>
-            <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip}/>
-              <Typography className={classes.texttitle}>
-                Tackle Hunger
-              </Typography>
-              <Link href="https://tacklehunger.org">
-              <LinkIcon style={{fontSize: "3em"}} className={classes.link}/>
-              </Link>            
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12}>
-              <Typography className={classes.textbody}>
-              In this project I wrote the initial code for the front-end of the Admin console, and the Edit Charity page for TackleHunger, a "youth-inspired movement working across the nation to tackle hunger in their local communities". Along with coding those two pages, I was a consultant on what technologies to use for the initial frontend development.
-              </Typography>
-          </Grid>
+        <Grid item xs={12} sm={8} md={7} lg={7}>
+          <Image
+            src={pgnbuddy}
+            alt="Picture of the author"
+            width={1900}
+            height={1120}
+            className={classes.image}
+          />
         </Grid>
+        <Grid item xs={12} sm={4} md={5} lg={5} className={classes.gridtitle}>
+          <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip} />
+          <Typography className={classes.texttitle}>
+            Tackle Hunger
+          </Typography>
+          <Link href="https://tacklehunger.org">
+            <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
+          </Link>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          <Typography className={classes.textbody}>
+            In this project I wrote the initial code for the front-end of the Admin console,
+            and the Edit Charity page for TackleHunger,
+            a "youth-inspired movement working across the nation to
+            tackle hunger in their local communities".
+            Along with coding those two pages, I was a consultant on what
+            technologies to use for the initial frontend development.
+          </Typography>
+        </Grid>
+      </Grid>
     </animated.div>
-  )
-}
+  );
+};

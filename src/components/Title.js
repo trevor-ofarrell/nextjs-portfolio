@@ -1,10 +1,10 @@
-import React from 'react'
-import { useSpring, animated } from 'react-spring'
+import React from 'react';
+import { useSpring, animated } from 'react-spring';
 import {
-    makeStyles,
-    Grid,
+  makeStyles,
+  Grid,
 } from '@material-ui/core';
-import { HomeTextBold } from './HomeTextBold'
+import { HomeTextBold } from './HomeTextBold';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   typewritter: {
-      textAlign: 'center',
+    textAlign: 'center',
   },
 }));
 
-const calc = (x, y) => [-(y - window.innerHeight / 3) / 20, (x - window.innerWidth / 2) / 20, 1.175]
-const trans = (x, y, s) => `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const calc = (x, y) => [-(y - window.innerHeight / 3) / 20, (x - window.innerWidth / 2) / 20, 1.175];
+const trans = (x, y, s) => `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 export const Title = () => {
-  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
-  const classes = useStyles()
+  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
+  const classes = useStyles();
 
   return (
     <>
@@ -48,5 +48,5 @@ export const Title = () => {
         </Grid>
       </animated.div>
     </>
-  )
-}
+  );
+};

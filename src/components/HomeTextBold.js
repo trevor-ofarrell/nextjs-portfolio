@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 import {
   makeStyles,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 import Typewriter from 'typewriter-effect';
 
-import Head from 'next/head'
+import Head from 'next/head';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: 'Cyber',
     fontWeight: '700',
-    fontSize: '7.25em',
+    fontSize: '7.35em',
     lineHeight: '1.1',
     paddingTop: '11vh',
     paddingBottom: '12vh',
@@ -49,35 +49,33 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const HomeTextBold = () => {
-    const classes = useStyles();
-    return(
-      <>
-        <div className={classes.root}>
-          <Head>
-          </Head>
-            <Typewriter
-                onInit={(typewriter) => {
-                    
-                    typewriter.typeString("Hello! I'm Trevor O'Farrell, welcome to my website.")
-                      .pauseFor(2000)
-                      .deleteAll()
-                      typewriter.typeString(
-                        `I\'m a full stack web developer from the Bay Area, who loves to use 💭 creativity to solve 🧩 problems.`
-                      )
-                      .pauseFor(1000)
-                      .pauseFor(5500)
-                      .deleteAll()
-                      .pauseFor(100)
-                      .start();
-                }}
-                options={{
-                  loop: true,
-                  deleteSpeed: 25,
-                  delay: 75,
-                }}
-                className={classes.text}
-            />
-        </div>
-      </>
-    )
-}
+  const classes = useStyles();
+  return (
+    <>
+      <div className={classes.root}>
+        <Head />
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter.typeString("Hello! I'm Trevor O'Farrell, welcome to my website.")
+              .pauseFor(2000)
+              .deleteAll();
+            typewriter.typeString(
+              'I\'m a full stack web developer from the Bay Area, who loves to use 💭 creativity to solve 🧩 problems.',
+            )
+              .pauseFor(1000)
+              .pauseFor(5500)
+              .deleteAll()
+              .pauseFor(100)
+              .start();
+          }}
+          options={{
+            loop: true,
+            deleteSpeed: 25,
+            delay: 75,
+          }}
+          className={classes.text}
+        />
+      </div>
+    </>
+  );
+};

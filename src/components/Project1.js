@@ -1,16 +1,16 @@
-import React from 'react'
-import { useSpring, animated } from 'react-spring'
+import React from 'react';
+import { useSpring, animated } from 'react-spring';
 import {
-    makeStyles,
-    Grid,
-    Typography,
-    Chip,
+  makeStyles,
+  Grid,
+  Typography,
+  Chip,
 } from '@material-ui/core';
 
 import Image from 'next/image';
-import pgnbuddy from '../../public/pgnbuddy.png';
 import LinkIcon from '@material-ui/icons/Link';
-import Link from 'next/link'
+import Link from 'next/link';
+import pgnbuddy from '../../public/pgnbuddy.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       fontSize: '3.7vh',
       paddingLeft: '0vw',
-    }
+    },
   },
   textbody: {
     textAlign: 'center',
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '0.8em',
     marginBottom: '2vh',
     [theme.breakpoints.down('md')]: {
-      paddingTop: '.5em'
+      paddingTop: '.5em',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '2.25vh',
@@ -120,26 +120,28 @@ const useStyles = makeStyles((theme) => ({
   gridtitle: {
     paddingLeft: '2vw',
     [theme.breakpoints.down('sm')]: {
-      paddingLeft: '0vw'
+      paddingLeft: '0vw',
     },
   },
   link: {
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
-      marginLeft: '3vw'
+      marginLeft: '3vw',
     },
     [theme.breakpoints.down('xs')]: {
       marginLeft: '0vw',
     },
-  }
+  },
 }));
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
+const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 export const Project1 = () => {
-  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }))
-  const classes = useStyles()
+  const [props, set] = useSpring(
+    () => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }),
+  );
+  const classes = useStyles();
   return (
     <animated.div
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
@@ -148,31 +150,36 @@ export const Project1 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-            <Grid item xs={12} sm={8} md={7} lg={7}>
-              <Image
-                src={pgnbuddy}
-                alt="Picture of the author"
-                width={1900}
-                height={1120}
-                layout="responsive"
-                className={classes.image}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4} md={4} lg={5} className={classes.gridtitle}>
-              <Chip label="Personal Project" color="primary" className={classes.chip}/>
-              <Typography className={classes.texttitle}>
-                PGNBuddy
-              </Typography>
-              <Link href="https://pgnbuddy.com">
-              <LinkIcon style={{fontSize: "3em"}} className={classes.link}/>
-              </Link>
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12}>
-              <Typography className={classes.textbody}>
-              A database to store & view your PGN(playable game notation) files, made using the lichess.org API. Export any game played on the site, or export multiple at once by game ID, or with username. Analyze the game, download the PGN, save the PGN's to folders for later study, and many other uses/features in the works.          
-              </Typography>
-            </Grid>
+        <Grid item xs={12} sm={8} md={7} lg={7}>
+          <Image
+            src={pgnbuddy}
+            alt="Picture of the author"
+            width={1900}
+            height={1120}
+            layout="responsive"
+            className={classes.image}
+          />
         </Grid>
+        <Grid item xs={12} sm={4} md={4} lg={5} className={classes.gridtitle}>
+          <Chip label="Personal Project" color="primary" className={classes.chip} />
+          <Typography className={classes.texttitle}>
+            PGNBuddy
+          </Typography>
+          <Link href="https://pgnbuddy.com">
+            <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
+          </Link>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+          <Typography className={classes.textbody}>
+            PGNBuddy was first created by me in 2020, as a personal project
+            to practice my coding skills by building something I could personally use,
+            and was interested in frequently working on. I recently began rewriting PGNBuddy
+            from scratch after my original efforts, and came to realize that my fun project
+            may prove useful to other chess players. So I've made it open source for the
+            public to use free of charge, without ads or tracking.
+          </Typography>
+        </Grid>
+      </Grid>
     </animated.div>
-  )
-}
+  );
+};

@@ -1,10 +1,10 @@
-import React from 'react'
-import { useSpring, animated } from 'react-spring'
+import React from 'react';
+import { useSpring, animated } from 'react-spring';
 import {
-    makeStyles,
-    Grid,
+  makeStyles,
+  Grid,
 } from '@material-ui/core';
-import { AboutText } from './AboutText'
+import { AboutText } from './AboutText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,16 +33,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   typewritter: {
-      textAlign: 'left',
-  }
+    textAlign: 'left',
+  },
 }));
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
+const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 export const AboutCard = () => {
-  const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }))
-  const classes = useStyles()
+  const [props, set] = useSpring(
+    () => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }),
+  );
+  const classes = useStyles();
   return (
     <animated.div
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
@@ -56,5 +58,5 @@ export const AboutCard = () => {
         </Grid>
       </Grid>
     </animated.div>
-  )
-}
+  );
+};

@@ -1,8 +1,8 @@
-import React from "react";
-import Head from "next/head";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import React from 'react';
+import Head from 'next/head';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { FormspreeProvider } from '@formspree/react';
-import './styles.css'
+import './styles.css';
 
 //
 // A note about Server Side Rendering w/ stylesheets & Material UI
@@ -14,7 +14,7 @@ export default function SaveApp(props) {
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector("#jss-server-side");
+    const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
@@ -22,19 +22,19 @@ export default function SaveApp(props) {
 
   return (
     <FormspreeProvider project="1552057770667146702">
-      <React.Fragment>
+      <>
         <Head>
           <title>Trevor O'Farrell</title>
           <meta
             name="viewport"
             content="minimum-scale=0.100, initial-scale=1.00, width=device-width"
           />
-          <meta name="description" content="Hi I'm Trevor O'Farrell, I'm a full stack web developer from the Bay Area. Welcome to my website!"/>
+          <meta name="description" content="Hi I'm Trevor O'Farrell, I'm a full stack web developer from the Bay Area. Welcome to my website!" />
         </Head>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-          <Component {...pageProps} />
-      </React.Fragment>
+        <Component {...pageProps} />
+      </>
     </FormspreeProvider>
   );
 }
