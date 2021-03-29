@@ -94,7 +94,8 @@ export const AboutText = () => {
         </Typography>
 
         <Typography className={classes.textbody}>
-          Some technologies that I'm most excited about and use most frequently are: JavaScript, Node.js, React, Next.js/Vercel, Material-UI, Redis, and Python.
+          Some technologies that I'm most excited about and use most frequently are: JavaScript,
+          Node.js, React, Next.js/Vercel, Material-UI, Redis, and Python.
         </Typography>
       </Grid>
     </Grid>
