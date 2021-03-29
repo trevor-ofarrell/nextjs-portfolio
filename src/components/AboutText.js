@@ -83,18 +83,18 @@ export const AboutText = () => {
       </Grid>
       <Grid item xs={8} sm={7} md={8} lg={7}>
         <Typography className={classes.texttitle}>
-          Hi, I'm Trevor O'Farrell
+          Hi, I'm Trevor
         </Typography>
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={12}>
         <Typography className={classes.textbody}>
           I’m a Bay Area native who loves mountain biking,
-          chess, spending time outdoors, and coding. Currently I’m seeking full-time employment,
-          and interested in anything in the full stack web development/software engineering
-          spectrum.
+          playing chess, PC gaming, and coding. I'm currently seeking full-time employment,
+          and interested in anything web development/software engineering related.
         </Typography>
+
         <Typography className={classes.textbody}>
-          Feel free to reach out with inquires about hiring me for freelancing/consulting as well.
+          Some technologies that I'm most excited about and use most frequently are: JavaScript, Node.js, React, Next.js/Vercel, Material-UI, Redis, and Python.
         </Typography>
       </Grid>
     </Grid>

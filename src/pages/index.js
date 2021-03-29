@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '24vh',
     scrollBehavior: 'smooth',
     [theme.breakpoints.down('md')]: {
-      paddingTop: '9vh',
+      paddingTop: '24vh',
     },
     [theme.breakpoints.down('sm')]: {
       paddingTop: '8vh',
@@ -91,7 +91,7 @@ export default function Birds() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: '#202020',
+        backgroundColor: '#222',
         color1: '#000000',
         color2: '#606060',
         birdSize: 3,

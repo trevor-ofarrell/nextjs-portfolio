@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('lg')]: {
       marginLeft: '-.75vw',
-      marginTop: '25vh',
+      marginTop: '20vh',
       width: '25em',
       minWidth: '17em',
     },

@@ -20,10 +20,7 @@ const useStyles = makeStyles((theme) => ({
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     overflow: 'hidden',
-    WebkitAnimationTimingFunction: 'linear',
-    MozAnimationTimingFunction: 'linear',
-    OAnimationTimingFunction: 'linear',
-    animationTimingFunction: 'linear',
+
     [theme.breakpoints.down('md')]: {
       marginLeft: '2vw',
       fontSize: '5em',
@@ -41,10 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     textAlign: 'left',
-    WebkitAnimationTimingFunction: 'linear',
-    MozAnimationTimingFunction: 'linear',
-    OAnimationTimingFunction: 'linear',
-    animationTimingFunction: 'linear',
+
   },
 }));
 
@@ -71,7 +65,7 @@ export const HomeTextBold = () => {
           options={{
             loop: true,
             deleteSpeed: 25,
-            delay: 75,
+            delay: 80,
           }}
           className={classes.text}
         />

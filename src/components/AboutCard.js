@@ -18,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
     marginTop: '-6vh',
     marginLeft: '4.5vw',
-    opacity: 0.7,
-    background: 'linear-gradient(to right, #616161, #9bc5c3)',
+    opacity: 0.8,
+    background: 'linear-gradient(to right, rgb(70,70,70,0.6), #999)',
     boxShadow: '0px 0px 55px 5px #fafafa',
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
-      opacity: 0.85,
+      opacity: 0.9,
     },
     [theme.breakpoints.down('md')]: {
       width: '100%',

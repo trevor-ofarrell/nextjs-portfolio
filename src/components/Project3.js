@@ -14,16 +14,14 @@ import pgnbuddy from '../../public/ochre.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '58vw',
+    width: '100%',
     height: 'auto',
-    background: 'grey',
     borderRadius: 0,
     background: 'linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%)',
     backgroundBlendMode: 'color-dodge, overlay, difference, normal',
     opacity: '0.85',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
-    marginLeft: '4.5vw',
-    marginBottom: '9vh',
+    marginBottom: '25vh',
     '&:hover': {
       boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.8)',
     },
@@ -31,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       marginLeft: '0vw',
       marginTop: '12vh',
-      marginBottom: '12vh',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',

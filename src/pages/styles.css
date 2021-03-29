@@ -94,7 +94,6 @@ body .cybr-btn + .cybr-btn {
   --shadow-primary-hue: 270;
   --shadow-secondary-hue: 20;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
-  --clip: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 20%);
   --border: 5px;
   --shimmy-distance: 4;
   --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
@@ -137,7 +136,6 @@ body .cybr-btn + .cybr-btn {
   left: 0;
   right: 0;
   bottom: 0;
-  clip-path: var(--clip);
   z-index: -1;
 }
 
@@ -159,7 +157,6 @@ body .cybr-btn + .cybr-btn {
   bottom: calc(var(--border) * -1);
   background: var(--shadow-primary);
   text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
-  clip-path: var(--clip);
   animation: glitch 1.5s infinite;
   display: none;
 }
@@ -175,7 +172,6 @@ body .cybr-btn + .cybr-btn {
   right: calc(var(--border) * 1);
   bottom: calc(var(--border) * 1);
   left: calc(var(--border) * 1);
-  clip-path: var(--clip);
   background: var(--primary);
   z-index: -1;
 }

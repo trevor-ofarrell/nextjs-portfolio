@@ -6,8 +6,6 @@ import {
 } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import Link from 'next/link';
 import { Nav } from './Nav';
 import { MenuToggle } from './MenuToggle';
 import { useDimensions } from './use-dimensions';
@@ -43,42 +41,38 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    marginLeft: '5vw',
-    marginTop: '2.5vh',
-    pointerEvents: 'none',
-    height: '10vh',
-    width: '29vw',
+    marginTop: '1vh',
+    WebkitTouchCallout: 'none',
+    WebkitUserSelect: 'none',
+    KhtmlUserSelect: 'none',
+    MozUserSelect: 'none',
+    MsUserSelect: 'none',
+    userSelect: 'none',
+    cursor: 'pointer',
+    color: 'white',
+    textAlign: 'left',
     [theme.breakpoints.up('xl')]: {
-      marginLeft: '4vw',
-      height: '9vh',
-      width: '22vw',
+
     },
     [theme.breakpoints.down('md')]: {
-      marginLeft: '7vw',
-      width: '40vw',
     },
     [theme.breakpoints.down('sm')]: {
-      height: '9vh',
-      width: '42vw',
+
     },
     [theme.breakpoints.down('xs')]: {
-      height: '8.2vh',
-      width: '45vw',
-      marginLeft: '7vw',
+      width: '100%',
+      height: '100%',
+      paddingRight: '.5em',
     },
   },
-
+  menubutton: {
+    marginTop: '0em',
+    top: '0',
+  },
   icons: {
-    marginTop: '3vh',
+    marginTop: 'auto',
+    marginBottom: 'auto',
     fill: '#000000',
-    [theme.breakpoints.up('xl')]: {
-    },
-    [theme.breakpoints.down('lg')]: {
-    },
-    [theme.breakpoints.down('sm')]: {
-    },
-    [theme.breakpoints.down('xs')]: {
-    },
   },
   icon: {
     [theme.breakpoints.up('xl')]: {
@@ -94,12 +88,13 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '3em',
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '2.4em',
+      marginTop: '2.5vh',
+      fontSize: '2.5em',
     },
   },
 }));
 
-export const NavBar = ({ toggleView }) => {
+export const NavBar = ({ toggleView, changeView }) => {
   const classes = useStyles();
 
   const [isOpen, toggleOpen] = useState(false);
@@ -121,26 +116,38 @@ export const NavBar = ({ toggleView }) => {
       <div className={classes.root}>
         <AppBar position="static" color="transparent" elevation={0}>
           <Toolbar>
-            <Link href="/">
-              <img src={graff} max-height="70" alt="Trevor O'Farrell" className={classes.title} />
-            </Link>
             <Grid container>
-              <Grid item xs={3} sm={6} md={6} lg={9} xl={9} />
-              <Grid item xs={8} sm={6} md={6} lg={3} xl={3} className={classes.icons}>
+              <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+                <motion.nav
+                  initial={false}
+                  animate={isOpen ? 'open' : 'closed'}
+                  custom={height}
+                  ref={containerRef}
+                >
+                  <motion.div variants={sidebar} />
+                  <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
+                    <Nav toggleView={toggleView} toggle={handleClick} />
+                  </div>
+                  <div>
+                    <MenuToggle toggle={() => handleClick()} />
+
+                  </div>
+                </motion.nav>
+              </Grid>
+              <Grid item xs={7} sm={8} md={8} lg={8} xl={8}>
+                <img src={graff} height="auto" alt="Trevor O'Farrell" className={classes.title} />
+              </Grid>
+              <Grid item lg={1} xl={1} />
+              <Grid item xs={3} sm={2} md={2} lg={1} xl={1} className={classes.icons}>
                 <Grid container>
-                  <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+                  <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <a href="https://github.com/trevor-ofarrell" aria-label="github link">
                       <GitHubIcon fontSize="large" style={{ fill: '#000000' }} className={classes.icon} />
                     </a>
                   </Grid>
-                  <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+                  <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <a href="https://twitter.com/trevorthegnar" aria-label="twitter link">
                       <TwitterIcon fontSize="large" style={{ fill: '#000000' }} className={classes.icon} />
-                    </a>
-                  </Grid>
-                  <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
-                    <a href="https://instagram.com/trevorthegnar" aria-label="instagram link">
-                      <InstagramIcon fontSize="large" style={{ fill: '#000000' }} className={classes.icon} />
                     </a>
                   </Grid>
                 </Grid>
@@ -148,21 +155,7 @@ export const NavBar = ({ toggleView }) => {
             </Grid>
           </Toolbar>
         </AppBar>
-        <motion.nav
-          initial={false}
-          animate={isOpen ? 'open' : 'closed'}
-          custom={height}
-          ref={containerRef}
-          className={classes.root}
-        >
-          <motion.div className={classes.root} variants={sidebar} />
-          <div className={classes.items} style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
-            <Nav toggleView={toggleView} toggle={handleClick} />
-          </div>
-          <div>
-            <MenuToggle toggle={() => handleClick()} />
-          </div>
-        </motion.nav>
+
       </div>
     </ClickAwayListener>
   );

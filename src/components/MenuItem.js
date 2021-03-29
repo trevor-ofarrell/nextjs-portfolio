@@ -27,11 +27,11 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    clipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
-    WebkitClipPath: 'polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 30%)',
+    clipPath: 'polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)',
+    WebkitClipPath: 'polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)',
     marginBottom: '3.25vh',
     listStyle: 'none',
-    height: '11.75vh',
+    height: '10.75vh',
     [theme.breakpoints.down('md')]: {
       marginBottom: '2vh',
     },

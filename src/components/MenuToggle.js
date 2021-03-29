@@ -12,28 +12,23 @@ const Path = (props) => (
 
 const useStyles = makeStyles((theme) => ({
   toggle: {
-    top: '5.75vh',
-    left: '2vw',
-    width: '3.6vw',
-    height: 'auto',
+    top: '0em',
+    left: '-6.25em',
+    width: '100%',
+    height: '100%',
+    padding: '2.5em',
     [theme.breakpoints.up('xl')]: {
-      height: 'auto',
-      width: '5.15em',
-      top: '5.15vh',
-      left: '1.75vw',
+      width: '100%',
+      height: '100%',
     },
     [theme.breakpoints.down('md')]: {
-      width: '5.4em',
-      height: 'auto',
-    },
-    [theme.breakpoints.down('sm')]: {
-      width: '4.20em',
-      height: 'auto',
+      width: '100%',
+      height: '100%',
     },
     [theme.breakpoints.down('xs')]: {
-      width: '4em',
-      height: 'auto',
-      top: '5.5vh',
+      padding: '1em',
+      top: '1em',
+      left: '-8.25em',
     },
   },
   svg: {

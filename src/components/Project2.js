@@ -14,13 +14,11 @@ import pgnbuddy from '../../public/tacklehunger.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '58vw',
+    width: '100%',
     height: 'auto',
-    background: 'grey',
     borderRadius: 0,
     opacity: '0.89',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
-    marginLeft: '4.5vw',
     marginBottom: '9vh',
     background: 'radial-gradient(50% 123.47% at 50% 50%, #00FF94 0%, #FF00C7 100%), linear-gradient(121.28deg, #213100 0%, #FF0000 100%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), linear-gradient(114.9deg, #00C6A2 0%, #6A45A8 100%), radial-gradient(100% 148.07% at 0% 0%, #FFFFFF 0%, #1DCD00 100%)',
     backgroundBlendMode: 'screen, color-dodge, overlay, difference, normal',

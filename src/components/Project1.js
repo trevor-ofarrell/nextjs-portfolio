@@ -14,15 +14,13 @@ import pgnbuddy from '../../public/pgnbuddy.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '58vw',
+    width: '100%',
     height: 'auto',
-    background: 'grey',
     borderRadius: 0,
     opacity: '0.88',
     boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
-    marginTop: '-1.5vh',
-    marginLeft: '4.5vw',
     marginBottom: '9vh',
+    marginTop: '-10vh',
     background: 'linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%)',
     backgroundBlendMode: 'color-dodge, overlay, difference, normal',
     '&:hover': {
@@ -36,13 +34,12 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',
+      marginTop: '-10vh',
       width: '100%',
-      marginTop: '10vh',
-      height: 'auto',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'auto',
-      marginTop: '7vh',
+      marginTop: '5vh',
     },
   },
   root2: {
@@ -61,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '7vh',
+    fontSize: '6.5vh',
     color: '#121212',
     paddingTop: '0.2em',
     lineHeight: '1.2em',
