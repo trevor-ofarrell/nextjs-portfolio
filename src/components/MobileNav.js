@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginTop: '1vh',
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(0),
   },
   title: {
-    marginTop: '1vh',
+    marginTop: '0.5vh',
     cursor: 'pointer',
     WebkitTouchCallout: 'none',
     WebkitUserSelect: 'none',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     MsUserSelect: 'none',
     userSelect: 'none',
     color: 'white',
-    width: '49vw',
+    width: '48vw',
     height: '100%',
   },
   icons: {
@@ -42,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
     fill: '#000000',
   },
   icon: {
-    marginTop: '1.5vh',
-    fontSize: '2.5em',
+    marginTop: '2.5vh',
+    fontSize: '2.3em',
   },
 }));
 
@@ -105,15 +105,16 @@ export const MobileNav = ({ toggleView }) => {
                 <MenuIcon fontSize="large" onClick={() => handleClick()} />
               </IconButton>
             </div>
-            <img src={graff} height="auto" alt="Trevor O'Farrell" className={classes.title} />
             <Grid container>
-              <Grid item xs={4} />
-              <Grid item xs={4}>
+              <Grid item xs={8}>
+                <img src={graff} alt="Trevor O'Farrell" className={classes.title} />
+              </Grid>
+              <Grid item xs={2}>
                 <a href="https://github.com/trevor-ofarrell" aria-label="github link">
                   <GitHubIcon fontSize="large" style={{ fill: '#000000' }} className={classes.icon} />
                 </a>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={2}>
                 <a href="https://twitter.com/trevorthegnar" aria-label="twitter link">
                   <TwitterIcon fontSize="large" style={{ fill: '#000000' }} className={classes.icon} />
                 </a>
