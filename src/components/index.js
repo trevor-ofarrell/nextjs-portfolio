@@ -12,3 +12,4 @@ export * from './Project1';
 export * from './Project2';
 export * from './Project3';
 export * from './Contact';
+export * from './MobileNav';

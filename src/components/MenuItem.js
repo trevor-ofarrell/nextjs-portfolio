@@ -29,15 +29,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     clipPath: 'polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)',
     WebkitClipPath: 'polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)',
-    marginBottom: '3.25vh',
+    marginBottom: '2em',
     listStyle: 'none',
-    height: '10.75vh',
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '2vh',
-    },
-    [theme.breakpoints.down('xs')]: {
-      height: '13vh',
-    },
+    height: '8em',
   },
   textPlaceholder: {
     flex: '1',
@@ -119,10 +113,10 @@ export const MenuItem = ({ toggleView, i, toggle }) => {
   }, [toggleView, i, toggle]);
 
   const icons = [
-    <HomeIcon fontSize="large" className={classes.menuIcon} />,
-    <InfoIcon fontSize="large" className={classes.menuIcon} />,
-    <CodeIcon fontSize="large" className={classes.menuIcon} />,
-    <MessageIcon fontSize="large" className={classes.menuIcon} />,
+    <HomeIcon key="homeicon" fontSize="large" className={classes.menuIcon} />,
+    <InfoIcon key="infoicon" fontSize="large" className={classes.menuIcon} />,
+    <CodeIcon key="codeicon" fontSize="large" className={classes.menuIcon} />,
+    <MessageIcon key="messageicon" fontSize="large" className={classes.menuIcon} />,
   ];
 
   return (

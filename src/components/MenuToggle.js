@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       padding: '1em',
       top: '1em',
-      left: '-8.25em',
+      left: '-10.25em',
     },
   },
   svg: {

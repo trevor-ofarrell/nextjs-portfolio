@@ -2,12 +2,16 @@ import React, { useState, useRef } from 'react';
 
 import { motion } from 'framer-motion';
 import {
-  makeStyles, Toolbar, AppBar, Grid, ClickAwayListener,
+  makeStyles,
+  Toolbar,
+  AppBar,
+  Grid,
+  ClickAwayListener,
 } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Nav } from './Nav';
-import { MenuToggle } from './MenuToggle';
+import MenuIcon from '@material-ui/icons/Menu';
+import { MenuToggle, Nav } from '.';
 import { useDimensions } from './use-dimensions';
 import graff from '../../public/blackname.png';
 
@@ -130,7 +134,6 @@ export const NavBar = ({ toggleView, changeView }) => {
                   </div>
                   <div>
                     <MenuToggle toggle={() => handleClick()} />
-
                   </div>
                 </motion.nav>
               </Grid>
@@ -155,7 +158,6 @@ export const NavBar = ({ toggleView, changeView }) => {
             </Grid>
           </Toolbar>
         </AppBar>
-
       </div>
     </ClickAwayListener>
   );
