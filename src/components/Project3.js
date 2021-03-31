@@ -20,10 +20,11 @@ const useStyles = makeStyles((theme) => ({
     background: 'linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%)',
     backgroundBlendMode: 'color-dodge, overlay, difference, normal',
     opacity: '0.85',
-    boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
     marginBottom: '25vh',
+    boxShadow: '0px 0px 45px 5px #fafafa',
     '&:hover': {
-      boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.8)',
+      boxShadow: '0px 0px 80px 7.5px #fafafa',
+      opacity: 0.9,
     },
     [theme.breakpoints.up('xl')]: {
       width: '100%',

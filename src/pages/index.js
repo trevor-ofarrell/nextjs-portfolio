@@ -12,6 +12,7 @@ import {
   Grid,
   Hidden,
   createMuiTheme,
+  Slide,
 } from '@material-ui/core';
 
 import Grow from '@material-ui/core/Grow';
@@ -152,7 +153,7 @@ export default function Birds() {
                         && (
                         <>
                           <section className={classes.homesection}>
-                            <Grow in={changeView === 0} timeout={600}>
+                            <Slide in={changeView === 0} direction="left" timeout={350}>
                               <Grid container>
                                 <Grid item xs={1} sm={1} md={1} lg={2} xl={3} />
                                 <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
@@ -160,7 +161,7 @@ export default function Birds() {
                                 </Grid>
                                 <Grid item xs={1} sm={1} md={1} lg={2} xl={3} />
                               </Grid>
-                            </Grow>
+                            </Slide>
                           </section>
                         </>
                         )}
@@ -168,7 +169,7 @@ export default function Birds() {
                         && (
                         <>
                           <section className={classes.homesection}>
-                            <Grow in={changeView === 1} timeout={600}>
+                            <Slide in={changeView === 1} direction="left" timeout={350}>
                               <Grid container>
                                 <Grid item xs={1} sm={1} md={1} lg={2} xl={3} />
                                 <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
@@ -176,7 +177,7 @@ export default function Birds() {
                                 </Grid>
                                 <Grid item xs={1} sm={1} md={1} lg={2} xl={3} />
                               </Grid>
-                            </Grow>
+                            </Slide>
                           </section>
                         </>
                         )}
@@ -184,7 +185,7 @@ export default function Birds() {
                         && (
                         <>
                           <section className={classes.section}>
-                            <Grow in={changeView === 2} timeout={600}>
+                            <Slide in={changeView === 2} direction="left" timeout={350}>
                               <Grid container>
                                 <Grid item xs={1} sm={1} md={1} lg={2} xl={3} />
                                 <Grid item xs={10} sm={10} md={10} lg={8} xl={6}>
@@ -194,7 +195,7 @@ export default function Birds() {
                                 </Grid>
                                 <Grid item xs={1} sm={1} md={1} lg={2} xl={3} />
                               </Grid>
-                            </Grow>
+                            </Slide>
                           </section>
                         </>
                         )}
@@ -202,7 +203,7 @@ export default function Birds() {
                         && (
                         <>
                           <section className={classes.section}>
-                            <Grow in={changeView === 3} timeout={600}>
+                            <Slide in={changeView === 3} direction="left" timeout={350}>
                               <Grid container>
                                 <Grid item xs={1} sm={1} md={1} lg={2} />
                                 <Grid item xs={10} sm={10} md={10} lg={8}>
@@ -210,7 +211,7 @@ export default function Birds() {
                                 </Grid>
                                 <Grid item xs={1} sm={1} md={1} lg={2} />
                               </Grid>
-                            </Grow>
+                            </Slide>
                           </section>
                         </>
                         )}

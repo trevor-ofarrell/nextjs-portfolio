@@ -7,6 +7,8 @@ import {
   AppBar,
   Grid,
   ClickAwayListener,
+  Hidden,
+  Backdrop,
 } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -136,6 +138,23 @@ export const NavBar = ({ toggleView, changeView }) => {
                     <MenuToggle toggle={() => handleClick()} />
                   </div>
                 </motion.nav>
+                <Hidden lgUp>
+                  <Backdrop className={classes.backdrop} open={isOpen} onClick={handleClickAway}>
+                    <motion.nav
+                      initial={false}
+                      animate={isOpen ? 'open' : 'closed'}
+                      custom={height}
+                      ref={containerRef}
+                    >
+                      <motion.div variants={sidebar} />
+                      <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
+                        <Nav toggleView={toggleView} toggle={handleClick} />
+                      </div>
+                      <div>
+                      </div>
+                    </motion.nav>
+                  </Backdrop>
+                </Hidden>
               </Grid>
               <Grid item xs={7} sm={8} md={8} lg={8} xl={8}>
                 <img src={graff} height="auto" alt="Trevor O'Farrell" className={classes.title} />

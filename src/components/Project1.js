@@ -11,25 +11,26 @@ import Image from 'next/image';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link';
 import pgnbuddy from '../../public/pgnbuddy.png';
+import pgnbuddymobile from '../../public/pgnbuddymobile.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     height: 'auto',
     borderRadius: 0,
-    opacity: '0.88',
-    boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.6)',
+    opacity: '0.89',
+    boxShadow: '0px 0px 45px 5px #fafafa',
     marginBottom: '9vh',
     marginTop: '-10vh',
     background: 'linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%)',
     backgroundBlendMode: 'color-dodge, overlay, difference, normal',
     '&:hover': {
-      boxShadow: '0px 0px 80px 10px rgb(127, 0, 255, 0.8)',
+      boxShadow: '0px 0px 80px 7.5px #fafafa',
     },
     [theme.breakpoints.up('xl')]: {
       width: '100%',
       marginLeft: '0vw',
-      marginTop: '-10vh',
+      marginTop: '-8vh',
       marginBottom: '12vh',
     },
     [theme.breakpoints.down('md')]: {
@@ -100,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     pointerEvents: 'none',
   },
   chip: {
-    marginTop: '7vh',
+    marginTop: '1vh',
     marginLeft: '0.5vw',
     width: '87%',
     textAlign: 'left',
@@ -129,6 +130,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '0vw',
     },
   },
+  imagediv: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
+  },
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
@@ -147,26 +152,26 @@ export const Project1 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-        <Grid item xs={12} sm={8} md={7} lg={7}>
+        <Grid item xs={12} sm={6} md={6} lg={5} className={classes.imagediv}>
           <Image
-            src={pgnbuddy}
+            src={pgnbuddymobile}
             alt="Picture of the author"
-            width={1900}
-            height={1120}
-            layout="responsive"
+            width={353.76}
+            height={700}
+            layout="intrinsic"
+            quality={100}
+            priority
             className={classes.image}
           />
         </Grid>
-        <Grid item xs={12} sm={4} md={4} lg={5} className={classes.gridtitle}>
-          <Chip label="Personal Project" color="primary" className={classes.chip} />
+        <Grid item xs={12} sm={6} md={6} lg={7} className={classes.gridtitle}>
+          <Chip label="Open Source Project" color="primary" className={classes.chip} />
           <Typography className={classes.texttitle}>
             PGNBuddy
           </Typography>
           <Link href="https://pgnbuddy.com">
             <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
           </Link>
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
           <Typography className={classes.textbody}>
             PGNBuddy was first created by me in 2020, as a personal project
             to practice my coding skills by building something I could personally use,
@@ -175,6 +180,9 @@ export const Project1 = () => {
             may prove useful to other chess players. So I've made it open source for the
             public to use free of charge, without ads or tracking.
           </Typography>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={12}>
+         
         </Grid>
       </Grid>
     </animated.div>

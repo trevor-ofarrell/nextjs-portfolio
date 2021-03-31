@@ -1,7 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Grid, ClickAwayListener } from '@material-ui/core';
+import {
+  AppBar,
+  Grid,
+  ClickAwayListener,
+  Backdrop,
+} from '@material-ui/core';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -42,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     fill: '#000000',
   },
   icon: {
-    marginTop: '2.5vh',
+    marginTop: '2.25vh',
     fontSize: '2.3em',
   },
 }));
@@ -89,17 +94,19 @@ export const MobileNav = ({ toggleView }) => {
       <div className={classes.root}>
         <AppBar position="static" color="transparent" elevation={0}>
           <Toolbar>
-            <motion.nav
-              initial={false}
-              animate={isOpen ? 'open' : 'closed'}
-              custom={height}
-              ref={containerRef}
-            >
-              <motion.div variants={sidebar} />
-              <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
-                <Nav toggleView={toggleView} toggle={handleClick} />
-              </div>
-            </motion.nav>
+            <Backdrop className={classes.backdrop} open={isOpen}>
+              <motion.nav
+                initial={false}
+                animate={isOpen ? 'open' : 'closed'}
+                custom={height}
+                ref={containerRef}
+              >
+                <motion.div variants={sidebar} />
+                <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
+                  <Nav toggleView={toggleView} toggle={handleClick} />
+                </div>
+              </motion.nav>
+            </Backdrop>
             <div>
               <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                 <MenuIcon fontSize="large" onClick={() => handleClick()} />

@@ -32,6 +32,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '2em',
     listStyle: 'none',
     height: '8em',
+    [theme.breakpoints.down('md')]: {
+      height: '10.5em',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '8em',
+    },
   },
   textPlaceholder: {
     flex: '1',

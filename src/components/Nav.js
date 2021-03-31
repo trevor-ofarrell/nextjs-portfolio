@@ -14,15 +14,17 @@ const variants = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
     [theme.breakpoints.up('xl')]: {
       marginLeft: '1vw',
-      marginTop: '20vh',
+      marginTop: '26vh',
       width: '30em',
       minWidth: '17em',
     },
     [theme.breakpoints.down('lg')]: {
       marginLeft: '-.75vw',
-      marginTop: '20vh',
+      marginTop: '26vh',
       width: '25em',
       minWidth: '17em',
     },
