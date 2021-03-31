@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
       height: '10.5em',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '8em',
+      height: '7em',
     },
   },
   textPlaceholder: {
