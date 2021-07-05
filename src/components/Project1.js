@@ -11,7 +11,7 @@ import Image from 'next/image';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link';
 import pgnbuddy from '../../public/pgnbuddy.png';
-import pgnbuddymobile from '../../public/pgnbuddymobile.png';
+import pgnbuddymobile from '../../public/pgnbuddy2.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
     opacity: '0.89',
     boxShadow: '0px 0px 45px 5px #fafafa',
     marginBottom: '9vh',
-    marginTop: '-15vh',
-    background: '#606060',
+    marginTop: '-5vh',
+    background: '#707070',
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
     },
@@ -159,8 +159,8 @@ export const Project1 = () => {
           <Image
             src={pgnbuddymobile}
             alt="Picture of the author"
-            width={353.76}
-            height={700}
+            width={715}
+            height={805}
             layout="intrinsic"
             quality={75}
             priority

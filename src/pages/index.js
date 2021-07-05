@@ -24,6 +24,9 @@ import {
   Project1,
   Project2,
   Project3,
+  Project4,
+  Project5,
+  Project6,
   Contact,
 } from '../components';
 
@@ -154,6 +157,9 @@ export default function Birds() {
                                   <Project1 />
                                   <Project2 />
                                   <Project3 />
+                                  <Project4 />
+                                  <Project5 />
+                                  <Project6 />
                                 </Grid>
                                 <Grid item xs={1} sm={1} md={1} lg={2} xl={3} />
                               </Grid>

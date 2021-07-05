@@ -11,5 +11,8 @@ export * from './About';
 export * from './Project1';
 export * from './Project2';
 export * from './Project3';
+export * from './Project4';
+export * from './Project5';
+export * from './Project6';
 export * from './Contact';
 export * from './MobileNav';
