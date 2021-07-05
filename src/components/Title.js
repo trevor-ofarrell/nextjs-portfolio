@@ -26,7 +26,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const calc = (x, y) => [-(y - window.innerHeight / 3) / 20, (x - window.innerWidth / 2) / 20, 1.175];
+const calc = (x, y) => [
+  -(y - window.innerHeight / 3) / 20, (x - window.innerWidth / 2) / 20, 1.175,
+];
 const trans = (x, y, s) => `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 export const Title = () => {

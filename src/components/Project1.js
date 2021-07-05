@@ -21,9 +21,8 @@ const useStyles = makeStyles((theme) => ({
     opacity: '0.89',
     boxShadow: '0px 0px 45px 5px #fafafa',
     marginBottom: '9vh',
-    marginTop: '-10vh',
-    background: 'linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%)',
-    backgroundBlendMode: 'color-dodge, overlay, difference, normal',
+    marginTop: '-15vh',
+    background: '#606060',
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
     },
@@ -134,6 +133,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 'auto',
     marginBottom: 'auto',
   },
+  input: {
+    color: '#fafafa',
+    fontWeight: '300',
+  },
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
@@ -159,7 +162,7 @@ export const Project1 = () => {
             width={353.76}
             height={700}
             layout="intrinsic"
-            quality={100}
+            quality={75}
             priority
             className={classes.image}
           />
@@ -173,12 +176,10 @@ export const Project1 = () => {
             <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
           </Link>
           <Typography className={classes.textbody}>
-            PGNBuddy was first created by me in 2020, as a personal project
+            I first created PGNBuddy in 2020, as a personal project
             to practice my coding skills by building something I could personally use,
-            and was interested in frequently working on. I recently began rewriting PGNBuddy
-            from scratch after my original efforts, and came to realize that my fun project
-            may prove useful to other chess players. So I've made it open source for the
-            public to use free of charge, without ads or tracking.
+            and was interested in frequently working on. After begining on the third version I came to realize that my fun project
+            may prove useful to other chess players. So I've made it open source for anyone to use.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>

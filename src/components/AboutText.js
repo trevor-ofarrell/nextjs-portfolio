@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '5vh',
+    fontSize: '6vh',
     color: '#000000',
     paddingTop: '1.6em',
     [theme.breakpoints.down('md')]: {
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     padding: '.2em',
     opacity: '0.90',
-    borderRadius: '50%',
+    borderRadius: '5%',
     pointerEvents: 'none',
     [theme.breakpoints.down('xs')]: {
       padding: '0em',
@@ -88,15 +88,14 @@ export const AboutText = () => {
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={12}>
         <Typography className={classes.textbody}>
-          I’m a Bay Area native who loves mountain biking,
-          playing chess, PC gaming, and coding. I'm currently seeking full-time employment,
-          and interested in anything web development/software engineering related.
+          I’m a Bay Area native who loves to code, play chess, and ride bikes.
+          To see my open source projects
+          <a href="https://github.com/trevor-ofarrell"> check out my Github</a>.
+          To see my tweets (usually about chess, and tech), feel free to
+          <a href="https://twitter.com/0xFarrell"> follow me on Twitter</a>.
         </Typography>
 
-        <Typography className={classes.textbody}>
-          Some technologies that I'm most excited about and use most frequently are: JavaScript,
-          Node.js, React, Next.js/Vercel, Material-UI, Redis, and Python.
-        </Typography>
+
       </Grid>
     </Grid>
   );

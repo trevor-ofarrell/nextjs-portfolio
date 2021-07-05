@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     overflow: 'hidden',
-
     [theme.breakpoints.down('md')]: {
       marginLeft: '2vw',
       fontSize: '5em',
@@ -38,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     textAlign: 'left',
-
   },
 }));
 
@@ -50,7 +48,7 @@ export const HomeTextBold = () => {
         <Head />
         <Typewriter
           onInit={(typewriter) => {
-            typewriter.typeString("Hello! I'm Trevor O'Farrell, welcome to my website.")
+            typewriter.typeString("Hi! I'm Trevor, welcome to my website!")
               .pauseFor(2000)
               .deleteAll();
             typewriter.typeString(

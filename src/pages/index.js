@@ -4,9 +4,6 @@ import React, {
   useRef,
 } from 'react';
 
-import BIRDS from 'vanta/dist/vanta.birds.min';
-import Head from 'next/head';
-
 import {
   CssBaseline,
   Grid,
@@ -50,11 +47,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     overflowX: 'hidden',
     overflowY: 'hidden',
+    backgroundColor: '#454545',
   },
   contentContainer: {
     height: '100vh',
     width: '100vw',
-    zIndex: '3',
   },
   sidebar: {
     zIndex: '10',
@@ -92,51 +89,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Birds() {
   const classes = useStyles();
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const myRef = useRef(null);
   const [changeView, toggleView] = useState(0);
 
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(BIRDS({
-        el: myRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: true,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        backgroundColor: '#222',
-        color1: '#000000',
-        color2: '#606060',
-        birdSize: 3,
-        wingSpan: 40.00,
-        speedLimit: 4,
-        separation: 60.00,
-        quantity: 3,
-        alignment: 7.00,
-        cohesion: 10.00,
-        backgroundAlpha: 0.94,
-        colorMode: 'variance',
-      }));
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
 
   return (
     <>
-      <Head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" />
-        <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.birds.min.js" />
-      </Head>
       <CssBaseline />
       <a className="skip-link" href="#main">Skip to main</a>
       <main id="main">
         <ThemeProvider theme={customBreakpoints}>
-          <div className={classes.root} ref={myRef}>
+          <div className={classes.root}>
             <div className={classes.sidebar}>
               <Hidden xsDown>
                 <NavBar changeView={changeView} toggleView={toggleView} />
