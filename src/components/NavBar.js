@@ -40,7 +40,6 @@ const sidebar = {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    zIndex: '0',
     height: '0vh',
   },
   menuButton: {
@@ -119,7 +118,7 @@ export const NavBar = ({ toggleView, changeView }) => {
 
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
-      <div className={classes.root}>
+      <div className={classes.root} style={{ zIndex: '9999' }}>
         <AppBar position="static" color="transparent" elevation={0}>
           <Toolbar>
             <Grid container>
@@ -149,8 +148,6 @@ export const NavBar = ({ toggleView, changeView }) => {
                       <motion.div variants={sidebar} />
                       <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
                         <Nav toggleView={toggleView} toggle={handleClick} />
-                      </div>
-                      <div>
                       </div>
                     </motion.nav>
                   </Backdrop>

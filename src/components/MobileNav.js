@@ -8,14 +8,12 @@ import {
   Backdrop,
 } from '@material-ui/core';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 
-import { MenuToggle, Nav } from '.';
+import { Nav } from '.';
 import { useDimensions } from './use-dimensions';
 import graff from '../../public/blackname.png';
 
@@ -23,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     height: '0vh',
+    zIndex: '100',
   },
   menuButton: {
     marginTop: '1vh',
@@ -49,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginTop: '2.25vh',
     fontSize: '2.3em',
+  },
+  backdrop: {
+    zIndex: '15',
   },
 }));
 

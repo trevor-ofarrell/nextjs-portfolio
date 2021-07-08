@@ -23,9 +23,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '6vh',
+    fontSize: '5vh',
     color: '#000000',
-    paddingTop: '1.6em',
+    marginTop: 'auto',
+    marginBottom: 'auto',
     [theme.breakpoints.down('md')]: {
       fontSize: '5vh',
       paddingLeft: '2vw',

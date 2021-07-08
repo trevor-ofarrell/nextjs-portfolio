@@ -8,16 +8,11 @@ import { AboutText } from './AboutText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '58vw',
-    [theme.breakpoints.up('xl')]: {
-      width: '100%',
-      marginLeft: '0vw',
-      marginTop: '-10vh',
-    },
+    width: '60vw',
+    marginTop: 'auto',
+    marginBototm: 'auto',
     height: '60vh',
     borderRadius: 0,
-    marginTop: 'auto',
-    marginBottom: 'auto',
     marginLeft: '4.5vw',
     opacity: 0.8,
     background: '#707070',
@@ -25,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
       opacity: 0.9,
+    },
+    [theme.breakpoints.up('xl')]: {
+      width: '100%',
+      marginLeft: '0vw',
     },
     [theme.breakpoints.down('md')]: {
       width: '100%',

@@ -50,14 +50,17 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     overflowX: 'hidden',
     overflowY: 'hidden',
-    backgroundColor: '#454545',
+    backgroundColor: '#505050',
   },
   contentContainer: {
     height: '100vh',
     width: '100vw',
+    zIndex: '3',
   },
   sidebar: {
     zIndex: '10',
+    position: 'absolute',
+    width: '100vw',
   },
   section: {
     height: '100%',
@@ -94,7 +97,6 @@ export default function Birds() {
   const classes = useStyles();
   const [changeView, toggleView] = useState(0);
 
-
   return (
     <>
       <CssBaseline />
@@ -102,7 +104,7 @@ export default function Birds() {
       <main id="main">
         <ThemeProvider theme={customBreakpoints}>
           <div className={classes.root}>
-            <div className={classes.sidebar}>
+            <div className={classes.sidebar} style={{ zIndex: '9999' }}>
               <Hidden xsDown>
                 <NavBar changeView={changeView} toggleView={toggleView} />
               </Hidden>

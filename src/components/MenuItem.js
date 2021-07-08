@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '2em',
     listStyle: 'none',
     height: '8em',
+    zIndex: '1000',
     [theme.breakpoints.down('md')]: {
       height: '10.5em',
     },
