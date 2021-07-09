@@ -10,34 +10,34 @@ import {
 import Image from 'next/image';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link';
-import pgnbuddy from '../../public/pgnbuddy.png';
-import pgnbuddymobile from '../../public/lichessTVWP.png';
+import ochre from '../../../public/ochre.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     height: 'auto',
     borderRadius: 0,
-    opacity: '0.89',
-    boxShadow: '0px 0px 45px 5px #fafafa',
-    marginBottom: '9vh',
     background: '#707070',
+    opacity: '0.85',
+    marginBottom: '25vh',
+    boxShadow: '0px 0px 45px 5px #fafafa',
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
+      opacity: 0.9,
     },
     [theme.breakpoints.up('xl')]: {
       width: '100%',
       marginLeft: '0vw',
-      marginBottom: '12vh',
+      marginTop: '12vh',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',
-      marginTop: '-10vh',
       width: '100%',
-    },
-    [theme.breakpoints.down('sm')]: {
+      marginTop: '10vh',
       height: 'auto',
-      marginTop: '5vh',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: 'auto',
     },
   },
   root2: {
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '6.5vh',
+    fontSize: '7vh',
     color: '#121212',
     paddingTop: '0.2em',
     lineHeight: '1.2em',
@@ -66,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '1vh',
     },
     [theme.breakpoints.down('sm')]: {
+      lineHeight: '1.25em',
       fontSize: '3.5vh',
     },
     [theme.breakpoints.down('xs')]: {
@@ -98,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     pointerEvents: 'none',
   },
   chip: {
-    marginTop: '1vh',
+    marginTop: '7vh',
     marginLeft: '0.5vw',
     width: '87%',
     textAlign: 'left',
@@ -127,23 +128,15 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '0vw',
     },
   },
-  imagediv: {
-    marginTop: 'auto',
-    marginBottom: 'auto',
-  },
-  input: {
-    color: '#fafafa',
-    fontWeight: '300',
-  },
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
 const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-export const Project2 = () => {
-  const [props, set] = useSpring(
-    () => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }),
-  );
+export const Project6 = () => {
+  const [props, set] = useSpring(() => (
+    { xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }
+  ));
   const classes = useStyles();
   return (
     <animated.div
@@ -153,33 +146,29 @@ export const Project2 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-        <Grid item xs={12} sm={6} md={6} lg={5} className={classes.imagediv}>
+        <Grid item xs={12} sm={8} md={7} lg={7}>
           <Image
-            src={pgnbuddymobile}
-            alt="Picture of the author"
-            width={715}
-            height={805}
-            layout="intrinsic"
-            quality={75}
-            priority
+            src={ochre}
+            alt="screenshot of shopochre.com homepage"
+            width={1900}
+            height={1120}
             className={classes.image}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={7} className={classes.gridtitle}>
-          <Chip label="Open Source Project" color="primary" className={classes.chip} />
+        <Grid item xs={12} sm={4} md={5} lg={5} className={classes.gridtitle}>
+          <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip} />
           <Typography className={classes.texttitle}>
-            LichessTV Watch Party
+            Shop Ochre
           </Typography>
-          <Link href="https://lichess-TV-watch-party.vercel.app">
+          <Link href="https://shopochre.com">
             <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
           </Link>
-          <Typography className={classes.textbody}>
-          Watch live chess games being played on lichess, and join the discussion. 
-          Create a room with a lichess.org game ID, or catch the featured top rated game. 
-          </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-         
+          <br />
+          <Typography className={classes.textbody}>
+            A demo site for a online shopping tool. I was hired to implement a redesign.
+          </Typography>
         </Grid>
       </Grid>
     </animated.div>

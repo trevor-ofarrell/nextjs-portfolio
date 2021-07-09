@@ -10,7 +10,7 @@ import {
 import Image from 'next/image';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link';
-import pgnbuddy from '../../public/tacklehunger.png';
+import lichesstvwp from '../../../public/lichessTVWP.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,27 +18,25 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto',
     borderRadius: 0,
     opacity: '0.89',
+    boxShadow: '0px 0px 45px 5px #fafafa',
     marginBottom: '9vh',
     background: '#707070',
-    boxShadow: '0px 0px 45px 5px #fafafa',
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
-      opacity: 0.9,
     },
     [theme.breakpoints.up('xl')]: {
       width: '100%',
       marginLeft: '0vw',
-      marginTop: '12vh',
       marginBottom: '12vh',
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '0vw',
+      marginTop: '-10vh',
       width: '100%',
-      marginTop: '10vh',
-      height: 'auto',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'auto',
+      marginTop: '5vh',
     },
   },
   root2: {
@@ -57,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '7vh',
+    fontSize: '6.5vh',
     color: '#121212',
     paddingTop: '0.2em',
     lineHeight: '1.2em',
@@ -65,10 +63,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '4vh',
       paddingLeft: '4vw',
       paddingTop: '1vh',
-      lineHeight: '1.1em',
     },
     [theme.breakpoints.down('sm')]: {
-      lineHeight: '1.25em',
       fontSize: '3.5vh',
     },
     [theme.breakpoints.down('xs')]: {
@@ -101,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     pointerEvents: 'none',
   },
   chip: {
-    marginTop: '7vh',
+    marginTop: '1vh',
     marginLeft: '0.5vw',
     width: '87%',
     textAlign: 'left',
@@ -130,12 +126,20 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '0vw',
     },
   },
+  imagediv: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
+  },
+  input: {
+    color: '#fafafa',
+    fontWeight: '300',
+  },
 }));
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
 const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-export const Project5 = () => {
+export const Project2 = () => {
   const [props, set] = useSpring(
     () => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }),
   );
@@ -148,32 +152,28 @@ export const Project5 = () => {
       className={classes.root}
     >
       <Grid container className={classes.root2}>
-        <Grid item xs={12} sm={8} md={7} lg={7}>
+        <Grid item xs={12} sm={6} md={6} lg={5} className={classes.imagediv}>
           <Image
-            src={pgnbuddy}
-            alt="Picture of the author"
-            width={1900}
-            height={1120}
+            src={lichesstvwp}
+            alt="lichess TV watchparty app shown in action on two cell phones"
+            width={715}
+            height={805}
+            layout="intrinsic"
+            priority
             className={classes.image}
           />
         </Grid>
-        <Grid item xs={12} sm={4} md={5} lg={5} className={classes.gridtitle}>
-          <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip} />
+        <Grid item xs={12} sm={6} md={6} lg={7} className={classes.gridtitle}>
+          <Chip label="Open Source Project" color="primary" className={classes.chip} />
           <Typography className={classes.texttitle}>
-            Tackle Hunger
+            LichessTV Watch Party
           </Typography>
-          <Link href="https://tacklehunger.org">
+          <Link href="https://lichess-TV-watch-party.vercel.app">
             <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
           </Link>
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
           <Typography className={classes.textbody}>
-            In this project I wrote the initial code for the front-end of the Admin console,
-            and the Edit Charity page for TackleHunger,
-            a "youth-inspired movement working across the nation to
-            tackle hunger in their local communities".
-            Along with coding those two pages, I was a consultant on what
-            technologies to use for the initial frontend development.
+            Watch live chess games being played on lichess, and join the discussion. 
+            Create a room with a lichess.org game ID, or catch the featured top rated game. 
           </Typography>
         </Grid>
       </Grid>

@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core';
 
 import Image from 'next/image';
-import me from '../../public/trevorprofilepic.jpg';
+import me from '../../../public/trevorprofilepic.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,7 +72,7 @@ export const AboutText = () => {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid item xs={0} sm={0} md={0} lg={1} />
+      <Grid item lg={1} />
       <Grid item xs={4} sm={4} md={3} lg={3}>
         <Image
           src={me}
@@ -91,12 +91,11 @@ export const AboutText = () => {
         <Typography className={classes.textbody}>
           I’m a Bay Area native who loves to code, play chess, and ride bikes.
           To see my open source projects
-          <a href="https://github.com/trevor-ofarrell"> check out my Github</a>.
-          To see my tweets (usually about chess, and tech), feel free to
-          <a href="https://twitter.com/0xFarrell"> follow me on Twitter</a>.
+          <a href="https://github.com/trevor-ofarrell"> check out my Github</a>
+          . To see my tweets (usually about chess, and tech), feel free to
+          <a href="https://twitter.com/0xFarrell"> follow me on Twitter</a>
+          .
         </Typography>
-
-
       </Grid>
     </Grid>
   );

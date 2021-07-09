@@ -12,10 +12,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
-
-import { Nav } from '.';
-import { useDimensions } from './use-dimensions';
-import graff from '../../public/blackname.png';
+import { MenuItems } from '../Menu/MenuItems';
+import { useDimensions } from '../use-dimensions';
+import graff from '../../../public/blackname.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -105,13 +104,19 @@ export const MobileNav = ({ toggleView }) => {
               >
                 <motion.div variants={sidebar} />
                 <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
-                  <Nav toggleView={toggleView} toggle={handleClick} />
+                  <MenuItems toggleView={toggleView} toggle={handleClick} />
                 </div>
               </motion.nav>
             </Backdrop>
             <div>
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuIcon fontSize="large" onClick={() => handleClick()} />
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+                onClick={() => handleClick()}
+              >
+                <MenuIcon fontSize="large" />
               </IconButton>
             </div>
             <Grid container>

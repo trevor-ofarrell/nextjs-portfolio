@@ -4,7 +4,7 @@ import {
   makeStyles,
   Grid,
 } from '@material-ui/core';
-import { HomeTextBold } from './HomeTextBold';
+import { HomeTextBold } from './HomePageTypingAnimation';
 
 const useStyles = makeStyles((theme) => ({
   root: {

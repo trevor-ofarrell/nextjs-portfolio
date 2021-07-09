@@ -13,9 +13,10 @@ import {
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import MenuIcon from '@material-ui/icons/Menu';
-import { MenuToggle, Nav } from '.';
-import { useDimensions } from './use-dimensions';
-import graff from '../../public/blackname.png';
+import { MenuToggle } from '../Menu/MenuToggle';
+import { MenuItems } from '../Menu/MenuItems';
+import { useDimensions } from '../use-dimensions';
+import graff from '../../../public/blackname.png';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -131,7 +132,7 @@ export const NavBar = ({ toggleView, changeView }) => {
                 >
                   <motion.div variants={sidebar} />
                   <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
-                    <Nav toggleView={toggleView} toggle={handleClick} />
+                    <MenuItems toggleView={toggleView} toggle={handleClick} />
                   </div>
                   <div>
                     <MenuToggle toggle={() => handleClick()} />
@@ -147,7 +148,7 @@ export const NavBar = ({ toggleView, changeView }) => {
                     >
                       <motion.div variants={sidebar} />
                       <div style={{ pointerEvents: isOpen ? 'all' : 'none' }}>
-                        <Nav toggleView={toggleView} toggle={handleClick} />
+                        <MenuItems toggleView={toggleView} toggle={handleClick} />
                       </div>
                     </motion.nav>
                   </Backdrop>

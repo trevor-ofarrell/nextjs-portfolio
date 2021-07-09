@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useRef,
-} from 'react';
-
+import React, { useState } from 'react';
 import {
   CssBaseline,
   Grid,
@@ -11,11 +6,7 @@ import {
   createMuiTheme,
   Slide,
 } from '@material-ui/core';
-
-import Grow from '@material-ui/core/Grow';
-
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
-
 import {
   NavBar,
   Title,

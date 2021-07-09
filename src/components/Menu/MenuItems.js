@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 'auto',
     marginBottom: 'auto',
+    position: 'absolute',
     [theme.breakpoints.up('xl')]: {
       marginLeft: '1vw',
       marginTop: '26vh',
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('lg')]: {
       marginLeft: '-.75vw',
-      marginTop: '26vh',
+      marginTop: '25vh',
       width: '25em',
       minWidth: '17em',
     },
@@ -46,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Nav = ({ toggleView, toggle }) => {
+export const MenuItems = ({ toggleView, toggle }) => {
   const classes = useStyles();
   const itemIds = [0, 1, 2, 3];
 

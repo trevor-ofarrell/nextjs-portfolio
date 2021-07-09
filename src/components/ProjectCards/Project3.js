@@ -10,8 +10,7 @@ import {
 import Image from 'next/image';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link';
-import pgnbuddy from '../../public/pgnbuddy.png';
-import pgnbuddymobile from '../../public/pgnbuddy2.png';
+import fen2diagram from '../../../public/fen2diagram.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     opacity: '0.89',
     boxShadow: '0px 0px 45px 5px #fafafa',
     marginBottom: '9vh',
-    marginTop: '-5vh',
     background: '#707070',
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
@@ -29,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('xl')]: {
       width: '100%',
       marginLeft: '0vw',
-      marginTop: '-8vh',
       marginBottom: '12vh',
     },
     [theme.breakpoints.down('md')]: {
@@ -142,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
 const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-export const Project1 = () => {
+export const Project3 = () => {
   const [props, set] = useSpring(
     () => ({ xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }),
   );
@@ -157,12 +154,11 @@ export const Project1 = () => {
       <Grid container className={classes.root2}>
         <Grid item xs={12} sm={6} md={6} lg={5} className={classes.imagediv}>
           <Image
-            src={pgnbuddymobile}
-            alt="Picture of the author"
+            src={fen2diagram}
+            alt="Fen to diagram shown in action on two cell phone screens"
             width={715}
             height={805}
             layout="intrinsic"
-            quality={75}
             priority
             className={classes.image}
           />
@@ -170,16 +166,15 @@ export const Project1 = () => {
         <Grid item xs={12} sm={6} md={6} lg={7} className={classes.gridtitle}>
           <Chip label="Open Source Project" color="primary" className={classes.chip} />
           <Typography className={classes.texttitle}>
-            PGNBuddy
+            FEN to Diagram
           </Typography>
-          <Link href="https://pgnbuddy.com">
+          <Link href="https://fen2diagram.com">
             <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
           </Link>
           <Typography className={classes.textbody}>
-            I first created PGNBuddy in 2020, as a personal project
-            to practice my coding skills by building something I could personally use,
-            and was interested in frequently working on. After begining on the third version I came to realize that my fun project
-            may prove useful to other chess players. So I've made it open source for anyone to use.
+          Create PNG chess diagrams from
+          <a href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation"> FEN (Forsyth–Edwards Notation) </a>
+          strings.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>

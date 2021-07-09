@@ -29,15 +29,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     clipPath: 'polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)',
     WebkitClipPath: 'polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)',
-    marginBottom: '2em',
+    marginBottom: '3vh',
     listStyle: 'none',
-    height: '8em',
+    height: '11vh',
     zIndex: '1000',
     [theme.breakpoints.down('md')]: {
-      height: '10.5em',
+      height: '13vh',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '7em',
+      height: '13vh',
     },
   },
   textPlaceholder: {
@@ -114,7 +114,7 @@ export const MenuItem = ({ toggleView, i, toggle }) => {
 
   const handleToggleMobile = useCallback(async (event) => {
     toggleView(i);
-    await delay(650).then(() => {
+    await delay(525).then(() => {
       toggle();
     });
   }, [toggleView, i, toggle]);

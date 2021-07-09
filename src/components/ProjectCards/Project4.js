@@ -10,7 +10,7 @@ import {
 import Image from 'next/image';
 import LinkIcon from '@material-ui/icons/Link';
 import Link from 'next/link';
-import pgnbuddy from '../../public/ochre.png';
+import chessevalbar from '../../../public/chessevalbarNPM.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
     background: '#707070',
     opacity: '0.85',
-    marginBottom: '25vh',
+    marginBottom: '9vh',
     boxShadow: '0px 0px 45px 5px #fafafa',
     '&:hover': {
       boxShadow: '0px 0px 80px 7.5px #fafafa',
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Cyber',
     fontWeight: '600',
-    fontSize: '7vh',
+    fontSize: '6vh',
     color: '#121212',
     paddingTop: '0.2em',
     lineHeight: '1.2em',
@@ -133,7 +133,7 @@ const useStyles = makeStyles((theme) => ({
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
 const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-export const Project6 = () => {
+export const Project4 = () => {
   const [props, set] = useSpring(() => (
     { xys: [0, 0, 1], config: { mass: 7, tension: 350, friction: 60 } }
   ));
@@ -148,26 +148,27 @@ export const Project6 = () => {
       <Grid container className={classes.root2}>
         <Grid item xs={12} sm={8} md={7} lg={7}>
           <Image
-            src={pgnbuddy}
-            alt="Picture of the author"
+            src={chessevalbar}
+            alt="screenshot of chess-eval-bar NPM package homepage"
             width={1900}
             height={1120}
             className={classes.image}
           />
         </Grid>
         <Grid item xs={12} sm={4} md={5} lg={5} className={classes.gridtitle}>
-          <Chip label="Freelance/Consulting Work" color="primary" className={classes.chip} />
+          <Chip label="Open Source Project" color="primary" className={classes.chip} />
           <Typography className={classes.texttitle}>
-            Shop Ochre
+            Chess Evaluation Bar
           </Typography>
-          <Link href="https://shopochre.com">
+          <Link href="https://www.npmjs.com/package/chess-evaluation-bar">
             <LinkIcon style={{ fontSize: '3em' }} className={classes.link} />
           </Link>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <br />
           <Typography className={classes.textbody}>
-            A demo site for a online shopping tool. I was hired to implement a redesign.
+          A browser based Stockfish 11 engine analysis React component. 
+          Pass the component a FEN of the position, and the depth of which to search.
           </Typography>
         </Grid>
       </Grid>

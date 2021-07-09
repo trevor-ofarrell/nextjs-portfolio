@@ -79,7 +79,11 @@ export const Contact = () => {
   const classes = useStyles();
   const [state, handleSubmit] = useForm('contactForm');
   if (state.succeeded) {
-    return <div className={classes.success}>Thanks for the message, I'll get back to you ASAP.</div>;
+    return (
+      <div className={classes.success}>
+        Thanks for the message, I'll get back to you ASAP.
+      </div>
+    );
   }
 
   return (
